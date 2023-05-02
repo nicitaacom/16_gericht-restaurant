@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Upright:wght@500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body {
+  list-style: none;
+  min-height: 100vh;
+  height: -webkit-fill-available;
+  background-color: #0C0B08;
+  font-family: 'Open Sans', sans-serif;
+}
+
+html {
+  height:-webkit-fill-available;
+}
+
+.title {
+  color:#DCCA87
+}
+
+.subTitle {
+  color:#AAAAAA;
+}
+
+.container {
+max-width: 90%;
+margin: 0 auto;
+}

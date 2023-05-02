@@ -1,0 +1,45 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  max-width:87vw;
+  margin:0 auto;
+  padding:1.6rem 0;
+}
+
+.navbar-logo {
+  width: 10.5vw;
+  margin-right: auto;
+}
+
+.navbar-links {
+  display: flex;
+  justify-content: space-between;
+  gap: 2vw;
+  font-size: 0.8rem;
+  margin-right: 14vw;
+}
+
+.navbar-auth {
+font-family: 'Open Sans', sans-serif;
+font-weight: 600;
+display: flex;
+justify-content: center;
+align-items: center;
+gap:3vw;
+font-size: 0.8rem;
+}
+
+.navbar-auth a {
+  transition: 0.5s ease;
+}
+
+.navbar-auth a:hover {
+  border-bottom:2px solid #DCCA87;
+}
+
+.navbar-auth div {
+  width: 1px;
+  height: 2.5rem;
+  border-right: 1px solid #505050;
+  border-image: linear-gradient(to bottom, #202020, #606060, #202020) 1 100%;
+}
