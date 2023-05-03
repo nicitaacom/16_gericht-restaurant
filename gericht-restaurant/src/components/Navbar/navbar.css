@@ -34,7 +34,7 @@ font-size: 0.8rem;
 }
 
 .navbar-auth a:hover {
-  border-bottom:2px solid #DCCA87;
+  border-bottom:1px solid #DCCA87;
 }
 
 .navbar-auth div {

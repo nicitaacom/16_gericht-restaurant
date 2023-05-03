@@ -19,6 +19,11 @@ html {
   height:-webkit-fill-available;
 }
 
+a {
+  color: unset;
+  text-decoration: none;
+}
+
 .title {
   color:#DCCA87
 }
