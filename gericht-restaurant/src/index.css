@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Upright:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Upright&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Upright:wght@700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -15,6 +17,12 @@ body {
   font-family: 'Open Sans', sans-serif;
 }
 
+#root {
+  display: flex;
+  flex-flow: column;
+  min-height: 100vh;
+}
+
 html {
   height:-webkit-fill-available;
 }
@@ -23,7 +31,6 @@ html {
 /* don't modify !important here cause some users will not see hover effect 
 cause they have some extentions like dark reader */
 a {
-  color: unset !important;
   text-decoration: none !important;
   border-color:#e5e7eb !important;
   border-style: none !important;

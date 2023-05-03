@@ -1,9 +1,12 @@
 .navbar {
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  max-width:87vw;
+  min-width:87vw;
   margin:0 auto;
   padding:1.6rem 0;
+  font-size: 0.8rem;
+  margin-bottom: auto;
 }
 
 .navbar-logo {
@@ -15,8 +18,12 @@
   display: flex;
   justify-content: space-between;
   gap: 2vw;
-  font-size: 0.8rem;
+
   margin-right: 14vw;
+}
+
+.li-item:hover {
+  color:#404040;
 }
 
 .navbar-auth {
@@ -25,7 +32,6 @@ display: flex;
 justify-content: center;
 align-items: center;
 gap:3vw;
-font-size: 0.8rem;
 }
 
 .navbar-auth a {
@@ -38,9 +44,108 @@ cause they have some extentions like dark reader */
   border-bottom:1px solid #DCCA87 !important;
 }
 
-.navbar-auth div {
+.line {
   width: 1px;
   height: 2.5rem;
   border-right: 1px solid #505050;
   border-image: linear-gradient(to bottom, #202020, #606060, #202020) 1 100%;
+}
+
+.navbar-mobile-menu {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom:0;
+  top:0;
+  background-color: #000000;
+  display: flex;
+  flex-flow: column;
+  gap: 6rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar-links-mobile {
+display: flex;
+justify-content: center;
+align-items: center;
+flex-flow: column;
+gap: 1rem;
+font-size:2rem;
+}
+
+.navbar-auth-mobile {
+  display: flex;
+  flex-flow: column;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size:2rem;
+}
+
+.navbar-auth-mobile .line{
+  -webkit-transform: rotate(90deg); -moz-transform: rotate(90deg); -o-transform: rotate(90deg); -ms-transform: rotate(90deg); transform: rotate(90deg);
+  height: 10vw;
+  position: absolute;
+  line-height: 30px;
+  border-right: 2px solid #505050;
+  bottom:12.5vw;
+}
+
+.navbar-mobile-icon {
+  width: 2rem;
+  height: 2rem;
+  fill:#ffffff;
+}
+
+
+
+
+@media (min-width:1px) {
+  .navbar-links {
+    display: none;
+  }
+  .navbar-logo {
+    margin:0;
+    width: 20vw;
+  }
+  .navbar {
+    justify-content: space-between;
+  }
+  .navbar-auth {
+    display: none;
+  }
+}
+
+@media (min-width:720px) {
+  .navbar {
+  font-size: 1rem;
+  }
+  .navbar-links {
+    display: flex;
+    margin-right: 0;
+  }
+}
+
+
+@media (min-width:1280px) {
+  .navbar-mobile-menu {
+    display: none;
+  }
+  .navbar-links {
+    display: flex;
+    margin-right: 14vw;
+  }
+  .navbar-auth {
+    display: flex;
+  }
+  .navbar-logo {
+    width: 10.5vw;
+    margin-right: auto;
+  }
+  .navbar-mobile-icon {
+    display: none;
+  }
+  
 }
