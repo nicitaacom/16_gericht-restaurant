@@ -19,10 +19,21 @@ html {
   height:-webkit-fill-available;
 }
 
+/* something that impact on hover - start */
+/* don't modify !important here cause some users will not see hover effect 
+cause they have some extentions like dark reader */
 a {
-  color: unset;
-  text-decoration: none;
+  color: unset !important;
+  text-decoration: none !important;
+  border-color:#e5e7eb !important;
+  border-style: none !important;
+  border-color:inherit !important;
 }
+
+*, ::before , ::after {
+  border-color: inherit !important;
+}
+/* something that impact on hover - end */
 
 .title {
   color:#DCCA87

@@ -14,9 +14,9 @@ return (
   </ul>
 
       <div className='navbar-auth'>
-        <a onClick={() => {/* modal auth */}}>Log In / Registration</a>
+          <span><a onClick={() => {/* modal auth */}}>Log In / Registration</a></span>
         <div />
-        <a onClick={() => {/* modal book a table */}}>Book Table</a>  
+          <span><a onClick={() => {/* modal book a table */}}>Book Table</a></span>
       </div>
 
 </div>
