@@ -1,3 +1,65 @@
 .main {
-  
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  min-height: 90vh;
+  gap:2rem;
+  padding-top: 5vh;
+}
+
+.main-content{
+  display: flex;
+  gap: 4rem;
+}
+
+.main-text {
+display: flex;
+flex-flow: column;
+justify-content: center;
+align-items: start;
+}
+
+.main-slider {
+  max-width: 50%;
+}
+
+.slider-dots {
+  font-family: 'Cormorant Upright', serif;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+}
+
+.line-svg {
+  stroke:#DCCA87;
+  width: 2rem;
+  height: 2px;
+}
+
+.tags {
+  -webkit-transform: rotate(270deg); -moz-transform: rotate(270deg); -o-transform: rotate(270deg); -ms-transform: rotate(270deg); transform: rotate(270deg);
+  position: absolute;
+  left:3vw;
+  top:60%;
+  display: flex;
+  gap: 2rem;
+}
+
+.scroll {
+  position: absolute;
+  right:9vh;
+  bottom:9vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+}
+
+.line-scroll {
+  border-right: 1px solid #DCCA87;
+  width: 1px;
+  height: 3.5rem;
+  border-image: linear-gradient(to bottom, #DCCA87, #0C0B08) 1 100%;
 }

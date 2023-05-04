@@ -1,5 +1,10 @@
+import { Main,About } from "./sections";
+
 export function HomePage () {
 return (
-<div>Home</div>
-)
+<>
+<Main/>
+<About/>
+</>
+  )
 }

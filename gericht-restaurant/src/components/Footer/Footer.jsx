@@ -25,7 +25,7 @@ return (
 
   <p className='footer-description'>"The best way to find yourself is to lose yourself in the service of others."</p>
 
-  <svg className='spoon-svg'>
+  <svg className='spoon-svg mb-[0.8rem]'>
   <use xlinkHref='./sprite.svg#spoon'/>
   </svg>
 

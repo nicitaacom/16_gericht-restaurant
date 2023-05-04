@@ -1,3 +1,25 @@
 .about {
+  display: flex;
+  gap:4rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.g-png {
+  width: 20vw;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.knife-png {
+  width: 6.25%;
+  z-index: 1;
+}
+
+.about-info {
+  display: flex;
+  flex-flow: column;
   
+  z-index: 2;
 }

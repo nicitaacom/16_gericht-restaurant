@@ -21,6 +21,7 @@ body {
   display: flex;
   flex-flow: column;
   min-height: 100vh;
+  background-color: #0C0B08;
 }
 
 html {
@@ -42,15 +43,50 @@ a {
 }
 /* something that impact on hover - end */
 
+.preTitle {
+  font-family: 'Cormorant Upright', serif;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.spoon-svg {
+  width: 2rem;
+  height: 1rem;
+}
+
+.title-big {
+  font-family: 'Cormorant Upright', serif;
+  font-weight: 700;
+  color:#DCCA87;
+  font-size: 5rem;
+}
+
 .title {
-  color:#DCCA87
+  font-family: 'Cormorant Upright', serif;
+  color:#DCCA87;
+  font-size: 3rem;
+}
+
+.title-small {
+  font-family: 'Cormorant Upright', serif;
+  color:#DCCA87;
+  font-size: 0.9rem;
 }
 
 .subTitle {
   color:#AAAAAA;
+  font-size: 0.8rem;
+  line-height: 1.4rem;
 }
 
 .container {
-max-width: 90%;
+max-width: 70%;
 margin: 0 auto;
+}
+
+.bg-png {
+  z-index: 0;
+  position: absolute;
+  left:0;
+  right:0;
 }

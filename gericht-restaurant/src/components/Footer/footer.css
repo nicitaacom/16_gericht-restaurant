@@ -54,12 +54,6 @@
   fill:#ffffff;
 }
 
-.spoon-svg {
-  width: 2rem;
-  height: 1rem;
-  margin-bottom: 0.8rem;
-}
-
 .footer-top_center {
   display: flex;
   flex-flow: column;
