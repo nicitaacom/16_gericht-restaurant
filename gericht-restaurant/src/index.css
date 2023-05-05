@@ -12,6 +12,7 @@
 body {
   list-style: none;
   min-height: 100vh;
+  min-height: 100dvh;
   height: -webkit-fill-available;
   background-color: #0C0B08;
   font-family: 'Open Sans', sans-serif;
@@ -65,12 +66,13 @@ a {
   font-family: 'Cormorant Upright', serif;
   color:#DCCA87;
   font-size: 3rem;
+  font-weight: 600;
 }
 
 .title-small {
   font-family: 'Cormorant Upright', serif;
   color:#DCCA87;
-  font-size: 0.9rem;
+  font-size: 1.2rem;
 }
 
 .subTitle {
@@ -79,14 +81,38 @@ a {
   line-height: 1.4rem;
 }
 
-.container {
+.section-container {
+  z-index: 1;
 max-width: 70%;
-margin: 0 auto;
+margin-right:  auto;
+margin-left:  auto;
 }
 
 .bg-png {
   z-index: 0;
   position: absolute;
+  top:0;
+  bottom:0;
   left:0;
   right:0;
+}
+
+.modal-bg {
+  background-color: rgba(0, 0, 0, 0.4);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 9;
+}
+
+.close-button {
+  cursor: pointer;
+  position: fixed;
+  top: 3rem;
+  right: 7rem;
+  width: 2rem;
+  height: 2rem;
+  filter: invert(98%) sepia(5%) saturate(4054%) hue-rotate(334deg) brightness(93%) contrast(83%);
 }

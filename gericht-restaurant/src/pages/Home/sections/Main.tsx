@@ -3,7 +3,7 @@ import './main.css'
 
 export function Main () {
 return (
-<div className="main mb-32">
+<div className="main section-container mb-32">
   <div className='main-content'>
   <div className="main-text ml-4 mt-4">
     <h6 className="preTitle leading-[1.6rem]">Chase the new Flavour</h6>
@@ -24,7 +24,7 @@ return (
   
   <div className='slider-dots'>
     01 
-   <svg className='line-svg mt-[0.4rem]'>
+   <svg className='line-svg mt-[0.4rem] mx-2'>
    <use xlinkHref='./sprite.svg#line'/>
    </svg>
   02 03 04

@@ -12,12 +12,10 @@ function App() {
   return (
     <>
       <Navbar/>
-        <div className="container">
-          <Routes>
+         <Routes>
            <Route path="/" element={<HomePage/>}/>
             {/* <Route path="/contact" element={<ContactPage/>}/> */}
          </Routes>
-        </div>
       <Footer/>
     </>
   )

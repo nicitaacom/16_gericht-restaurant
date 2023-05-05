@@ -1,15 +1,17 @@
 import './about.css'
-import {Button} from './../../../components'
+import {Button} from '../../../components'
+
 
 export function About () {
-  function openUrl(html) {
+  function openUrl(html:string) {
     window.open(html, "_blank")
    }
 return (
-<div className="about">
+<div className="about py-16 mb-32">
 <img className="bg-png" src='./bg.png'/>
 <img className="g-png" src="./G.png"/>
 
+<div className='about section-container'>
 <div className='about-info items-end text-end'>
 <h1 className='title'>About Us</h1>
 <svg className='spoon-svg rotate-180 mb-4'>
@@ -30,6 +32,7 @@ return (
 <Button buttonTitle='Know more' buttonOnClick={() => openUrl('https://github.com/Nicitaa') }/>
 </div>
 
+</div>
 </div>
 )
 }

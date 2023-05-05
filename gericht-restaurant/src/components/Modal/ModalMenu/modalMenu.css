@@ -1,0 +1,51 @@
+.modal-body {
+  display: flex;
+  flex-flow: column;
+  padding:4rem 2rem 1rem 2rem;
+}
+
+.modal-list-title {
+  width: 100%;
+}
+
+.modal-menu-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.modal-title-small {
+  min-width: 60%;
+}
+
+.modal-list-line {
+  min-width: 30%;
+  padding:0 1rem;
+}
+
+.modal-list-price {
+  min-width: 10%;
+}
+
+.modal-list-item {
+display: flex;
+min-width: 45%;
+max-width: 45%;
+}
+
+.modal-list-item img {
+height: 6rem;
+object-fit: cover;
+}
+
+.modal-list-text-info {
+min-width:80%;
+
+}
+
+.modal-list-img-info {
+min-width: 20%;
+}
+
+
+  

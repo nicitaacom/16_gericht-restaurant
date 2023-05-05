@@ -1,4 +1,68 @@
 .todaySpecial {
   display: flex;
   flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.todaySpecial-header {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.todaySpecial-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap:2rem;
+  margin-bottom: 4rem;
+}
+
+.menu-title {
+  min-width: 60%;
+}
+
+.menu-list {
+  box-sizing: border-box;
+  position: relative;
+  min-width: 20%;
+}
+
+.menu-list-img {
+  width: 30%;
+}
+
+.item-info {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.list-item {
+  display: flex;
+  flex-flow: column;
+}
+
+.list-line {
+  display: flex;
+  justify-content: center;
+  stroke: #ffffff;
+  width: 6rem;
+  height: 2px;
+  min-width: 30%;
+  padding:0 1.5rem;
+}
+
+.list-price {
+  min-width: 10%;
+}
+
+.list-title {
+  font-family: 'Cormorant Upright', serif;
+font-size: 2.5rem;
+margin-bottom: 1.5rem;
 }
