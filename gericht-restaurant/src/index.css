@@ -109,9 +109,6 @@ margin-left:  auto;
 
 .close-button {
   cursor: pointer;
-  position: fixed;
-  top: 3rem;
-  right: 7rem;
   width: 2rem;
   height: 2rem;
   filter: invert(98%) sepia(5%) saturate(4054%) hue-rotate(334deg) brightness(93%) contrast(83%);
