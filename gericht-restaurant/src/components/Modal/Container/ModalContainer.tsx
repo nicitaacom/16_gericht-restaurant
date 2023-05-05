@@ -36,7 +36,7 @@ return (
     
     <motion.div className='modal' animate={{y:[-1280,0]}} transition={{duration:0.25}} 
     {...modalHandler}>
-    <div className='modal-top'>
+    <div className='modal-header'>
       <h1 className={`title modal-title`}>{modalTitle}</h1>
       <motion.img src={'./menu/decorations/close.png'} className='close-button' onClick={closeModal} 
       whileHover={{ scale: 1.1}} whileTap={{scale:0.9}}/>
