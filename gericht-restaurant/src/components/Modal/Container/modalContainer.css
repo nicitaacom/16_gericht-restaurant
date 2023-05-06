@@ -7,7 +7,7 @@
   top: 5%; /*100-90=10/2=5=center*/
   margin: 0 auto;
   
-  border: 1px solid #ffffff;
+ border:2px solid #ffffff !important;
   border-radius: 0.8em;
 
   background-image: url(./../../../public/menu/decorations/abstract-dark.jpg);
@@ -20,6 +20,8 @@
   scrollbar-width: none;
   overflow:hidden;
 }
+
+
 
 .modal::-webkit-scrollbar {
   display: none;

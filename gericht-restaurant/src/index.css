@@ -10,6 +10,7 @@
 
 
 body {
+  color:#ffffff;
   list-style: none;
   min-height: 100vh;
   min-height: 100dvh;
@@ -32,6 +33,7 @@ html {
 /* something that impact on hover - start */
 /* don't modify !important here cause some users will not see hover effect 
 cause they have some extentions like dark reader */
+/* if you want apply border try do it with !important if it doesn't work without it */
 a {
   text-decoration: none !important;
   border-color:#e5e7eb !important;

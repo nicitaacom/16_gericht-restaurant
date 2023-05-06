@@ -21,9 +21,25 @@
   margin-bottom: 4rem;
 }
 
+
 .menu-title {
   min-width: 60%;
 }
+
+.list-line {
+  display: flex;
+  justify-content: center;
+  stroke: #ffffff;
+  width: 6rem;
+  height: 2px;
+  min-width: 30%;
+  padding:0 1.5rem;
+}
+
+.list-price {
+  min-width: 10%;
+}
+
 
 .menu-list {
   box-sizing: border-box;
@@ -45,20 +61,6 @@
 .list-item {
   display: flex;
   flex-flow: column;
-}
-
-.list-line {
-  display: flex;
-  justify-content: center;
-  stroke: #ffffff;
-  width: 6rem;
-  height: 2px;
-  min-width: 30%;
-  padding:0 1.5rem;
-}
-
-.list-price {
-  min-width: 10%;
 }
 
 .list-title {
