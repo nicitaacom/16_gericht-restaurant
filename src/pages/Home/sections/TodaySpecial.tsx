@@ -1,15 +1,14 @@
 import './todaySpecial.css'
-import {Button, ModalContainer,ModalMenu} from '../../../components'
+import {Button} from '../../../components'
 import { wines,coctails } from '../../../constant'
-import { useContext } from 'react'
-import { ModalContext } from '../../../context'
+import useMenuModal from '../../../hooks/useMenuModal'
 
 interface todaySpecialProps {
   todaySpecialClass?:string
 }
 
 export function TodaySpecial ({todaySpecialClass}:todaySpecialProps) {
-  const {modal,openModal} = useContext(ModalContext)
+  const menuModal = useMenuModal()
 return (
 <div className={`todaySpecial ${todaySpecialClass}`}>
 
@@ -59,19 +58,11 @@ return (
     
   </div>
 ))}
-
-
-
 </div>
 
-<Button buttonTitle='View more' buttonOnClick={() => openModal()}/>
+<Button title='View more' onClick={menuModal.onOpen}/>
 
   
-  {modal && 
-  <ModalContainer modalTitle='Menu'>
-    <ModalMenu/>
-  </ModalContainer>
-  }
 </div>
 )
 }

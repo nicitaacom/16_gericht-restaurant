@@ -1,13 +1,13 @@
 import './button.css'
 
 type ButtonProps = {
-  buttonTitle:string;
-  buttonClassName?:string;
-  buttonOnClick:() => void;
+  title:string;
+  onClick:() => void;
+  className?:string;
 }
 
-export function Button ({buttonTitle,buttonClassName,buttonOnClick}:ButtonProps) {
+export function Button ({title,className,onClick}:ButtonProps) {
 return (
-<button onClick={buttonOnClick} className={`button ${buttonClassName}`}>{buttonTitle}</button>
+<button onClick={onClick} className={`button ${className}`}>{title}</button>
 )
 }

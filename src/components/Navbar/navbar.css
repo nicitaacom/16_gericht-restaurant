@@ -9,6 +9,10 @@
   margin-bottom: auto;
 }
 
+.link {
+  cursor: pointer;
+}
+
 .navbar-logo {
   width: 10.5vw;
   margin-right: auto;

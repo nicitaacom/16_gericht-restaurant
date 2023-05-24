@@ -1,15 +1,19 @@
 import './modalMenu.css'
 import { menuLists } from '../../../constant'
-import { useState } from 'react'
 import { formatCurrency } from '../../../utilities/formatCurrency'
+import { ModalContainer } from '../..'
+import useMenuModal from '../../../hooks/useMenuModal'
+
 
 export function ModalMenu () {
+  const menuModal = useMenuModal()
 
 const quantity = 0
 
 return (
-
-    <div className='modal-body'>
+  <ModalContainer title='Menu' onClose={menuModal.onClose} isOpen={menuModal.isOpen} 
+  imgSrc='./../../../public/menu/decorations/abstract-dark.jpg'>
+     <div className='modal-body'>
       {menuLists.map(menuList => (
       <div key={menuList.title} className='modal-menu-list'>
       <h6 className='list-title modal-list-title'>{menuList.title}</h6>
@@ -24,9 +28,9 @@ return (
             </div>
               <div className='subTitle'>{item.subTitle.map(subTitle => (
                   <span key={subTitle}>
-                    {(item.subTitle.indexOf(subTitle)!=item.subTitle.length - 1) ?
-                    <span><a key={subTitle} className='subTitle-option'>{subTitle} </a> &nbsp;|&nbsp;</span> 
-                     : <a key={subTitle} className='subTitle-option'>{subTitle} </a>}
+                    {(item.subTitle.indexOf(subTitle)!=item.subTitle.length - 1)
+                    ? <span><a key={subTitle} className='subTitle-option'>{subTitle} </a> &nbsp;|&nbsp;</span> 
+                    : <a key={subTitle} className='subTitle-option'>{subTitle} </a>}
                   </span>
               ))}</div>
               <div className='item-options'>
@@ -43,5 +47,6 @@ return (
       </div>
     ))}
   </div>  
+  </ModalContainer>
 )
 }

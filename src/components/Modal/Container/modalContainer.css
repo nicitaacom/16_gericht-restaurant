@@ -7,20 +7,20 @@
   top: 5%; /*100-90=10/2=5=center*/
   margin: 0 auto;
   
- border:2px solid #ffffff !important;
+  border:2px solid #ffffff !important;
   border-radius: 0.8em;
 
-  background-image: url(./../../../public/menu/decorations/abstract-dark.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
   box-shadow: 11px 16px 8px 0px rgba(0, 0, 0, 0.75);
   
+  
+  
   -ms-overflow-style: none;
   scrollbar-width: none;
   overflow:hidden;
 }
-
 
 
 .modal::-webkit-scrollbar {
@@ -45,4 +45,17 @@
 .close-button {
   position: absolute;
   right: 2.5%;
+}
+
+
+/* custom classes */
+.center {
+  top:15%;
+  /*if you put transform:translateY(-50%) animation will not work*/
+}
+
+.blur {
+  backdrop-filter:blur(20px);
+  /* for disable tailwind styles */
+  filter:blur(0px) !important;
 }

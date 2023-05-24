@@ -12,7 +12,7 @@ return (
     </svg>
     <h1 className="title-big mb-6 leading-[6rem] inline-block">The Key To Fine Dining</h1>
     <p className="subTitle max-w-[80%] mb-6">Sit tellus lobortis sed senectus vivamus molestie. Condimentum volutpat morbi facilisis quam scelerisque sapien. Et, penatibus aliquam amet tellus </p>
-    <Button buttonTitle={'Explore Menu'} buttonOnClick={() => window.open('https://github.com/Nicitaa')}/>
+    <Button title={'Explore Menu'} onClick={() => window.open('https://github.com/Nicitaa')}/>
   </div>
 
   <div className="main-slider">
