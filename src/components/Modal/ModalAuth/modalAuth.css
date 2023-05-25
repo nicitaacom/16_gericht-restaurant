@@ -1,0 +1,13 @@
+.modal-auth-body {
+  display: flex;
+  gap: 1rem;
+  padding-top: 1rem;
+  overflow: visible;
+}
+
+.social-auth {
+  display: flex;
+  justify-content: center;
+  gap:0.5rem;
+  overflow-x: hidden;
+}

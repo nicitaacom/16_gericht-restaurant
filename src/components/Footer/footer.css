@@ -88,8 +88,8 @@
 
 
 
-
-
-
-
-
+@media (max-width:720px) {
+  .footer-top {
+    flex-flow: column;
+  }
+}

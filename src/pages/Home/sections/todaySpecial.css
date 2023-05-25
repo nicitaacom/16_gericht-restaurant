@@ -68,3 +68,21 @@
 font-size: 2.5rem;
 margin-bottom: 1.5rem;
 }
+
+@media (max-width:720px) {
+  .menu-list-img {
+    display: none;
+  }
+  .list-title {
+    text-align: center;
+  }
+  .menu-title {
+    min-width: 50%;
+  }
+  .list-line {
+    min-width: 20%;
+  }
+  .todaySpecial-menu {
+    gap:4rem;
+  }
+}

@@ -1,0 +1,11 @@
+.social-button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  white-space: nowrap;
+  gap:0.5rem;
+  width: auto;
+  padding: 0.5rem 1rem;
+  border:1px solid #DCCA87 !important;
+  border-radius: 14px;
+}

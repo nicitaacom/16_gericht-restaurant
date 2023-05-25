@@ -18,6 +18,14 @@
   margin-right: auto;
 }
 
+
+
+
+
+
+
+
+
 .navbar-links {
   display: flex;
   justify-content: space-between;
@@ -54,6 +62,14 @@ cause they have some extentions like dark reader */
   border-image: linear-gradient(to bottom, #202020, #606060, #202020) 1 100%;
 }
 
+
+
+
+
+
+
+
+
 .navbar-mobile-menu {
   position: absolute;
   left: 0;
@@ -66,6 +82,7 @@ cause they have some extentions like dark reader */
   gap: 6rem;
   justify-content: center;
   align-items: center;
+  z-index: 100;
 }
 
 .navbar-links-mobile {
@@ -101,6 +118,10 @@ font-size:2rem;
   height: 2rem;
   fill:#ffffff;
 }
+
+
+
+
 
 
 

@@ -4,12 +4,17 @@ import { Link } from 'react-router-dom';
 import { navLinks } from "../../constant";
 import { motion } from 'framer-motion'
 import {gsap} from 'gsap'
+
 import useAuthModal from '../../hooks/useAuthModal';
 
 
 export function NavbarAuth () {
   const authModal = useAuthModal()
   const [showMobileLinks,setShowMobileLinks] = useState(false)
+
+  if (showMobileLinks) {
+    document.body.style.overflow = 'hidden';
+  }
 
   const mobileMenuRef = useRef(null);
   function closeMobileLinks() {
@@ -19,7 +24,11 @@ export function NavbarAuth () {
       y:-1920,
       onComplete: () => setShowMobileLinks(false),
     });
+    document.body.style.overflow = 'visible';
   }
+
+ 
+
 return (
 <>
       <div className='navbar-auth'>
@@ -31,7 +40,7 @@ return (
       <svg className='navbar-mobile-icon' onClick={() => setShowMobileLinks(true)}>
             <use xlinkHref='./sprite.svg#hamburger-menu'/>
       </svg>
-
+      
       {showMobileLinks && 
       <motion.div className='navbar-mobile-menu' animate={{y:[-1200,0]}} ref={mobileMenuRef}
       transition={{ type: "spring",duration:0.75}}>

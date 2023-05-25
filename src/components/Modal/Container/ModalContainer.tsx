@@ -45,7 +45,7 @@ export function ModalContainer ({isOpen,imgSrc,onClose,children,title,className}
       y:-1280,
       onComplete: () => onClose(),
     });
-    document.body.style.overflow = 'visible';
+    document.body.removeAttribute('style');
   }
 
    /* for e.stopPropagation when mousedown on modal and mouseup on modalBg */
