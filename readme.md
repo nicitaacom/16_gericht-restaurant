@@ -1,28 +1,26 @@
+# What inside?
+![work in progress](https://i.imgur.com/2hHq62J.jpg)
+
+
 # Clone repository
 
+## Step 1.1 - clone repository (variant 1)
 ![alt text](https://i.imgur.com/9KSgjaN.png)
 
-### Open in IDE (e.g VS Code)
-
-```
-npm i
-```
-
-```
-npm run dev
-```
-## or
+## or Step 1.1 - clone repository (variant 2)
 
 ```
 git clone https://github.com/Nicitaa/16_gericht-restaurant
 ```
 
-### Open in IDE (e.g VS Code)
+## Step 1.2 - install deps
 
 ```
-npm i
+yarn
 ```
 
+## Step 1.3 - run project
+
 ```
-npm run dev
+yarn dev -- --port 8000
 ```

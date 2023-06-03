@@ -1,12 +1,37 @@
 .navbar {
+  position: fixed;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  min-width:87vw;
-  margin:0 auto;
-  padding:1.5rem 0;
-  font-size: 0.8rem;
+  min-width:100%;
+  margin:3rem auto;
+  padding:1rem 0;
+  font-size: 2rem;
   margin-bottom: auto;
+  z-index: 99;
+
+  -webkit-box-shadow: 7px 10px 50px 1px rgba(0,0,0,0.75);
+  -moz-box-shadow: 7px 10px 50px 1px rgba(0,0,0,0.75);
+  box-shadow: 7px 10px 50px 1px rgba(0,0,0,0.75);
+
+  /* ff 3.6+ */
+  background:-moz-linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.9) 50%, rgba(0, 0, 0, 0.7) 100%); 
+
+  /* safari 5.1+,chrome 10+ */
+  background:-webkit-linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.9) 50%, rgba(0, 0, 0, 0.7) 100%);
+
+  /* opera 11.10+ */
+  background:-o-linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.9) 50%, rgba(0, 0, 0, 0.7) 100%);
+
+  /* ie 6-9 */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#000000', GradientType=1 );
+
+  /* ie 10+ */
+  background:-ms-linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.9) 50%, rgba(0, 0, 0, 0.7) 100%);
+
+  /* global 94%+ browsers support */
+  background:linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.9) 50%, rgba(0, 0, 0, 0.7) 100%);
+
 }
 
 .link {
@@ -14,7 +39,7 @@
 }
 
 .navbar-logo {
-  width: 10.5vw;
+  max-width: 12.5%;
   margin-right: auto;
 }
 
@@ -42,7 +67,7 @@ font-weight: 600;
 display: flex;
 justify-content: center;
 align-items: center;
-gap:3vw;
+gap:2rem;
 }
 
 .navbar-auth a {
@@ -70,7 +95,7 @@ cause they have some extentions like dark reader */
 
 
 
-.navbar-mobile-menu {
+.navbar-hamburger-menu {
   position: absolute;
   left: 0;
   right: 0;
@@ -79,99 +104,204 @@ cause they have some extentions like dark reader */
   background-color: #000000;
   display: flex;
   flex-flow: column;
-  gap: 6rem;
+  gap: 2rem;
+  font-size:1rem;
   justify-content: center;
   align-items: center;
   z-index: 100;
 }
 
-.navbar-links-mobile {
+.navbar-hamburger-menu_links-mobile {
 display: flex;
 justify-content: center;
 align-items: center;
 flex-flow: column;
 gap: 1rem;
-font-size:2rem;
+
 }
 
-.navbar-auth-mobile {
+.navbar-hamburger-menu_auth-mobile {
+  position: relative;
   display: flex;
   flex-flow: column;
   gap: 1rem;
   justify-content: center;
   align-items: center;
   text-align: center;
-  font-size:2rem;
 }
 
-.navbar-auth-mobile .line{
+.navbar-hamburger-menu_auth-mobile .line{
   -webkit-transform: rotate(90deg); -moz-transform: rotate(90deg); -o-transform: rotate(90deg); -ms-transform: rotate(90deg); transform: rotate(90deg);
-  height: 10vw;
+  height: 15vh;
   position: absolute;
-  line-height: 30px;
-  border-right: 2px solid #505050;
-  bottom:12.5vw;
 }
 
 .navbar-mobile-icon {
-  width: 2rem;
-  height: 2rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  fill:#ffffff;
+}
+
+.navbar-hamburger-menu_close {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.25rem;
+  width: 1.25rem;
+  height: 1.25rem;
   fill:#ffffff;
 }
 
 
 
 
-
-
-
-
-@media (min-width:1px) {
-  .navbar-links {
-    display: none;
-  }
-  .navbar-logo {
-    margin:0;
-    width: 20vw;
-  }
+/* for phones like this https://prnt.sc/_tfU5Zqal7cw in 4:3 view */
+@media (min-width:2560px) {
   .navbar {
-    justify-content: space-between;
-  }
-  .navbar-auth {
-    display: none;
-  }
-}
-
-@media (min-width:720px) {
-  .navbar {
-  font-size: 1rem;
-  }
-  .navbar-links {
-    display: flex;
-    margin-right: 0;
-  }
-}
-
-
-@media (min-width:1280px) {
-  .navbar-mobile-menu {
-    display: none;
-  }
-  .navbar-links {
-    display: flex;
-    margin-right: 14vw;
-    font-size: 0.8rem;
-  }
-  .navbar-auth {
-    display: flex;
-    font-size: 0.8rem;
-  }
-  .navbar-logo {
-    width: 10.5vw;
-    margin-right: auto;
+    padding:4rem 6rem;
+    font-size: 2.75rem;
   }
   .navbar-mobile-icon {
     display: none;
   }
+}
+
+/* 4K */
+@media (max-width:2560px) {
+  .navbar {
+    font-size: 2.5rem;
+    padding: 1.25rem 4rem;
+  }
+  .navbar-mobile-icon {
+    display: none;
+  }
+  .navbar-links {
+    margin-right: 10%;
+  }
+}
+
+/* FHD */
+@media (max-width:1920px) {
+  .navbar-links {
+    margin-right: auto;
+  }
+  .navbar {
+    font-size: 1.6rem;
+  }
+  
+}
+
+/* ? */
+@media (max-width:1600px) {
+  .navbar {
+    margin:0rem;
+  }
+  .navbar {
+    font-size: 1rem;
+  }
+}
+
+
+/* Laptop L */
+@media (max-width:1440px) {
+  .navbar {
+    margin:0 2rem;
+  }
+}
+
+/* HD */
+@media (max-width:1280px) {
+  .navbar-logo {
+    margin-right: auto;
+  } 
+}
+
+/* Laptop */
+@media (max-width:1024px) {
+  .navbar {
+    font-size: 0.8rem;
+  }
+  .navbar-logo {
+    max-width: 15%;
+  }  
+}
+
+/* Tablet */
+@media (max-width:768px) {
+  .navbar {
+    font-size: 0.6rem;
+  }
+}
+
+/* SD */
+@media (max-width:720px) {
+  .navbar-links {
+    margin-right: 0;
+  }
+  .navbar-logo {
+    margin:0;
+  }
+}
+
+/* ? */
+@media (max-width:600px) {
+  .navbar-auth {
+    display: none;
+  }
+  .navbar-mobile-icon {
+    display: flex;
+  }
+  .navbar-logo {
+    max-width: 17.5%;
+  }
+  
+}
+
+/* Mobile L */
+@media (max-width:425px) {
+  .navbar-logo {
+    max-width: 25%;
+  }
+  .navbar {
+    margin: 0 1rem;
+  }
+}
+
+/* Mobile M */
+@media (max-width:375px) {
+ .navbar-links {
+  display: none;
+ }
+ .navbar-mobile-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+ }
+ .navbar-logo {
+  max-width: 30%;
+}
+.navbar-hamburger-menu {
+  font-size: 1.2rem;
+}
+.navbar-hamburger-menu_close {
+  top: 1.5rem;
+  right: 1.5rem;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+}
+
+/* SM */
+@media (max-width:360px) {
+  
+}
+
+/* Mobile S */
+@media (max-width:320px) {
+  .navbar-logo {
+    max-width: 40%;
+  }
+}
+
+/* XS */
+@media (max-width:1px) {
   
 }

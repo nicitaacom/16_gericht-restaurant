@@ -1,3 +1,5 @@
 export {About} from './About'
 export {Main} from './Main'
 export {TodaySpecial} from './TodaySpecial'
+export {WhatWeBelieveIn} from './WhatWeBelieveIn'
+export {Video} from './Video'

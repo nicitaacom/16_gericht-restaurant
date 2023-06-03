@@ -3,16 +3,24 @@ import { menuLists } from '../../../constant'
 import { formatCurrency } from '../../../utilities/formatCurrency'
 import { ModalContainer } from '../..'
 import useMenuModal from '../../../hooks/useMenuModal'
+import { useRef } from 'react'
 
 
 export function ModalMenu () {
   const menuModal = useMenuModal()
 
-const quantity = 0
+  const ingridientRef = useRef<HTMLAnchorElement>(null) as React.LegacyRef<HTMLAnchorElement>
+  const ingridient = ingridientRef.current
+  function removeIngridient() {
+    console.log(ingridient)
+    ingridient.style.color = 'red'
+  }
+
+  const quantity = 0
 
 return (
   <ModalContainer title='Menu' onClose={menuModal.onClose} isOpen={menuModal.isOpen} 
-  imgSrc='./../../../public/menu/decorations/abstract-dark.jpg'>
+  imgSrc='/menu/abstract-dark.jpg'>
      <div className='modal-body'>
       {menuLists.map(menuList => (
       <div key={menuList.title} className='modal-menu-list'>
@@ -29,8 +37,10 @@ return (
               <div className='subTitle'>{item.subTitle.map(subTitle => (
                   <span key={subTitle}>
                     {(item.subTitle.indexOf(subTitle)!=item.subTitle.length - 1)
-                    ? <span><a key={subTitle} className='subTitle-option'>{subTitle} </a> &nbsp;|&nbsp;</span> 
-                    : <a key={subTitle} className='subTitle-option'>{subTitle} </a>}
+                    ? <span><a className='subTitle-option' key={subTitle} onClick={() => removeIngridient()}
+                    ref={ingridientRef}>{subTitle}</a> &nbsp;|&nbsp;</span> 
+                    : <a className='subTitle-option' key={subTitle} onClick={() => removeIngridient()}
+                    ref={ingridientRef}>{subTitle}</a>}
                   </span>
               ))}</div>
               <div className='item-options'>

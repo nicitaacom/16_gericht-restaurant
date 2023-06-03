@@ -84,5 +84,19 @@ margin-bottom: 1.5rem;
   }
   .todaySpecial-menu {
     gap:4rem;
+    flex-flow: column;
+  }
+}
+
+@media (min-width:721px) {
+  .list-title {
+    text-align: center;
+  }
+  .menu-list-img {
+    display: none;
+  }
+  .todaySpecial-menu {
+    padding: 0 4rem;
+    gap:4rem;
   }
 }

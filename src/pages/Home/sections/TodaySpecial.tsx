@@ -4,13 +4,13 @@ import { wines,coctails } from '../../../constant'
 import useMenuModal from '../../../hooks/useMenuModal'
 
 interface todaySpecialProps {
-  todaySpecialClass?:string
+  className?:string
 }
 
-export function TodaySpecial ({todaySpecialClass}:todaySpecialProps) {
+export function TodaySpecial ({className}:todaySpecialProps) {
   const menuModal = useMenuModal()
 return (
-<div className={`todaySpecial ${todaySpecialClass}`}>
+<div className={`todaySpecial ${className}`}>
 
 <div className='todaySpecial-header'>
 <h6 className='preTitle mb-1'>Menu that fits you palatte</h6>
@@ -60,7 +60,7 @@ return (
 ))}
 </div>
 
-<Button title='View more' onClick={menuModal.onOpen}/>
+<Button label='View more' onClick={menuModal.onOpen}/>
 
   
 </div>

@@ -15,7 +15,6 @@ body {
   min-height: 100vh;
   min-height: 100dvh;
   height: -webkit-fill-available;
-  background-color: #0C0B08;
   font-family: 'Open Sans', sans-serif;
 }
 
@@ -23,7 +22,7 @@ body {
   display: flex;
   flex-flow: column;
   min-height: 100vh;
-  background-color: #0C0B08;
+  background-color: #141311;
 }
 
 html {
@@ -85,7 +84,7 @@ a {
 }
 
 .section-container {
-  z-index: 1;
+z-index: 1;
 max-width: 70%;
 margin-right:  auto;
 margin-left:  auto;

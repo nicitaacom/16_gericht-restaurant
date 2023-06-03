@@ -7,25 +7,25 @@ export default {
   theme: {
     extend: {
       screens: {
-        'XS': {'min': '1px', 'max': '359px'},
+        '4K': {'max': '2560px',},
         // => @media (min-width: 1px and max-width: 359px) { ... }
         
-        'SM': {'min': '360px', 'max': '719px'},
+        'LaptopL': {'max': '1440px'},
         // => @media (min-width: 360px and max-width: 719px) { ... }
 
-        'SD': {'min': '720px', 'max': '1279px'},
+        'Laptop': {'max': '1024px'},
         // => @media (min-width: 720px and max-width: 1279px) { ... }
   
-        'HD': {'min': '1280px', 'max': '1919px'},
+        'Tablet': {'max': '768px'},
         // => @media (min-width: 1280px and max-width: 1919px) { ... }
   
-        'FHD': {'min': '1920px', 'max': '2559px'},
+        'MobileL': {'max': '425px'},
         // => @media (min-width: 1920px and max-width: 2559px) { ... }
   
-        'QHD': {'min': '2560px', 'max': '3839px'},
+        'MobileM': {'max': '375px'},
         // => @media (min-width: 2560px and max-width: 3839px) { ... }
   
-        '4K': {'min': '3840px'},
+        'MobileS': {'max': '320px'},
         // => @media (min-width: 3840px) { ... }
       },
     },

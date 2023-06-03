@@ -30,19 +30,36 @@ export function ModalContainer ({isOpen,imgSrc,onClose,children,title,className}
 
   const [showModal,setShowModal] = useState(isOpen)
 
+    /* for overflow hidden when modal open */
   useEffect(() => {
     setShowModal(isOpen)
     if (isOpen) {
       document.body.style.overflow = 'hidden';
+      const navbar = document.querySelector('.navbar')
+      if (navbar) {
+        gsap.to(navbar, {
+          duration: 1,
+          y:-240,
+          onComplete: () => document.querySelector('.navbar').style.visibility = 'hidden'
+        });
+      }
     }
   },[isOpen])
 
   /* for onClose animation (applies for all modals) */
   function closeModal() {
     const modal = modalRef.current;
+    const navbar = document.querySelector('.navbar')
+    document.querySelector('.navbar').removeAttribute('style')
+      if (navbar) {
+        gsap.to(navbar, {
+          duration: 1,
+          y:0,
+        })
+      }
     gsap.to(modal, {
       duration: 0.5,
-      y:-1280,
+      y:-720,
       onComplete: () => onClose(),
     });
     document.body.removeAttribute('style');
@@ -71,11 +88,11 @@ return (
   {...modalBgHandler} ref={modalRef}>
     
      <motion.div className={`modal ${className}`}
-      style={modalStyle} animate={{y:[-1280,0]}} transition={{duration:0.25}} 
+      style={modalStyle} animate={{y:[-640,0]}}  transition={{duration:0.5}} 
     {...modalHandler}>
     <div className='modal-header'>
       <h1 className={`title modal-title`}>{title}</h1>
-      <motion.img src={'./menu/decorations/close.png'} className='close-button' onClick={() => closeModal()} 
+      <motion.img src={'./menu/close.png'} className='close-button' onClick={() => closeModal()} 
       whileHover={{ scale: 1.1}} whileTap={{scale:0.9}}/>
     </div>
       {children}
