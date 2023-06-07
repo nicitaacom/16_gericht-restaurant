@@ -1,0 +1,26 @@
+.pseudo-play::before {
+  content: '';
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-75%);
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border:2px solid #DCCA87 !important;
+  cursor: pointer;
+}
+
+.pseudo-play::after {
+  content: '';
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-20%,-110%);
+  border-top:20px solid transparent !important;
+  border-bottom:20px solid transparent !important;
+  border-right:25px solid transparent !important;
+  border-left:25px solid #ffffff !important;
+  cursor: pointer;
+}
+

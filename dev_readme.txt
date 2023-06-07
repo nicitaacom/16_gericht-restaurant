@@ -5,6 +5,7 @@ Tasks:https://www.notion.so/16_gericht-restaurant-03d656e9a4c44f10b9375a3c63bca7
 
 RULES:
 Don't write tailwind in components - use .css for it (in all other stuff you should use tailwind)
+(I wrote some sections with .css - leave it as is)
 
 
 
@@ -12,7 +13,17 @@ Don't write tailwind in components - use .css for it (in all other stuff you sho
 
 
 INFO:
+Project on:
 React + vite + TS + tailwind + css
+Adaptive+responsive design (adaptive=clam() - responsive=@media)
+
+1)
 use <Component className='flex flex-col'/> only with tailwind (className in props)
 use .css for something that hard wirte with tailwind (it's fine - but not use .css for everything cause
 it can be contains similar .class and it will be hard to coordinate across .css)
+
+2)
+check out index.css
+
+3)
+Framer motion in deps - that's why some css with transform property requires !important

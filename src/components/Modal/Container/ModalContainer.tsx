@@ -24,7 +24,6 @@ export function ModalContainer ({isOpen,imgSrc,onClose,children,title,className}
 
   const modalStyle = {
     backgroundImage:`url(${imgSrc})`,
-   
     }
     
 
@@ -35,6 +34,7 @@ export function ModalContainer ({isOpen,imgSrc,onClose,children,title,className}
     setShowModal(isOpen)
     if (isOpen) {
       document.body.style.overflow = 'hidden';
+      document.body.style.width = 'calc(100% - 17px)';
       const navbar = document.querySelector('.navbar')
       if (navbar) {
         gsap.to(navbar, {
@@ -91,7 +91,7 @@ return (
       style={modalStyle} animate={{y:[-640,0]}}  transition={{duration:0.5}} 
     {...modalHandler}>
     <div className='modal-header'>
-      <h1 className={`title modal-title`}>{title}</h1>
+      <h1 className={`modal-title`}>{title}</h1>
       <motion.img src={'./menu/close.png'} className='close-button' onClick={() => closeModal()} 
       whileHover={{ scale: 1.1}} whileTap={{scale:0.9}}/>
     </div>

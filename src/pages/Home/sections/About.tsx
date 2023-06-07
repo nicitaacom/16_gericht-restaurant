@@ -7,12 +7,9 @@ export function About () {
 
   const aboutModal = useAboutModal()
 
-  function openUrl(html:string) {
-    window.open(html, "_blank")
-   }
 return (
 <div className="about py-16 mb-32">
-<img className="bg-png" src='./bg.png'/>
+<img className="bg-png w-full h-full" src='./bg.webp'/>
 <img className="g-png" src="./G.png"/>
 
 <div className='about section-container'>

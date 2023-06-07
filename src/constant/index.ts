@@ -2,27 +2,27 @@ export const navLinks = [
   {
     id:'home',
     to:'/',
-    title:'Home'
+    label:'Home'
   },
   {
     id:'pages',
     to:'/pages',
-    title:'Pages'
+    label:'Pages'
   },
   {
     id:'contact us',
     to:'/contact',
-    title:'Contact Us'
+    label:'Contact Us'
   },
   {
     id:'blog',
     to:'/blog',
-    title:'Blog'
+    label:'Blog'
   },
   {
     id:'landing',
     to:'/landing',
-    title:'Landing'
+    label:'Landing'
   },
 ]
 
@@ -96,6 +96,54 @@ export const coctails = [
   }
 ]
 
+
+/* our laurels */
+export const laurels = [
+  {
+    title:'Bib Gourmond',
+    subTitle:'lorem ipsum dolor sit amet, consectetur.',
+    imgSrc:'/award01.png',
+  },
+  {
+    title:'Rising Star',
+    subTitle:'Rising Star lorema nakinul',
+    imgSrc:'/award02.png',
+  },
+  {
+    title:'AA Hospitality',
+    subTitle:'Find the best dishes in your life',
+    imgSrc:'/award03.png',
+  },
+  {
+    title:'Outstanding Chef',
+    subTitle:'We have the best chef in the world',
+    imgSrc:'/award05.png',
+  },
+]
+
+export const gallerey = [
+  {
+    imgSrc:'/gallery-01.webp'
+  },
+  {
+    imgSrc:'/gallery-02.webp'
+  },
+  {
+    imgSrc:'/gallery-03.webp'
+  },
+  {
+    imgSrc:'/gallery-04.webp'
+  },
+  {
+    imgSrc:'/gallery-05.webp'
+  },
+  {
+    imgSrc:'/gallery-06.webp'
+  },
+  {
+    imgSrc:'/gallery-07.webp'
+  },
+]
 
 
 /* full menu */

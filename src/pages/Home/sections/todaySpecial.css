@@ -15,10 +15,9 @@
 
 .todaySpecial-menu {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  gap:2rem;
+  justify-content: space-between;
   margin-bottom: 4rem;
+  max-width: 80%;
 }
 
 
@@ -27,13 +26,9 @@
 }
 
 .list-line {
-  display: flex;
-  justify-content: center;
-  stroke: #ffffff;
-  width: 6rem;
-  height: 2px;
-  min-width: 30%;
-  padding:0 1.5rem;
+  height: 1px;
+  width:22%;
+  background: #cccccc !important;
 }
 
 .list-price {
@@ -44,7 +39,11 @@
 .menu-list {
   box-sizing: border-box;
   position: relative;
-  min-width: 20%;
+  width: 30%;
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-start;
+  row-gap: 1rem;
 }
 
 .menu-list-img {
@@ -65,8 +64,7 @@
 
 .list-title {
   font-family: 'Cormorant Upright', serif;
-font-size: 2.5rem;
-margin-bottom: 1.5rem;
+  font-size: clamp(2rem,3vw,4rem)
 }
 
 @media (max-width:720px) {
@@ -83,8 +81,12 @@ margin-bottom: 1.5rem;
     min-width: 20%;
   }
   .todaySpecial-menu {
-    gap:4rem;
+    row-gap: 2rem;
     flex-flow: column;
+    align-items: center;
+  }
+  .menu-list {
+    width: 100%;
   }
 }
 
@@ -93,10 +95,6 @@ margin-bottom: 1.5rem;
     text-align: center;
   }
   .menu-list-img {
-    display: none;
-  }
-  .todaySpecial-menu {
-    padding: 0 4rem;
-    gap:4rem;
+    display: flex;
   }
 }

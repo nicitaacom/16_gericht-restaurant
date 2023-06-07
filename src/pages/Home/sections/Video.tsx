@@ -1,7 +1,9 @@
+import './video.css'
+
 export function Video () {
 return (
-<div>
-  <video className="h-[90vh] object-cover" src="/public/meal.mp4"></video>
+<div className="relative pseudo-play">
+  <img className="w-[100vw] object-cover" src="/video-preview.jpeg" alt="video-preview" />
 </div>
 )
 }

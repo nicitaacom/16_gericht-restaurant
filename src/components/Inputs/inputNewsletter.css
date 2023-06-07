@@ -1,0 +1,10 @@
+.input-newsletter {
+  width: 60%;
+  padding: 0.6rem 1rem;
+  border:1px solid #aaaaaa;
+}
+
+.input-newsletter::placeholder {
+  font-family: 'Cormorant Upright', serif;
+  color:#aaaaaa;
+}

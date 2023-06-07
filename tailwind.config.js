@@ -20,6 +20,7 @@ export default {
         // => @media (min-width: 1280px and max-width: 1919px) { ... }
   
         'MobileL': {'max': '425px'},
+        // very funny when queries for Tablet works and for it it requires +1px
         // => @media (min-width: 1920px and max-width: 2559px) { ... }
   
         'MobileM': {'max': '375px'},

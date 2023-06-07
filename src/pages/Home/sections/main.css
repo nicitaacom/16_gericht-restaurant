@@ -1,8 +1,10 @@
 .main {
   display: flex;
   flex-flow: column;
+  justify-content: space-around;
   gap:2rem;
-  /* mt-24 = 7rem + mb-16 = 4rem =7+4=11*/
+  margin-top: clamp(4rem,8vw,100rem);
+  /* mt=min7rem + mb-16 = 4rem =7+4=11*/
   min-height: calc(100vh - 11rem);
 }
 
@@ -16,33 +18,42 @@ display: flex;
 flex-flow: column;
 justify-content: center;
 align-items: flex-start;
+max-width: 50%;
 }
 
 .main-slider {
   position: relative;
-  max-width: 25vw;
+  width: clamp(5rem,30vw,75rem); 
+  height: clamp(5rem,30vw,75rem);
   display: flex;
-  justify-self: center;
+  align-self: center;
+  max-width: 50%;
+}
+.main-slider img {
+  width: clamp(5rem,30vw,75rem);
+  height: clamp(5rem,30vw,75rem);
 }
 .img-pseudo::before {
   content: '';
   position: absolute;
-  top:-1rem;
-  left:-1rem;
+  top:clamp(-10rem,1vw,-1rem);
+  left:clamp(-10rem,1vw,-1rem);
   width: 60%;
   height: 60%;
-  border-left: 1rem solid #DCCA87 !important;
-  border-top: 1rem solid #DCCA87 !important;
+  border-left: clamp(1rem,1vw,10rem) solid #DCCA87 !important;
+  border-top: clamp(1rem,1vw,10rem) solid #DCCA87 !important;
+  z-index: -1;
 }
 .img-pseudo::after {
   content: '';
   position: absolute;
-  bottom:-1rem;
-  right:-1rem;
+  bottom:clamp(-10rem,-1vw,-1rem);
+  right:clamp(-10rem,-1vw,-1rem);
   width: 60%;
   height: 60%;
-  border-bottom: 1rem solid #DCCA87 !important;
-  border-right: 1rem solid #DCCA87 !important;
+  border-bottom: clamp(1rem,1vw,10rem) solid #DCCA87 !important;
+  border-right: clamp(1rem,1vw,10rem) solid #DCCA87 !important;
+  z-index: -1;
 }
 
 .slider-dots {
@@ -51,13 +62,13 @@ align-items: flex-start;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap:0.5rem;
-  font-size: 1.2rem;
+  gap:clamp(0.5rem,0.5vw,1.5rem);
+  font-size: clamp(1rem,2vw,2rem);
 }
 
 .line-svg {
   stroke:#DCCA87;
-  width: 2rem;
+  width: clamp(2rem,2vw,10rem);
   height: 2px;
 }
 
@@ -66,15 +77,16 @@ align-items: flex-start;
   position:absolute;
   top:50%;
   translate:0 -50%;
-  left: 5%;
+  left: clamp(-2rem,3%,2rem);
   display: flex;
   gap: 2rem;
+  font-size: clamp(0.8rem,1vw,1.5rem);
 }
 
 .scroll {
   position: absolute;
-  right:9vh;
-  bottom:9vh;
+  right:4vw;
+  bottom:3vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -82,15 +94,68 @@ align-items: flex-start;
 }
 
 .line-scroll {
-  border-right: 1px solid #DCCA87;
-  width: 1px;
-  height: 3.5rem;
+  border-right:2px solid #DCCA87;
+  width:1px;
+  height: clamp(1rem,5vw,5rem);;
   border-image: linear-gradient(to bottom, #DCCA87, #0C0B08) 1 100%;
 }
 
+@media (max-width:768px) {
+  .main-slider,.tags,.scroll,.slider-dots {
+    display: none;
+  }
+  .main-content,.main-text {
+    max-width: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+}
 
-@media (max-width:2560px) {
-  .main {
+@media (min-width:1920px) {
+  .img-pseudo::before {
+    top:clamp(-10rem,1vw,-1.5rem);
+    left:clamp(-10rem,1vw,-1.5rem);
+    border-left: clamp(1.5rem,1vw,10rem) solid #DCCA87 !important;
+    border-top: clamp(1.5rem,1vw,10rem) solid #DCCA87 !important;
+  }
 
+  .img-pseudo::after {
+    bottom:clamp(-10rem,-1vw,-1.5rem);
+    right:clamp(-10rem,-1vw,-1.5rem);
+    border-bottom: clamp(1.5rem,1vw,10rem) solid #DCCA87 !important;
+    border-right: clamp(1.5rem,1vw,10rem) solid #DCCA87 !important;
+  }
+  .line-scroll {
+    border-right:3px solid #DCCA87;
+    width: 3px;
+  }
+  .line-svg {
+    height: 3px;
+  }
+}
+
+@media (min-width:2560px) {
+  .img-pseudo::before {
+    top:clamp(-10rem,1vw,-2.25rem);
+    left:clamp(-10rem,1vw,-2.25rem);
+    border-left: clamp(2.25rem,1vw,10rem) solid #DCCA87 !important;
+    border-top: clamp(2.25rem,1vw,10rem) solid #DCCA87 !important;
+  }
+
+  .img-pseudo::after {
+    bottom:clamp(-10rem,-1vw,-2.25rem);
+    right:clamp(-10rem,-1vw,-2.25rem);
+    border-bottom: clamp(2.25rem,1vw,10rem) solid #DCCA87 !important;
+    border-right: clamp(2.25rem,1vw,10rem) solid #DCCA87 !important;
+  }
+  .line-scroll {
+    border-right:4px solid #DCCA87;
+    width: 4px;
+  }
+  .line-svg {
+    height: 4px;
   }
 }

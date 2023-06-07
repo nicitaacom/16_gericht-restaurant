@@ -4,12 +4,10 @@
   justify-content: space-between;
   align-items: center;
   min-width:100%;
-  margin:3rem auto;
-  padding:1rem 0;
-  font-size: 2rem;
+  padding:clamp(0.75rem,1vw,100rem) clamp(1.5rem,1.5vw,100rem);
+  font-size: clamp(0.75rem,1.25vw,100rem);
   margin-bottom: auto;
-  z-index: 99;
-
+  
   -webkit-box-shadow: 7px 10px 50px 1px rgba(0,0,0,0.75);
   -moz-box-shadow: 7px 10px 50px 1px rgba(0,0,0,0.75);
   box-shadow: 7px 10px 50px 1px rgba(0,0,0,0.75);
@@ -31,7 +29,8 @@
 
   /* global 94%+ browsers support */
   background:linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.9) 50%, rgba(0, 0, 0, 0.7) 100%);
-
+  
+  z-index: 99;
 }
 
 .link {
@@ -40,7 +39,6 @@
 
 .navbar-logo {
   max-width: 12.5%;
-  margin-right: auto;
 }
 
 
@@ -55,7 +53,6 @@
   display: flex;
   justify-content: space-between;
   gap: 2vw;
-  margin-right: 14vw;
 }
 
 .li-item:hover {
@@ -96,7 +93,7 @@ cause they have some extentions like dark reader */
 
 
 .navbar-hamburger-menu {
-  position: absolute;
+  position: fixed;
   left: 0;
   right: 0;
   bottom:0;
@@ -105,10 +102,10 @@ cause they have some extentions like dark reader */
   display: flex;
   flex-flow: column;
   gap: 2rem;
-  font-size:1rem;
   justify-content: center;
   align-items: center;
   z-index: 100;
+  font-size:1.5rem;
 }
 
 .navbar-hamburger-menu_links-mobile {
@@ -156,94 +153,18 @@ gap: 1rem;
 
 /* for phones like this https://prnt.sc/_tfU5Zqal7cw in 4:3 view */
 @media (min-width:2560px) {
-  .navbar {
-    padding:4rem 6rem;
-    font-size: 2.75rem;
-  }
   .navbar-mobile-icon {
     display: none;
   }
 }
-
-/* 4K */
 @media (max-width:2560px) {
-  .navbar {
-    font-size: 2.5rem;
-    padding: 1.25rem 4rem;
-  }
   .navbar-mobile-icon {
     display: none;
   }
-  .navbar-links {
-    margin-right: 10%;
-  }
-}
-
-/* FHD */
-@media (max-width:1920px) {
-  .navbar-links {
-    margin-right: auto;
-  }
-  .navbar {
-    font-size: 1.6rem;
-  }
-  
-}
-
-/* ? */
-@media (max-width:1600px) {
-  .navbar {
-    margin:0rem;
-  }
-  .navbar {
-    font-size: 1rem;
-  }
-}
-
-
-/* Laptop L */
-@media (max-width:1440px) {
-  .navbar {
-    margin:0 2rem;
-  }
-}
-
-/* HD */
-@media (max-width:1280px) {
-  .navbar-logo {
-    margin-right: auto;
-  } 
-}
-
-/* Laptop */
-@media (max-width:1024px) {
-  .navbar {
-    font-size: 0.8rem;
-  }
-  .navbar-logo {
-    max-width: 15%;
-  }  
 }
 
 /* Tablet */
 @media (max-width:768px) {
-  .navbar {
-    font-size: 0.6rem;
-  }
-}
-
-/* SD */
-@media (max-width:720px) {
-  .navbar-links {
-    margin-right: 0;
-  }
-  .navbar-logo {
-    margin:0;
-  }
-}
-
-/* ? */
-@media (max-width:600px) {
   .navbar-auth {
     display: none;
   }
@@ -253,7 +174,6 @@ gap: 1rem;
   .navbar-logo {
     max-width: 17.5%;
   }
-  
 }
 
 /* Mobile L */
@@ -261,25 +181,15 @@ gap: 1rem;
   .navbar-logo {
     max-width: 25%;
   }
-  .navbar {
-    margin: 0 1rem;
-  }
+  .navbar-links {
+    display: none;
+   }
 }
 
 /* Mobile M */
 @media (max-width:375px) {
- .navbar-links {
-  display: none;
- }
- .navbar-mobile-icon {
-  width: 1.25rem;
-  height: 1.25rem;
- }
  .navbar-logo {
   max-width: 30%;
-}
-.navbar-hamburger-menu {
-  font-size: 1.2rem;
 }
 .navbar-hamburger-menu_close {
   top: 1.5rem;
@@ -289,19 +199,9 @@ gap: 1rem;
 }
 }
 
-/* SM */
-@media (max-width:360px) {
-  
-}
-
 /* Mobile S */
 @media (max-width:320px) {
   .navbar-logo {
     max-width: 40%;
   }
-}
-
-/* XS */
-@media (max-width:1px) {
-  
 }

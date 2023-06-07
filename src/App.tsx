@@ -3,7 +3,7 @@ import { Route, Routes } from "react-router-dom"
 /* components */
 import { Navbar, Footer, ModalMenu, ModalAbout } from './components/'
 /* sections */
-import { HomePage } from "./pages"
+import { Error404, HomePage } from "./pages"
 import { ModalAuth } from "./components/Modal/ModalAuth/ModalAuth"
 
 
@@ -16,6 +16,7 @@ function App() {
          <Routes>
            <Route path="/" element={<HomePage/>}/>
             {/* <Route path="/contact" element={<ContactPage/>}/> */}
+           <Route path="*" element={<Error404/>}/>
          </Routes>
       <Footer/>
       {/* MODALS */}

@@ -1,5 +1,5 @@
 import './main.css'
-import { useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import {Button} from '../../../components'
 import { gsap } from 'gsap'
 import useMenuModal from '../../../hooks/useMenuModal'
@@ -9,59 +9,67 @@ export function Main () {
   const menuModal = useMenuModal()
 
   const [slide,setSlide] = useState(1)
-  const sliderRef = useRef<HTMLImageElement>(null)
-  const slider = sliderRef.current
-  function changeSlide(slide:number) {
-    console.log('slder = ' + slider)
-    if (slider) {
-      gsap.to(slider, {
+  const sliderRef = useRef<HTMLDivElement>(null)
+
+  function changeSlide(newSlide:number) {
+
+    const slider = sliderRef.current
+    
+    if (!slider) return
+
+    const oldSlide = slider?.children[slide-1] as HTMLImageElement
+    const newSlideElement = slider?.children[newSlide-1] as HTMLImageElement
+
+      gsap.to(oldSlide, {
         duration: 1,
         opacity:0.0,
         onComplete:() => {
-      console.log('onComplete = ' + slider),
-          setSlide(slide),
-          gsap.to(slider, {
+          gsap.to(newSlideElement, {
             delay:0.25,
             duration: 1,
             opacity:1,
-            
           });
         }
       });
-    }
+      setSlide(newSlide)
   }
 
+  useEffect(() => {
+    changeSlide(1)
+  },[])
+  
+
 return (
-<div className="main section-container mb-16 mt-28">
-  <div className='main-content'>
-  <div className="main-text ml-4 mt-4">
-    <h6 className="preTitle leading-[1.6rem]">Chase the new Flavour</h6>
+<div className='main mb-16'>
+  <div className='main-content section-container'>
+  <div className="main-text">
+    <h6 className="preTitle">Chase the new Flavour</h6>
     <svg className='spoon-svg mb-1'>
     <use xlinkHref='./sprite.svg#spoon'/>
     </svg>
-    <h1 className="title-big mb-6 leading-[6rem] inline-block">The Key To Fine Dining</h1>
-    <p className="subTitle max-w-[80%] mb-6">Sit tellus lobortis sed senectus vivamus molestie. Condimentum volutpat morbi facilisis quam scelerisque sapien. Et, penatibus aliquam amet tellus </p>
+    <h1 className="title-big mb-6 MobileM:mb-4">The Key To Fine Dining</h1>
+    <p className="subTitle mb-6">Sit tellus lobortis sed senectus vivamus molestie. Condimentum volutpat morbi facilisis quam scelerisque sapien. Et, penatibus aliquam amet tellus </p>
     <Button label={'Explore Menu'} onClick={menuModal.onOpen}/>
   </div>
 
-  <div className="main-slider img-pseudo">
-    {slide == 1 && <img className='object-cover' src='./main-01.jpg' ref={sliderRef}/>}
-    {slide == 2 && <img className='object-cover' src='./main-02.jpeg' ref={sliderRef}/>}
-    {slide == 3 && <img className='object-cover' src='./main-03.jpg' ref={sliderRef}/>}
-    {slide == 4 && <img className='object-cover' src='./main-04.webp' ref={sliderRef}/>}
+  <div className="main-slider img-pseudo" ref={sliderRef}>
+    <img className={`object-cover opacity-0 absolute inset-0`} src='./main-01.jpg' />
+    <img className={`object-cover opacity-0 absolute inset-0`} src='./main-02.jpeg'/>
+    <img className={`object-cover opacity-0 absolute inset-0`} src='./main-03.jpg'/>
+    <img className={`object-cover opacity-0 absolute inset-0`} src='./main-04.webp'/>
   </div>
 
   </div>
   
   
   <div className='slider-dots'>
-    <button onClick={() => changeSlide(1)}>01</button> 
+    <button className='preTitle' onClick={() => changeSlide(1)}>01</button> 
    <svg className='line-svg mt-[0.4rem]'>
    <use xlinkHref='./sprite.svg#line'/>
    </svg>
-   <button onClick={() => changeSlide(2)}>02</button> 
-   <button onClick={() => changeSlide(3)}>03</button> 
-   <button onClick={() => changeSlide(4)}>04</button> 
+   <button className='preTitle' onClick={() => changeSlide(2)}>02</button> 
+   <button className='preTitle' onClick={() => changeSlide(3)}>03</button> 
+   <button className='preTitle' onClick={() => changeSlide(4)}>04</button> 
   </div>
 
   <div className='tags'>

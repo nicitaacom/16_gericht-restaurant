@@ -8,7 +8,7 @@ import {BsGoogle} from 'react-icons/bs'
 import { Button, ModalContainer } from "../..";
 import { SocialButton } from '../../Button/SocialButton';
 import useAuthModal from "../../../hooks/useAuthModal";
-import { Input } from '../../Input/Input';
+import { Input } from '../../Inputs/Input';
 
 import { useState } from "react";
 
@@ -26,7 +26,7 @@ title={`${variant == 'LOGIN' ? 'Login' : 'Register'}`}
     <Input label='Login' tooltip tooltipText='Email or Login' icon={BiUser}/>
     <Input label='Passowrd' tooltip tooltipText='Password' icon={BiLockOpenAlt}/>
     <Button className='w-full mx-auto rounded-lg text-xl'
-    title='Login' onClick={() => {/* BACKEND-Auth-with-credentials */}}/>
+    label='Login' onClick={() => {/* BACKEND-Auth-with-credentials */}}/>
     <div className='social-auth'>
     <SocialButton title='Continue with github' icon={AiFillGithub}
     onClick={() => {/* BACKEND-Social-auth-with-github-provider */}}/>

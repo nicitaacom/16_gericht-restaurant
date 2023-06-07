@@ -1,0 +1,76 @@
+import './photoGallery.css'
+
+import { useEffect, useRef } from "react";
+import { Button } from "../../../components";
+import { gallerey } from "../../../constant";
+import { motion } from 'framer-motion'
+
+export function PhotoGallerey () {
+
+  const shadow = {
+    boxShadow:`33px 3px 17px 10px rgba(0,0,0,0);`,
+    }
+
+  const sliderRef = useRef(null);
+
+  useEffect(() => {
+    const slider = sliderRef.current;
+    let isDown = false;
+    let startX;
+    let scrollLeft;
+
+    if (slider) {
+      slider.addEventListener("mousedown", (e) => {
+
+        isDown = true;
+        startX = e.pageX - slider.offsetLeft;
+        scrollLeft = slider.scrollLeft;
+      });
+
+      window.addEventListener("mouseup", () => {
+        isDown = false;
+      });
+
+      window.addEventListener("mousemove", (e) => {
+        if (!isDown) return;
+        e.preventDefault();
+
+        const x = e.pageX - slider.offsetLeft;
+        const speed = 1;
+        const walk = (x - startX) * speed;
+        slider.scrollLeft = scrollLeft - walk;
+      });
+    }
+  }, []);
+
+return (
+<div className="flex py-32 relative">
+  <img className='bg-png' src="/bg.webp" alt="bg-png" />
+  <div className="section-container px-16 flex flex-col justify-center items-start max-w-[30%]">
+  <h6 className="preTitle leading-[1.6rem]">Awards & Recognition</h6>
+      <svg className='spoon-svg'>
+      <use xlinkHref='./sprite.svg#spoon'/>
+      </svg>
+      <h1 className="title inline-block">Photo Gallery</h1>
+      <p className="subTitle mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae, assumenda?</p>
+      <Button label="View more" onClick={() => window.open('https://github.com/Nicitaa')}/>
+  </div>
+  <div className="flex gap-x-4 h-[60vh] max-w-[70%] overflow-hidden" ref={sliderRef}>
+    {gallerey.map(gallerey => (
+      <div className='relative h-[60vh] min-w-[15rem] overflow-hidden image-container'>
+       <svg className='w-6 h-6 absolute top-2 right-2 opacity-0 cursor-pointer scale-90 transition-all duration-500 z-10
+        gallery-svg' onClick={() => window.open('https://github.com/Nicitaa')}>
+       <use xlinkHref='./sprite.svg#instagram'/>
+       </svg>
+        <img className="object-cover h-[60vh] min-w-[15rem] w-full transition-all duration-500
+      hover:brightness-75 gallery-img"
+       src={gallerey.imgSrc} key={gallerey.imgSrc}/>
+      </div>
+    ))}
+    <motion.a className="inline-flex relative items-center mx-12 text-center font-bold cursor-pointer outline-0 z-0
+    gallery-shadow"
+    whileHover={{scale:1.05}} whileTap={{ scale: 0.95 }} onClick={() => window.open('https://github.com/Nicitaa')}>View More...</motion.a>
+  </div>
+</div>
+)
+}

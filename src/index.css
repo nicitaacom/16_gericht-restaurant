@@ -1,21 +1,38 @@
+/* default settings */
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Upright:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Upright&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Upright:wght@700&display=swap');
+@import url('https://fonts.cdnfonts.com/css/proxima-nova-2');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 
+/* 3 main colors */
+
+/* 60% #202020 */
+/* 30% #undefined */
+/* 10% #d70c0c */
+
+:root {
+  --primary-bg:#141311;
+    /* --secondary-bg: */
+  --cta:#DCCA87;
+  --preTitle:#ffffff;
+  --title:#DCCA87;
+  --subTitle:#AAAAAA;
+}
+
 body {
+  font-family: 'Open Sans', sans-serif;
   color:#ffffff;
   list-style: none;
   min-height: 100vh;
-  min-height: 100dvh;
   height: -webkit-fill-available;
-  font-family: 'Open Sans', sans-serif;
+  background-color: #141311;
 }
 
 #root {
@@ -28,6 +45,8 @@ body {
 html {
   height:-webkit-fill-available;
   min-height: 100vh;
+  /* to rewrite darkreader styles when modal open */
+  background-color: #141311 !important;
 }
 
 /* something that impact on hover - start */
@@ -46,44 +65,74 @@ a {
 }
 /* something that impact on hover - end */
 
+
+
+
+
+
+
+
+
+
+
+
+
+/* use it for https://prnt.sc/Ts8rcrdOetEK */
+
 .preTitle {
   font-family: 'Cormorant Upright', serif;
   font-weight: 700;
-  font-size: 1.2rem;
+  font-size: clamp(1.2rem,1.5vw,4rem);
 }
 
 .spoon-svg {
-  width: 2rem;
-  height: 1rem;
+  width: clamp(2rem,3vw,11rem);
+  height: clamp(1rem,1vw,5rem)
 }
 
 .title-big {
   font-family: 'Cormorant Upright', serif;
   font-weight: 700;
   color:#DCCA87;
-  font-size: 5rem;
+  line-height: clamp(3rem,6vw,10rem);
+  font-size: clamp(3.5rem,5vw,8.5rem);
 }
 
 .title {
   font-family: 'Cormorant Upright', serif;
   color:#DCCA87;
-  font-size: 3rem;
   font-weight: 600;
+  font-size: clamp(1.5rem,3vw,6rem);
 }
 
 .title-small {
   font-family: 'Cormorant Upright', serif;
   color:#DCCA87;
-  font-size: 1.2rem;
+  font-size: clamp(1.25rem,1.75vw,3rem);
 }
 
 .subTitle {
   color:#AAAAAA;
-  font-size: 0.8rem;
-  line-height: 1.4rem;
+  line-height: clamp(1rem,2vw,4rem);
+  font-size: clamp(1rem,1.5vw,3.5rem);
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .section-container {
+position: relative;
 z-index: 1;
 max-width: 70%;
 margin-right:  auto;
@@ -99,19 +148,40 @@ margin-left:  auto;
   right:0;
 }
 
-.modal-bg {
-  background-color: rgba(0, 0, 0, 0.4);
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 9;
-}
-
 .close-button {
   cursor: pointer;
-  width: 2rem;
-  height: 2rem;
+  width:clamp(1rem,2.25vw,5rem);
+  height: clamp(1rem,2.25vw,5rem);
   filter: invert(98%) sepia(5%) saturate(4054%) hue-rotate(334deg) brightness(93%) contrast(83%);
 }
+
+
+
+
+
+
+
+/* ===== Scrollbar ===== */
+  /* Firefox */
+  * {
+    scrollbar-width: none;
+    scrollbar-color: #272c8f #262978;
+  }
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 16px;
+    height: 0.2rem;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: #100f0e;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #1f1c18;
+    border-radius: 2px;
+    border: 1px solid rgba(220, 202, 135,0.4);
+    /* add some js here to change 2nd parameter when scrolling up/down */
+    box-shadow: 10px -20px 40px 10px rgba(220, 202, 135,0.25);
+  }

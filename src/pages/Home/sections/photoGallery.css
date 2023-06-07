@@ -1,0 +1,22 @@
+.gallery-shadow::after {
+  content: '';
+  position: absolute;
+  height: 100%;
+  left: -400%;
+  top:0;
+  bottom: 0;
+  box-shadow: 200px 5px 40px 40px rgba(10,9,7 ,0.75);
+}
+
+
+
+.image-container:hover .gallery-svg {
+  transform: scale(1);
+  opacity: 1;
+}
+
+
+.gallery-svg:hover ~ .gallery-img {
+  filter: brightness(75%) blur(3px);
+  transform:scale(1.025);
+}

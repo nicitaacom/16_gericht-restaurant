@@ -2,6 +2,7 @@
   font-family: 'Cormorant Upright', serif;
   font-weight: 700;
   color:#0C0B08;
-  padding:0.4rem 1.6rem;
+  font-size: clamp(1rem,1.5vw,5rem);
+  padding:clamp(0.4rem,0.75vw,0.6rem) clamp(1rem,0.75vw,2.4rem);
   background-color: #DCCA87
 }
