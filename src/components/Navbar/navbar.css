@@ -205,3 +205,11 @@ gap: 1rem;
     max-width: 40%;
   }
 }
+
+
+
+@media (max-height:360px) {
+  .navbar-hamburger-menu {
+    font-size: clamp(1.25rem,1.75vw,4.5rem);
+  }
+}

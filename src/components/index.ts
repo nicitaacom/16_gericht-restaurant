@@ -9,4 +9,7 @@ import {ModalContainer} from './Modal/Container/ModalContainer'
 import {ModalMenu} from './Modal/ModalMenu/ModalMenu'
 import {ModalAbout} from './Modal/ModalAbout/ModalAbout'
 
-export {Navbar,Footer,Button,ModalContainer,ModalMenu,ModalAbout,Input,InputNewsletter}
+import {Video} from './Video/Video'
+
+export {Navbar,Footer,Button,ModalContainer,ModalMenu,ModalAbout,Input,InputNewsletter,
+  Video}

@@ -12,7 +12,7 @@ export function Navbar () {
 
   
 return (
-<div className="navbar">
+<div className="navbar" id='navbar'>
     <img className='navbar-logo' src="/logo.png"/>
     <NavbarLinks/>
     <NavbarAuth/>

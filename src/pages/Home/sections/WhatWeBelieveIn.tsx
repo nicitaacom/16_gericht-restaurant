@@ -1,6 +1,6 @@
 export function WhatWeBelieveIn () {
 return (
-<div className="relative overflow-hidden py-64 bg-[url('/bg.webp')] 
+<div className="relative overflow-hidden py-64 bg-[url('/bg.webp')] bg-cover
 4K:py-48
 LaptopL:py-32
 Tablet:py-16">
@@ -18,12 +18,8 @@ Tablet:py-16">
       </svg>
       <h1 className="title mb-12 inline-block">What We Believe In</h1>
       <div className="relative">
-      <img className="max-w-[7.5%] absolute top-[-20px] inline-block float-left mr-2 
-      Tablet:left-[10px] Tablet:top-[-10px] Tablet:max-w-[5%]
-      MobileL:left-[40px]
-      MobileM:left-[20px]" src="/quote.png" alt="quotes.png"/>
+      <img className="max-w-[5%] inline-block float-left mr-4 LaptopL:mr-2" src="/quote.png" alt="quotes.png"/>
       <p className="subTitle mb-6 italic">
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quae harum quo, atque dolore esse nobis temporibus perferendis et, suscipit deleniti distinctio consequatur magnam nisi molestias doloremque earum quaerat dolor expedita tempore, hic ipsum possimus! Incidunt voluptatum error non praesentium eaque expedita vel cumque illum culpa ipsam, veritatis eius assumenda quia?
       </p>
       </div>

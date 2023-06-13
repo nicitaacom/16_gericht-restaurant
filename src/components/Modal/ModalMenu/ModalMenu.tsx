@@ -1,6 +1,6 @@
 import './modalMenu.css'
 import { menuLists } from '../../../constant'
-import { formatCurrency } from '../../../utilities/formatCurrency'
+import { formatCurrency } from '../../../utils/formatCurrency'
 import { ModalContainer } from '../..'
 import useMenuModal from '../../../hooks/useMenuModal'
 import { useRef } from 'react'

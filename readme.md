@@ -22,5 +22,5 @@ yarn
 ## Step 1.3 - run project
 
 ```
-yarn dev -- --port 8000
+yarn dev
 ```

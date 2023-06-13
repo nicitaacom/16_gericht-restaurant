@@ -33,6 +33,7 @@
 
 .list-price {
   min-width: 10%;
+  font-size: clamp(1rem,1.5vw,2.5rem);
 }
 
 
@@ -64,7 +65,7 @@
 
 .list-title {
   font-family: 'Cormorant Upright', serif;
-  font-size: clamp(2rem,3vw,4rem)
+  font-size: clamp(2rem,3vw,5rem)
 }
 
 @media (max-width:720px) {

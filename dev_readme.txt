@@ -5,7 +5,7 @@ Tasks:https://www.notion.so/16_gericht-restaurant-03d656e9a4c44f10b9375a3c63bca7
 
 RULES:
 Don't write tailwind in components - use .css for it (in all other stuff you should use tailwind)
-(I wrote some sections with .css - leave it as is)
+(I wrote some sections with .css - leave it as is or rewrite it with tailwind if you want)
 
 
 
@@ -15,7 +15,7 @@ Don't write tailwind in components - use .css for it (in all other stuff you sho
 INFO:
 Project on:
 React + vite + TS + tailwind + css
-Adaptive+responsive design (adaptive=clam() - responsive=@media)
+Adaptive+responsive design (adaptive=clamp() - responsive=@media)
 
 1)
 use <Component className='flex flex-col'/> only with tailwind (className in props)

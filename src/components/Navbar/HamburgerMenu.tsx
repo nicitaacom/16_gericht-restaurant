@@ -32,7 +32,7 @@ return (
   transition={{ type: "spring",duration:0.75}}>
      <ul className="navbar-hamburger-menu_links-mobile">
        {navLinks.map(navLink => (
-       <Link className='li-item' to={navLink.to} key={navLink.id}>{navLink.title}</Link>
+       <Link className='li-item' to={navLink.to} key={navLink.id}>{navLink.label}</Link>
       ))}
     </ul>
     <div className='navbar-hamburger-menu_auth-mobile'>

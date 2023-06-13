@@ -7,9 +7,9 @@ import { Error404, HomePage } from "./pages"
 import { ModalAuth } from "./components/Modal/ModalAuth/ModalAuth"
 
 
-
 function App() {
 
+  
   return (
     <>
       <Navbar/>

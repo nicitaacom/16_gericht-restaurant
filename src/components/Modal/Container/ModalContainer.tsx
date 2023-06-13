@@ -19,17 +19,13 @@ type ModalProps = {
 
 
 export function ModalContainer ({isOpen,imgSrc,onClose,children,title,className}:ModalProps) {
-
-  const modalRef = useRef(null);
-
-  const modalStyle = {
-    backgroundImage:`url(${imgSrc})`,
-    }
     
+  const modalRef = useRef(null);
+  const modalBgRef = useRef(null);
 
   const [showModal,setShowModal] = useState(isOpen)
 
-    /* for overflow hidden when modal open */
+    /* for disbling scroll and hiding navbar when modal open */
   useEffect(() => {
     setShowModal(isOpen)
     if (isOpen) {
@@ -46,11 +42,11 @@ export function ModalContainer ({isOpen,imgSrc,onClose,children,title,className}
     }
   },[isOpen])
 
-  /* for onClose animation (applies for all modals) */
+  /* for onClose animation and showing navbar (applies for all modals) */
   function closeModal() {
     const modal = modalRef.current;
     const navbar = document.querySelector('.navbar')
-    document.querySelector('.navbar').removeAttribute('style')
+    navbar.removeAttribute('style')
       if (navbar) {
         gsap.to(navbar, {
           duration: 1,
@@ -64,6 +60,17 @@ export function ModalContainer ({isOpen,imgSrc,onClose,children,title,className}
     });
     document.body.removeAttribute('style');
   }
+
+/* for background slow animation */
+  useEffect(() => {
+    const modalBg = modalBgRef.current
+    if (modalBg) {
+      gsap.to(modalBg, {
+        duration:0.5,
+        backgroundColor:'rgba(0,0,0,0.4)',
+      })
+    }
+  })
 
    /* for e.stopPropagation when mousedown on modal and mouseup on modalBg */
  const modalBgHandler = useSwipeable({
@@ -80,16 +87,22 @@ const modalHandler = useSwipeable({
   trackMouse: true
 })
 
+
+/* for custom bg */
+const modalStyle = {
+  backgroundImage:`url(${imgSrc})`,
+  }
+
 return (
 
  <>
   {showModal && 
   <div className="modal-bg" 
-  {...modalBgHandler} ref={modalRef}>
+  {...modalBgHandler} ref={modalBgRef}>
     
      <motion.div className={`modal ${className}`}
       style={modalStyle} animate={{y:[-640,0]}}  transition={{duration:0.5}} 
-    {...modalHandler}>
+    {...modalHandler} ref={modalRef}>
     <div className='modal-header'>
       <h1 className={`modal-title`}>{title}</h1>
       <motion.img src={'./menu/close.png'} className='close-button' onClick={() => closeModal()} 
