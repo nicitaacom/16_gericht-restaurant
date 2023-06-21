@@ -1,44 +1,44 @@
 import './photoGallery.css'
 
-import { useEffect, useRef } from "react";
-import { Button } from "../../../components";
-import { gallerey } from "../../../constant";
+import { useEffect, useRef } from "react"
+import { Button } from "../../../components"
+import { gallerey } from "../../../constant"
 import { motion } from 'framer-motion'
 
 export function PhotoGallerey () {
 
+  
+  /* slider */
   const sliderRef = useRef(null);
-
   useEffect(() => {
-    const slider = sliderRef.current;
-    let isDown = false;
-    let startX;
-    let scrollLeft;
+    const slider:any = sliderRef.current
+    let isDown = false
+    let startX:number
+    let scrollLeft:number
 
     if (slider) {
-      slider.addEventListener("mousedown", (e) => {
+      slider.addEventListener("mousedown", (e:any) => {
         isDown = true;
-        startX = e.pageX - slider.offsetLeft;
-        scrollLeft = slider.scrollLeft;
-      });
-      
+        startX = e.pageX - slider.offsetLeft
+        scrollLeft = slider.scrollLeft
+      })
       
 
       window.addEventListener("mouseup", () => {
-        isDown = false;
-      });
+        isDown = false
+      })
 
       window.addEventListener("mousemove", (e) => {
-        if (!isDown) return;
-        e.preventDefault();
+        if (!isDown) return
+        e.preventDefault()
 
-        const x = e.pageX - slider.offsetLeft;
-        const speed = 1;
-        const walk = (x - startX) * speed;
-        slider.scrollLeft = scrollLeft - walk;
-      });
+        const x = e.pageX - slider.offsetLeft
+        const speed = 1
+        const walk = (x - startX) * speed
+        slider.scrollLeft = scrollLeft - walk
+      })
     }
-  }, []);
+  }, [])
 
 return (
 <div className="flex py-32 relative bg-[url('/bg.webp')] bg-cover
@@ -61,7 +61,7 @@ MobileL:gap-y-8">
   LaptopL:gap-x-4
   Tablet:max-w-[90%] Tablet:ml-[10%]" ref={sliderRef}>
     {gallerey.map(gallerey => (
-      <div className='relative overflow-hidden image-container'>
+      <div className='relative overflow-hidden image-container' key={gallerey.imgSrc}>
        <svg className='absolute opacity-0 cursor-pointer scale-90 transition-all duration-500 z-10
         gallery-svg
         ' onClick={() => window.open('https://github.com/Nicitaa')}>

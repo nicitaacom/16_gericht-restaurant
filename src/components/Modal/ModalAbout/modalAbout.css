@@ -1,0 +1,12 @@
+.modal-about {
+  /* 768-3840px - 50% */
+  width: clamp(50%, 50rem + 0vw, 50%);
+  /* 320-2160px - 80vh */
+  height: clamp(16rem, 0rem + 80vh, 108rem);
+}
+
+@media (max-width:1024px) {
+  .modal-about {
+    width: clamp(75%, 75rem + 0vw, 75%);
+  }
+}

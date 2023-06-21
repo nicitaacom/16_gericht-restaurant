@@ -4,7 +4,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Upright:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Upright&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Upright:wght@700&display=swap');
-@import url('https://fonts.cdnfonts.com/css/proxima-nova-2');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
+
 
 @tailwind base;
 @tailwind components;
@@ -18,12 +19,49 @@
 /* 10% #d70c0c */
 
 :root {
-  --primary-bg:#141311;
-    /* --secondary-bg: */
+  /* bg */
+  --bg-primary:#141311;
+  /* bg-secondary - I use '/bg-secondary-reverse.jpg for it' */
   --cta:#DCCA87;
+  --cta-light:#dcca87dd;
+  --cta-dark:#dcca87bb;
+
+  
+  /* text - 320-3840px */
   --preTitle:#ffffff;
   --title:#DCCA87;
   --subTitle:#AAAAAA;
+  
+  --font-primary:'Cormorant Upright', serif;
+  --font-secondary:'Open Sans', serif;
+
+  --text-xs:clamp(1rem, 0.7727rem + 1.1364vw, 3.5rem);
+  --text-small:clamp(1.25rem,1.75vw,4.5rem);
+  --text-medium:clamp(1.5rem, 1.2727rem + 1.1364vw, 4rem);
+  --text-big:clamp(3.5rem,5vw,8.5rem);
+
+  /* padding - 320-3840px*/
+  --padding-xs:clamp(0.1rem, 0.0409rem + 0.2955vw, 0.75rem) clamp(0.25rem, -0.1875rem + 0.9115vw, 2rem);
+  --padding-small:clamp(0.5rem, 0.3133rem + 0.7028vw, 2rem) clamp(0.5rem, 0.1889rem + 1.1713vw, 3rem);
+  --padding-medium:clamp(0.75rem, 0.5455rem + 1.0227vw, 3rem) clamp(0.9rem, 0.6864rem + 1.0682vw, 3.25rem);
+  --padding-big:clamp(1rem, 0.3636rem + 3.1818vw, 8rem) clamp(1rem, 0.3636rem + 3.1818vw, 8rem);
+  
+  --padding-x-xs:0 clamp(0.25rem, -0.1875rem + 0.9115vw, 2rem);
+  --padding-x-small:0 clamp(0.5rem, 0.1889rem + 1.1713vw, 3rem);
+  --padding-x-medium:0 clamp(0.9rem, 0.6864rem + 1.0682vw, 3.25rem);
+  --padding-x-big:0 clamp(1rem, 0.3636rem + 3.1818vw, 8rem);
+  
+  /* border-radius - 320-3840px */
+  --border-xs:clamp(0.5rem, 0.4378rem + 0.2343vw, 1rem);
+  --border-samll:clamp(0.5rem, 0.4378rem + 0.2343vw, 1rem);
+  --border-medium:clamp(0.5rem, 0.4378rem + 0.2343vw, 1rem);
+  --border-big:clamp(0.5rem, 0.4378rem + 0.2343vw, 1rem);
+
+  /* border-radius - 320-3840px */
+  --gap-xs:clamp(0.75rem, 0.6364rem + 0.5682vw, 2rem);
+  --gap-samll:clamp(1rem, 0.8636rem + 0.6818vw, 2.5rem);
+  --gap-medium:clamp(1.5rem, 1.3636rem + 0.6818vw, 3rem);
+  --gap-big:clamp(2rem, 1.8182rem + 0.9091vw, 4rem);
 }
 
 body {
@@ -82,7 +120,7 @@ a {
 .preTitle {
   font-family: 'Cormorant Upright', serif;
   font-weight: 700;
-  font-size: clamp(1.2rem,1.5vw,4rem);
+  font-size: var(--text-xs);
 }
 
 .spoon-svg {
@@ -95,20 +133,20 @@ a {
   font-weight: 700;
   color:#DCCA87;
   line-height: clamp(3rem,6vw,10rem);
-  font-size: clamp(3.5rem,5vw,8.5rem);
+  font-size: var(--text-big);
 }
 
 .title {
   font-family: 'Cormorant Upright', serif;
   color:#DCCA87;
   font-weight: 600;
-  font-size: clamp(1.5rem,3vw,6rem);
+  font-size: var(--text-medium);
 }
 
 .title-small {
   font-family: 'Cormorant Upright', serif;
   color:#DCCA87;
-  font-size: clamp(1.25rem,1.75vw,4.5rem);
+  font-size: var(--text-small);
 }
 
 .subTitle {
@@ -119,6 +157,21 @@ a {
 
 
 
+.cta-link-primary {
+  color:var(--cta);
+  cursor: pointer;
+}
+.cta-link-primary:hover {
+  color:var(--cta-dark);
+}
+
+.cta-link-secondary {
+  color:var(--preTitle);
+  cursor: pointer;
+}
+.cta-link-secondary:hover {
+  color:var(--subTitle);
+}
 
 
 
@@ -127,9 +180,10 @@ a {
 
 
 
-
-
-
+.slider {
+  display: flex;
+  overflow: hidden;
+}
 
 .section-container {
 position: relative;
@@ -150,10 +204,17 @@ margin-left:  auto;
 
 .close-button {
   cursor: pointer;
-  width:clamp(1rem,2.25vw,5rem);
-  height: clamp(1rem,2.25vw,5rem);
+  width:clamp(1rem,2vw,1.75rem);
+  height: clamp(1rem,2vw,1.75rem);
   filter: invert(98%) sepia(5%) saturate(4054%) hue-rotate(334deg) brightness(93%) contrast(83%);
+
+  position: absolute;
+  right:clamp(1rem,2.25vw,8rem);
+  top:50%;
+  transform: translate(0%,-50%) !important;
 }
+
+
 
 
 

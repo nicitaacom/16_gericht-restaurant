@@ -5,15 +5,15 @@
   right: 0;
   bottom: 0;
   left: 0;
-  z-index: 9;
+  z-index: 99;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .modal {
   position: relative;
-  width: 90%;
-  height: 80%;
-  top: 10%; /*100-80=20/2=10=center*/
-  margin: 0 auto;
+
   z-index: 100;
   
   border:2px solid #424242 !important;
@@ -26,12 +26,16 @@
   
   -ms-overflow-style: none;
   scrollbar-width: none;
-  overflow:hidden;
 }
 
 .modal::-webkit-scrollbar {
   display: none;
 }
+
+
+
+
+
 
 .modal-header {
   position: relative;
@@ -43,31 +47,41 @@
 
   -webkit-box-shadow: 0px 14px 12px -3px rgba(32,32,32,0.625);
   -moz-box-shadow: 0px 14px 12px -3px rgba(32,32,32,0.625);
-  box-shadow: 0px 14px 12px -3px rgba(32,32,32,0.625);
+  box-shadow: 0px 14px 12px -3px rgba(16,16,16,0.75);
   
   z-index: 9;
 }
+
+
+
+
+
+.modal-body {
+  display: flex;
+  flex-flow: column;
+  row-gap:2rem;
+  height: 77.5%;
+}
+.modal-body::-webkit-scrollbar { 
+  display: none; 
+}
+
+
+
+
+
 
 .modal-title {
   font-family: 'Cormorant Upright', serif;
   color:#DCCA87;
   font-weight: 600;
-  font-size: clamp(1.5rem,4vw,12rem);
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
+  font-size: var(--text-medium);
 }
 
-.close-button {
-position: absolute;
-right:clamp(1rem,2.25vw,8rem);
-top:50%;
-transform: translate(0%,-50%) !important;
-}
+
 
 .blur {
   backdrop-filter:blur(20px);
   /* for disable tailwind styles */
   filter:blur(0px) !important;
 }
-

@@ -18,12 +18,15 @@ React + vite + TS + tailwind + css
 Adaptive+responsive design (adaptive=clamp() - responsive=@media)
 
 1)
-use <Component className='flex flex-col'/> only with tailwind (className in props)
+Use <Component className='flex flex-col'/> only with tailwind (className in props)
 use .css for something that hard wirte with tailwind (it's fine - but not use .css for everything cause
-it can be contains similar .class and it will be hard to coordinate across .css)
+it can be contains similar .class and it makes it hard to coordinate across .css)
 
 2)
 check out index.css
 
 3)
 Framer motion in deps - that's why some css with transform property requires !important
+
+4)
+If you want apply border try do it with !important if it doesn't work without it

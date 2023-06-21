@@ -8,17 +8,24 @@ import {gsap} from 'gsap'
 
 
 type ModalProps = {
+  header:React.ReactElement
+  body:React.ReactElement
+  footer?:React.ReactElement
   isOpen?:boolean
   imgSrc?:string
   onClose:() => void
-  children:React.ReactNode
-  title:string
   className?:string
+  headerClassName?:string
+  bodyClassName?:string
+  footerClassName?:string
 }
 
 
 
-export function ModalContainer ({isOpen,imgSrc,onClose,children,title,className}:ModalProps) {
+export function ModalContainer ({header,body,footer,
+  isOpen,onClose,
+  imgSrc,
+  className,headerClassName,bodyClassName,footerClassName}:ModalProps) {
     
   const modalRef = useRef(null);
   const modalBgRef = useRef(null);
@@ -28,15 +35,21 @@ export function ModalContainer ({isOpen,imgSrc,onClose,children,title,className}
     /* for disbling scroll and hiding navbar when modal open */
   useEffect(() => {
     setShowModal(isOpen)
+    
     if (isOpen) {
       document.body.style.overflow = 'hidden';
       document.body.style.width = 'calc(100% - 17px)';
-      const navbar = document.querySelector('.navbar')
+      const navbar = document.getElementById('navbar')
+      function hideNavbar() {
+        if (navbar) {
+          navbar.style.visibility = 'hidden'
+        }
+      }
       if (navbar) {
         gsap.to(navbar, {
           duration: 1,
           y:-240,
-          onComplete: () => document.querySelector('.navbar').style.visibility = 'hidden'
+          onComplete: () => hideNavbar()
         });
       }
     }
@@ -45,12 +58,18 @@ export function ModalContainer ({isOpen,imgSrc,onClose,children,title,className}
   /* for onClose animation and showing navbar (applies for all modals) */
   function closeModal() {
     const modal = modalRef.current;
-    const navbar = document.querySelector('.navbar')
-    navbar.removeAttribute('style')
+    const navbar = document.getElementById('navbar')
+    function showNavbar() {
       if (navbar) {
+        navbar.style.visibility = 'visible'
+      }
+    }
+      if (navbar) {
+        showNavbar()
         gsap.to(navbar, {
           duration: 1,
           y:0,
+          onComplete:() => navbar.removeAttribute('style')
         })
       }
     gsap.to(modal, {
@@ -72,7 +91,7 @@ export function ModalContainer ({isOpen,imgSrc,onClose,children,title,className}
     }
   })
 
-   /* for e.stopPropagation when mousedown on modal and mouseup on modalBg */
+  /* for e.stopPropagation when mousedown on modal and mouseup on modalBg */
  const modalBgHandler = useSwipeable({
   onTouchStartOrOnMouseDown: () => {
     closeModal()
@@ -87,6 +106,14 @@ const modalHandler = useSwipeable({
   trackMouse: true
 })
 
+/* for closing on esc */
+document.onkeydown = function (evt) {
+  if (evt.keyCode == 27) {
+      closeModal();
+  }
+};
+
+
 
 /* for custom bg */
 const modalStyle = {
@@ -97,18 +124,31 @@ return (
 
  <>
   {showModal && 
+  
   <div className="modal-bg" 
   {...modalBgHandler} ref={modalBgRef}>
     
      <motion.div className={`modal ${className}`}
       style={modalStyle} animate={{y:[-640,0]}}  transition={{duration:0.5}} 
     {...modalHandler} ref={modalRef}>
-    <div className='modal-header'>
-      <h1 className={`modal-title`}>{title}</h1>
-      <motion.img src={'./menu/close.png'} className='close-button' onClick={() => closeModal()} 
+
+
+     <div className={`modal-header ${headerClassName}`}>
+     <motion.img src={'./menu/close.png'} className='close-button' onClick={() => closeModal()}
       whileHover={{ scale: 1.1}} whileTap={{scale:0.9}}/>
-    </div>
-      {children}
+      {header}
+     </div>
+
+     <div className={`modal-body ${bodyClassName}`}>
+      {body}
+     </div>
+    
+    {footer &&
+     <div className={`modal-footer ${footerClassName}`}>
+      {footer}
+      </div>}
+
+
     </motion.div>
 
   </div>}

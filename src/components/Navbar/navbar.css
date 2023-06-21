@@ -55,10 +55,6 @@
   gap: 2vw;
 }
 
-.li-item:hover {
-  color:#404040;
-}
-
 .navbar-auth {
 font-weight: 600;
 display: flex;

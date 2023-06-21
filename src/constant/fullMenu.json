@@ -1,0 +1,234 @@
+[
+  {
+    "id": "7421eae4-cf2a-4437-8af6-d354bfcf0595",
+    "title": "Main dishes",
+    "items": [
+      {
+        "id": "a8414f0c-1413-4d11-a657-64c3fccf3a77",
+        "title": "Burger",
+        "subTitle": [
+          "Beef meet",
+          "Burger sause",
+          "cheese",
+          "salat",
+          "tomato",
+          "pickled cucumber"
+        ],
+        "price": 20.99,
+        "imgUrl": "./menu/main/burger.webp"
+      },
+      {
+        "id": "fe39504a-5ae4-40ce-9c44-a4d3310644fe",
+        "title": "`Roast Beef`",
+        "subTitle": [
+          "Rare",
+          "Medium Rare",
+          "Medium",
+          "Medium Well",
+          "Well",
+          "Well done"
+        ],
+        "price": 49.99,
+        "imgUrl": "./menu/main/roast-beef.webp"
+      },
+      {
+        "id": "6e893741-bc6c-432c-a753-a18a8060c651",
+        "title": "Naruto pasta",
+        "subTitle": [
+          "noodles",
+          "2 Eggs",
+          "Meat",
+          "Green Onion",
+          "smth"
+        ],
+        "price": 15.49,
+        "imgUrl": "./menu/main/naruto-pasta.webp"
+      },
+      {
+        "id": "12b53b97-fc41-4250-a28d-2878008bd815",
+        "title": "Pizza",
+        "subTitle": [
+          "Pizza sause",
+          "Chicken meet",
+          "Cherry Tomatos",
+          "Cheese"
+        ],
+        "price": 27.7,
+        "imgUrl": "./menu/main/pizza.webp"
+      },
+      {
+        "id": "37c732e7-9009-410b-80ec-77c347ac7bd3",
+        "title": "Meet with Fries",
+        "subTitle": [
+          "Sauce",
+          "Chicken Meet Rare",
+          "Fries",
+          "Green"
+        ],
+        "price": 24.4,
+        "imgUrl": "./menu/main/beef-with-fries.webp"
+      },
+      {
+        "id": "736710da-a8a3-4f9d-98ae-77da66e5d96f",
+        "title": "Cheese Soup",
+        "subTitle": [
+          "Melted Cheese",
+          "Potato",
+          "Carrot",
+          "Green"
+        ],
+        "price": 18.18,
+        "imgUrl": "./menu/main/cheese-soup.webp"
+      }
+    ]
+  },
+  {
+    "id": "c06a32bc-7929-462e-83e2-d7e487ff0fb0",
+    "title": "Deserts",
+    "items": [
+      {
+        "id": "301f1c7f-e079-4d9d-9f45-58c4fed7483e",
+        "title": "Pancakes",
+        "subTitle": [
+          "smth1",
+          "smth2",
+          "honig"
+        ],
+        "price": 8.88,
+        "imgUrl": "./menu/deserts/pancakes.webp"
+      },
+      {
+        "id": "ec45f5dc-5233-419a-ad1d-1f059c8ce058",
+        "title": "`Banana cheesecake`",
+        "subTitle": [
+          "Milk",
+          "Bananas",
+          "Chokolate"
+        ],
+        "price": 45.99,
+        "imgUrl": "./menu/deserts/banana-cheesecake.webp"
+      },
+      {
+        "id": "4c052b1a-4a16-4cec-91f0-946d911987e9",
+        "title": "Fruits salat",
+        "subTitle": [
+          "Strawberry",
+          "Peach",
+          "Plum",
+          "Bananas",
+          "Mandarin"
+        ],
+        "price": 12.19,
+        "imgUrl": "./menu/deserts/fruits-salat.webp"
+      },
+      {
+        "id": "e11c8cfb-b324-4abd-ba2c-5dd1d6f26d33",
+        "title": "Tiramisu",
+        "subTitle": [
+          "Egg",
+          "Sugar",
+          "Coffee",
+          "Coca powder"
+        ],
+        "price": 27.77,
+        "imgUrl": "./menu/deserts/tiramisu.webp"
+      },
+      {
+        "id": "1529fc8f-7e30-466e-83a9-5fd1791d0f25",
+        "title": "Ice cream",
+        "subTitle": [
+          "Orange",
+          "Blue",
+          "Yellow",
+          "White",
+          "Black",
+          "Fruits on your choise",
+          "Sweet sause on your choise"
+        ],
+        "price": 24.99,
+        "imgUrl": "./menu/deserts/ice-cream.webp"
+      }
+    ]
+  },
+  {
+    "id": "95e1af4e-72e1-4c28-9194-3c2850cfb264",
+    "title": "Drinks",
+    "items": [
+      {
+        "id": "29997311-b247-4940-83f3-488a136f1ebe",
+        "title": "Water",
+        "subTitle": [
+          "Cold",
+          "Normal",
+          "Hot",
+          "Ice",
+          "NoIce",
+          "Spirkles",
+          "NoSpirkles"
+        ],
+        "price": 3,
+        "imgUrl": "./menu/drinks/water.webp"
+      },
+      {
+        "id": "f0e20028-9108-4926-96ba-b0464a558157",
+        "title": "`Pepsi`",
+        "subTitle": [
+          "Cold",
+          "Normal",
+          "Hot",
+          "Ice",
+          "NoIce",
+          "Spirkles",
+          "NoSpirkles"
+        ],
+        "price": 6,
+        "imgUrl": "./menu/drinks/pepsi.webp"
+      },
+      {
+        "id": "e6f1cd13-b7db-4263-a4a8-f616bd4d8bbb",
+        "title": "Mirinda",
+        "subTitle": [
+          "Cold",
+          "Normal",
+          "Hot",
+          "Ice",
+          "NoIce",
+          "Spirkles",
+          "NoSpirkles"
+        ],
+        "price": 6,
+        "imgUrl": "./menu/drinks/mirinda.webp"
+      },
+      {
+        "id": "88687d1d-6f3b-4191-b1d2-c95ed8e73c76",
+        "title": "7up",
+        "subTitle": [
+          "Cold",
+          "Normal",
+          "Hot",
+          "Ice",
+          "NoIce",
+          "Spirkles",
+          "NoSpirkles"
+        ],
+        "price": 7,
+        "imgUrl": "./menu/drinks/7up.webp"
+      },
+      {
+        "id": "6efd27e6-5144-4d30-bd96-41daa5bb2ab9",
+        "title": "Coffee",
+        "subTitle": [
+          "Cold",
+          "Normal",
+          "Hot",
+          "Ice",
+          "NoIce",
+          "Spirkles",
+          "NoSpirkles"
+        ],
+        "price": 2.5,
+        "imgUrl": "./menu/drinks/coffee.webp"
+      }
+    ]
+  }
+]

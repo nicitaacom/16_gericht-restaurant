@@ -6,8 +6,11 @@ import { motion } from 'framer-motion'
 
 import { navLinks } from "../../constant";
 import useHamburgerMenu from '../../hooks/useHamburgerMenu';
+import useAuthModal from '../../hooks/useAuthModal';
 
 export function HamburgerMenu () {
+
+  const authModal = useAuthModal()
 
  const hamburgerMenu = useHamburgerMenu()
 
@@ -23,7 +26,11 @@ export function HamburgerMenu () {
       y:-1920,
       onComplete: () => hamburgerMenu.onClose(),
     });
-    document.body.removeAttribute('style');
+    document.body.removeAttribute('style')
+  }
+  function openAuthModal() {
+    closeMobileLinks()
+    authModal.onOpen()
   }
 
 return (
@@ -32,17 +39,17 @@ return (
   transition={{ type: "spring",duration:0.75}}>
      <ul className="navbar-hamburger-menu_links-mobile">
        {navLinks.map(navLink => (
-       <Link className='li-item' to={navLink.to} key={navLink.id}>{navLink.label}</Link>
+       <Link className='cta-link-secondary' to={navLink.to} key={navLink.id}>{navLink.label}</Link>
       ))}
     </ul>
     <div className='navbar-hamburger-menu_auth-mobile'>
-      <span><a onClick={() => {/* modal auth */}}>Log In / Registration</a></span>
+      <span><a className='cta-link-secondary' onClick={() => openAuthModal()}>Log In / Registration</a></span>
     <div className='line'/>
-      <span><a onClick={() => {/* modal book a table */}}>Book Table</a></span>
+      <span><a className='cta-link-secondary' onClick={() => {/* modal book a table */}}>Book Table</a></span>
     </div>
     <svg className='navbar-hamburger-menu_close'
     onClick={() => closeMobileLinks()}>
-        <use xlinkHref='./sprite.svg#close'/>
+      <use xlinkHref='./sprite.svg#close'/>
     </svg>
   </motion.div>
 

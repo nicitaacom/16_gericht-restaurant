@@ -1,6 +1,5 @@
 /* Input */
 .input {
-  margin-bottom: 10px;
   position:relative;
 }
 .input input {
@@ -51,6 +50,7 @@
   width: auto;
   height:auto;
   padding: 5px 10px;
+  color:var(--preTitle);
   z-index: 99;
 }
 .tooltiptext {
@@ -60,7 +60,7 @@
   left:50%;
   transform:translate(-50%,-110%);
   font-size: 14px;
-  background-color: #DCCA87;
+  background:url('/bg.webp');
   text-align: center;
   border-radius: 6px;
   z-index: 99;

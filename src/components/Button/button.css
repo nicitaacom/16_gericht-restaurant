@@ -1,5 +1,5 @@
 .button {
-  font-family: 'Cormorant Upright', serif;
+  font-family:var(--font-primary);
   font-weight: 700;
   color:#0C0B08;
   font-size: clamp(1rem,1.5vw,5rem);
