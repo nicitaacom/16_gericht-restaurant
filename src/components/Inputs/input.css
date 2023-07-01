@@ -40,28 +40,3 @@
   right: 12px;
   font-size: 20px;
 }
-
-
-
-/* Tooltip */
-.tooltip:hover .tooltiptext {
-  visibility: visible;
-  white-space: nowrap;
-  width: auto;
-  height:auto;
-  padding: 5px 10px;
-  color:var(--preTitle);
-  z-index: 99;
-}
-.tooltiptext {
-  visibility: hidden;
-  position: absolute;
-  top:0;
-  left:50%;
-  transform:translate(-50%,-110%);
-  font-size: 14px;
-  background:url('/bg.webp');
-  text-align: center;
-  border-radius: 6px;
-  z-index: 99;
-}

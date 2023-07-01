@@ -1,0 +1,16 @@
+.table-button {
+  position: absolute;
+  display: block;
+  border:1px solid var(--cta) !important;
+  transition: all 500ms;
+}
+
+.table-button:hover {
+  cursor: pointer;
+  background: var(--cta-dark);
+}
+
+.table-button-booked {
+  cursor: pointer;
+  background: var(--cta-light);
+}

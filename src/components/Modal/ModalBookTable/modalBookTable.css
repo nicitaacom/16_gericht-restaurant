@@ -1,0 +1,21 @@
+.modal-book-table {}
+
+.modal-book-table-header {
+  display: flex;
+  justify-content: space-between;
+  height: 15vh;
+  padding: var(--padding-x-medium);
+  padding-right: 6rem;
+}
+
+.book-table-header-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--gap-small);
+  width: 60%;
+}
+
+.button-book-table {
+  padding: var(--padding-xs)
+}

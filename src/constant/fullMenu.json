@@ -19,7 +19,7 @@
       },
       {
         "id": "fe39504a-5ae4-40ce-9c44-a4d3310644fe",
-        "title": "`Roast Beef`",
+        "title": "Roast Beef`",
         "subTitle": [
           "Rare",
           "Medium Rare",
@@ -34,49 +34,28 @@
       {
         "id": "6e893741-bc6c-432c-a753-a18a8060c651",
         "title": "Naruto pasta",
-        "subTitle": [
-          "noodles",
-          "2 Eggs",
-          "Meat",
-          "Green Onion",
-          "smth"
-        ],
+        "subTitle": ["noodles", "2 Eggs", "Meat", "Green Onion", "smth"],
         "price": 15.49,
         "imgUrl": "./menu/main/naruto-pasta.webp"
       },
       {
         "id": "12b53b97-fc41-4250-a28d-2878008bd815",
         "title": "Pizza",
-        "subTitle": [
-          "Pizza sause",
-          "Chicken meet",
-          "Cherry Tomatos",
-          "Cheese"
-        ],
+        "subTitle": ["Pizza sause", "Chicken meet", "Cherry Tomatos", "Cheese"],
         "price": 27.7,
         "imgUrl": "./menu/main/pizza.webp"
       },
       {
         "id": "37c732e7-9009-410b-80ec-77c347ac7bd3",
         "title": "Meet with Fries",
-        "subTitle": [
-          "Sauce",
-          "Chicken Meet Rare",
-          "Fries",
-          "Green"
-        ],
+        "subTitle": ["Sauce", "Chicken Meet Rare", "Fries", "Green"],
         "price": 24.4,
         "imgUrl": "./menu/main/beef-with-fries.webp"
       },
       {
         "id": "736710da-a8a3-4f9d-98ae-77da66e5d96f",
         "title": "Cheese Soup",
-        "subTitle": [
-          "Melted Cheese",
-          "Potato",
-          "Carrot",
-          "Green"
-        ],
+        "subTitle": ["Melted Cheese", "Potato", "Carrot", "Green"],
         "price": 18.18,
         "imgUrl": "./menu/main/cheese-soup.webp"
       }
@@ -89,47 +68,28 @@
       {
         "id": "301f1c7f-e079-4d9d-9f45-58c4fed7483e",
         "title": "Pancakes",
-        "subTitle": [
-          "smth1",
-          "smth2",
-          "honig"
-        ],
+        "subTitle": ["smth1", "smth2", "honig"],
         "price": 8.88,
         "imgUrl": "./menu/deserts/pancakes.webp"
       },
       {
         "id": "ec45f5dc-5233-419a-ad1d-1f059c8ce058",
         "title": "`Banana cheesecake`",
-        "subTitle": [
-          "Milk",
-          "Bananas",
-          "Chokolate"
-        ],
+        "subTitle": ["Milk", "Bananas", "Chokolate"],
         "price": 45.99,
         "imgUrl": "./menu/deserts/banana-cheesecake.webp"
       },
       {
         "id": "4c052b1a-4a16-4cec-91f0-946d911987e9",
         "title": "Fruits salat",
-        "subTitle": [
-          "Strawberry",
-          "Peach",
-          "Plum",
-          "Bananas",
-          "Mandarin"
-        ],
+        "subTitle": ["Strawberry", "Peach", "Plum", "Bananas", "Mandarin"],
         "price": 12.19,
         "imgUrl": "./menu/deserts/fruits-salat.webp"
       },
       {
         "id": "e11c8cfb-b324-4abd-ba2c-5dd1d6f26d33",
         "title": "Tiramisu",
-        "subTitle": [
-          "Egg",
-          "Sugar",
-          "Coffee",
-          "Coca powder"
-        ],
+        "subTitle": ["Egg", "Sugar", "Coffee", "Coca powder"],
         "price": 27.77,
         "imgUrl": "./menu/deserts/tiramisu.webp"
       },

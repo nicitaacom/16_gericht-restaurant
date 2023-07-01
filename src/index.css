@@ -53,13 +53,13 @@
   
   /* border-radius - 320-3840px */
   --border-xs:clamp(0.5rem, 0.4378rem + 0.2343vw, 1rem);
-  --border-samll:clamp(0.5rem, 0.4378rem + 0.2343vw, 1rem);
+  --border-small:clamp(0.5rem, 0.4378rem + 0.2343vw, 1rem);
   --border-medium:clamp(0.5rem, 0.4378rem + 0.2343vw, 1rem);
   --border-big:clamp(0.5rem, 0.4378rem + 0.2343vw, 1rem);
 
   /* border-radius - 320-3840px */
   --gap-xs:clamp(0.75rem, 0.6364rem + 0.5682vw, 2rem);
-  --gap-samll:clamp(1rem, 0.8636rem + 0.6818vw, 2.5rem);
+  --gap-small:clamp(1rem, 0.8636rem + 0.6818vw, 2.5rem);
   --gap-medium:clamp(1.5rem, 1.3636rem + 0.6818vw, 3rem);
   --gap-big:clamp(2rem, 1.8182rem + 0.9091vw, 4rem);
 }
@@ -214,7 +214,28 @@ margin-left:  auto;
   transform: translate(0%,-50%) !important;
 }
 
-
+/* Tooltip */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  white-space: nowrap;
+  width: auto;
+  height:auto;
+  padding: 5px 10px;
+  color:var(--preTitle);
+  z-index: 99;
+}
+.tooltiptext {
+  visibility: hidden;
+  position: absolute;
+  top:0;
+  left:50%;
+  transform:translate(-50%,-110%);
+  font-size: 14px;
+  background:url('/bg.webp');
+  text-align: center;
+  border-radius: 6px;
+  z-index: 99;
+}
 
 
 
