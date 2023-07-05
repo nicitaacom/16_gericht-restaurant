@@ -1,0 +1,23 @@
+.input-newsletter {
+  width: 60%;
+  padding: 0.6rem 1rem;
+  background-color: transparent;
+  border: 1px solid #aaaaaa;
+  outline: none;
+
+  font-family: 'Cormorant Upright', serif;
+  color: #aaaaaa;
+  font-size: clamp(1.25rem, 1.75vw, 4.5rem);
+}
+
+.input-newsletter::placeholder {
+  font-family: 'Cormorant Upright', serif;
+  color: #aaaaaa;
+  font-size: clamp(1.25rem, 1.75vw, 4.5rem);
+}
+
+@media (max-width:768px) {
+  .input-newsletter {
+    width: 100%;
+  }
+}

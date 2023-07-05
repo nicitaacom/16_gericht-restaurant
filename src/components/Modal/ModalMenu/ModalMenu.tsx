@@ -1,47 +1,131 @@
 import './modalMenu.css'
-import { menuLists } from '../../../constant'
-import { useState } from 'react'
-import { formatCurrency } from '../../../utilities/formatCurrency'
 
-export function ModalMenu () {
+import fullMenu from '../../../constant/fullMenu.json'
 
-const quantity = 0
+import { ModalContainer } from '../..'
+import useMenuModal from '../../../hooks/useMenuModal'
+import { Category } from './Category'
+import { useEffect, useRef } from 'react'
+import { useSlider } from '../../../hooks/useSlider'
 
-return (
 
-    <div className='modal-body'>
-      {menuLists.map(menuList => (
-      <div key={menuList.title} className='modal-menu-list'>
-      <h6 className='list-title modal-list-title'>{menuList.title}</h6>
-        <ul className='modal-list-item-container'>
-        {menuList.items.map(item => (
-           <li key={item.title} className='modal-list-item'>
-           <div className='modal-list-text-info'>
-           <div className='item-info'>
-              <h6 className='title-small modal-title-small'>{item.title}</h6>
-              <svg className='modal-list-line'><use xlinkHref='./sprite.svg#line'/></svg>
-              <h6 className='modal-list-price'>{formatCurrency(item.price)}</h6>
-            </div>
-              <div className='subTitle'>{item.subTitle.map(subTitle => (
-                  <span key={subTitle}>
-                    {(item.subTitle.indexOf(subTitle)!=item.subTitle.length - 1) ?
-                    <span><a key={subTitle} className='subTitle-option'>{subTitle} </a> &nbsp;|&nbsp;</span> 
-                     : <a key={subTitle} className='subTitle-option'>{subTitle} </a>}
-                  </span>
-              ))}</div>
-              <div className='item-options'>
-              {quantity === 0 
-              ? <a className='add-to-cart'>Add to cart</a> 
-              : <a className='remove-from-cart'>Remove from cart</a>}
-              </div>
-    
-           </div>
-              <img className='modal-list-img-info' src={item.imgUrl}/>
-           </li>
-        ))}
+export function ModalMenu() {
+
+  const { move, onMouseTouchDown } = useSlider()
+  const menuModal = useMenuModal()
+
+  /* logic for deleting/!deleting ingridients (without 2nd modal) - start */
+
+
+
+
+
+
+
+  /* adding smth in a cart and showing 2nd modal for configuring - start*/
+  const quantity = 0
+
+
+
+
+
+
+
+  /* for changing active class in modal-footer by scrolling menu - start */
+
+
+
+
+  /* slider */
+  const sliderRef = useRef(null);
+  useEffect(() => {
+    const slider: any = sliderRef.current;
+    let isDown = false;
+    let startX: number;
+    let scrollLeft: number;
+
+    if (slider) {
+      slider.addEventListener("mousedown", (e: any) => {
+        isDown = true;
+        startX = e.pageX - slider.offsetLeft;
+        scrollLeft = slider.scrollLeft;
+      });
+
+
+
+      window.addEventListener("mouseup", () => {
+        isDown = false;
+      });
+
+      window.addEventListener("mousemove", (e) => {
+        if (!isDown) return;
+        e.preventDefault();
+
+        const x = e.pageX - slider.offsetLeft;
+        const speed = 1;
+        const walk = (x - startX) * speed;
+        slider.scrollLeft = scrollLeft - walk;
+      });
+    }
+  }, []);
+
+
+
+
+
+
+
+
+
+
+
+  /* MODAL HEADER */
+  const header = (
+    <>
+      <h1 className={`modal-title`}>Menu</h1>
+      <div
+        onMouseDown={onMouseTouchDown}
+        onTouchStart={onMouseTouchDown}
+        onMouseMove={move}
+        onTouchMove={move}>
+        <ul className='modal-categories-container'>
+          {fullMenu.map((category) => (
+            <a href={`#${category.title}`} key={category.id}>
+              <li className={`nav-item-${category.id} modal-category`}>
+                {category.title}
+              </li>
+            </a>
+          ))}
         </ul>
       </div>
-    ))}
-  </div>  
-)
+    </>
+  )
+
+
+
+
+
+  /* MODAL BODY */
+  const body = (
+    <>
+      {/* Menu food-category container */}
+      <ul className='modal-category-list '>
+        {fullMenu.map(category => (
+          <li key={category.id}><Category {...category} /></li>
+        ))}
+      </ul>
+    </>
+  )
+
+
+
+
+
+  return (
+    <ModalContainer className='modal-menu'
+      header={header} headerClassName='modal-menu-header'
+      body={body} bodyClassName='modal-menu-body'
+      onClose={menuModal.onClose} isOpen={menuModal.isOpen}
+      imgSrc='/bg-secondary-reverse.jpg' />
+  )
 }

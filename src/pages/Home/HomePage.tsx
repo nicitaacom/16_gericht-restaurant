@@ -1,11 +1,17 @@
-import { Main,About, TodaySpecial } from "./sections";
+import { Main,About, TodaySpecial, WhatWeBelieveIn, VideoSection, OutLaurels,PhotoGallerey, FindUs, Newsletter} from "./sections";
 
 export function HomePage () {
 return (
-<>
+<div className="flex flex-col mb-32">
 <Main/>
 <About/>
-<TodaySpecial todaySpecialClass="mb-32"/>
-</>
+<TodaySpecial className="mb-32"/>
+<WhatWeBelieveIn/>
+<VideoSection/>
+<OutLaurels/>
+<PhotoGallerey/>
+<FindUs/>
+<Newsletter/>
+</div>
   )
 }

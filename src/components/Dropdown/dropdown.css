@@ -1,0 +1,56 @@
+.dropdown {
+  position: relative;
+  user-select: none;
+  width: 100%;
+}
+
+.dropdown .dropdown-btn {
+  padding: var(--padding-xs);
+  box-shadow: 3px 3px 10px 6px rgba(0, 0, 0, 0.1);
+  font-weight: bold;
+  color: var(--preTitle);
+  border: 1px solid var(--cta);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  cursor: pointer;
+}
+
+.dropdown .dropdown-content {
+  position: absolute;
+  top: 110%;
+  left: 0;
+  background: var(--bg-primary);
+  box-shadow: 3px 3px 10px 6px rgba(0, 0, 0, 0.1);
+  font-weight: bold;
+  color: var(--preTitle);
+  width: 100%;
+}
+
+.dropdown .dropdown-content .dropdown-item {
+  padding: var(--padding-xs);
+  cursor: pointer;
+  transition: all 200ms;
+  background: var(--primary);
+}
+
+
+.dropdown .dropdown-content .dropdown-item:hover {
+  background: var(--cta);
+}
+
+/* apply this classes for any transition you want */
+.dropdown-active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  transition: 300ms ease;
+}
+
+.dropdown-inactive {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-20px);
+  transition: 300ms ease;
+}

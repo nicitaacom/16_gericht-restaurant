@@ -22,6 +22,23 @@
 
 .about-info {
   display: flex;
-  flex-flow: column; 
+  flex-flow: column;
+  align-items: flex-end;
+  text-align: end;
   z-index: 2;
+}
+
+@media (max-width:768px) {
+ .about {
+  flex-flow: column;
+ }
+ .about-info {
+  /* important to rewrite tailwind classes */
+  justify-content: center !important;
+  align-items: center !important;
+  text-align: center !important;
+ }
+ .knife-png,.g-png {
+  display: none;
+ }
 }

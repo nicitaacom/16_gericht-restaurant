@@ -1,14 +1,15 @@
 import './about.css'
 import {Button} from '../../../components'
+import useAboutModal from '../../../hooks/useAboutModal'
 
 
 export function About () {
-  function openUrl(html:string) {
-    window.open(html, "_blank")
-   }
+
+  const aboutModal = useAboutModal()
+
 return (
 <div className="about py-16 mb-32">
-<img className="bg-png" src='./bg.png'/>
+<img className="bg-png w-full h-full" src='./bg.webp'/>
 <img className="g-png" src="./G.png"/>
 
 <div className='about section-container'>
@@ -18,7 +19,7 @@ return (
 <use xlinkHref='./sprite.svg#spoon'/>
 </svg>
 <p className='subTitle mb-6'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis pharetra adipiscing ultrices vulputate posuere tristique. In sed odio nec aliquet eu proin mauris et.</p>
-<Button buttonTitle='Know more' buttonOnClick={() => openUrl('https://github.com/Nicitaa') }/>
+<Button label='Know more' onClick={aboutModal.onOpen}/>
 </div>
 
 <img className='knife-png' src="./knife.png" alt="knife.png" />
@@ -29,7 +30,7 @@ return (
 <use xlinkHref='./sprite.svg#spoon'/>
 </svg>
 <p className='subTitle mb-6'>Adipiscing tempus ullamcorper lobortis odio tellus arcu volutpat. Risus placerat morbi volutpat habitasse interdum mi aliquam In sed odio nec aliquet.</p>
-<Button buttonTitle='Know more' buttonOnClick={() => openUrl('https://github.com/Nicitaa') }/>
+<Button label='Know more' onClick={aboutModal.onOpen}/>
 </div>
 
 </div>
