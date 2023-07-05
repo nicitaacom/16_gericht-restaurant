@@ -3,7 +3,7 @@ import { Route, Routes } from "react-router-dom"
 /* components */
 import { Navbar, Footer, ModalMenu, ModalAbout, ModalAuth, ModalBookTable } from './components/'
 /* sections */
-import { ContactPage, Error404, HomePage } from "./pages"
+import { AboutPage, ContactPage, Error404, HomePage } from "./pages"
 
 
 function App() {
@@ -15,6 +15,7 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/contact" element={<ContactPage />} />
+        <Route path="/about" element={<AboutPage />} />
         <Route path="*" element={<Error404 />} />
       </Routes>
       <Footer />
