@@ -33,18 +33,18 @@ export function ModalContainer({ header, body, footer,
   const [showModal, setShowModal] = useState(isOpen)
 
   /* for disbling scroll and hiding navbar when modal open */
+  const navbar = document.getElementById('navbar')
+  function hideNavbar() {
+    if (navbar) {
+      navbar.style.visibility = 'hidden'
+    }
+  }
   useEffect(() => {
     setShowModal(isOpen)
 
     if (isOpen) {
       document.body.style.overflow = 'hidden';
       document.body.style.width = 'calc(100% - 17px)';
-      const navbar = document.getElementById('navbar')
-      function hideNavbar() {
-        if (navbar) {
-          navbar.style.visibility = 'hidden'
-        }
-      }
       if (navbar) {
         gsap.to(navbar, {
           duration: 1,
