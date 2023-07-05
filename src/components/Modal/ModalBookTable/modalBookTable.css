@@ -5,7 +5,7 @@
 .modal-book-table-header {
   display: flex;
   justify-content: space-between;
-  height: 10vh;
+  height: 12.25vh;
   padding: var(--padding-x-medium);
   padding-right: clamp(4rem, 3.6rem + 2vw, 6rem);
 }
@@ -16,6 +16,10 @@
   align-items: center;
   gap: var(--gap-small);
   width: 60%;
+}
+
+.button-book-table {
+  padding: var(--padding-xs);
 }
 
 

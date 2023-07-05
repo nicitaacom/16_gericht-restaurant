@@ -5,11 +5,6 @@ export const navLinks = [
     label: "Home",
   },
   {
-    id: "pages",
-    to: "/pages",
-    label: "Pages",
-  },
-  {
     id: "contact us",
     to: "/contact",
     label: "Contact Us",
