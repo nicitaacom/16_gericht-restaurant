@@ -20,53 +20,53 @@
 
 :root {
   /* bg */
-  --bg-primary:#141311;
+  --bg-primary: #141311;
   /* bg-secondary - I use '/bg-secondary-reverse.jpg for it' */
-  --cta:#DCCA87;
-  --cta-light:#dcca87dd;
-  --cta-dark:#dcca87bb;
+  --cta: #DCCA87;
+  --cta-light: #dcca87dd;
+  --cta-dark: #dcca87bb;
 
-  
+
   /* text - 320-3840px */
-  --preTitle:#ffffff;
-  --title:#DCCA87;
-  --subTitle:#AAAAAA;
-  
-  --font-primary:'Cormorant Upright', serif;
-  --font-secondary:'Open Sans', serif;
+  --preTitle: #ffffff;
+  --title: #DCCA87;
+  --subTitle: #AAAAAA;
 
-  --text-xs:clamp(1rem, 0.7727rem + 1.1364vw, 3.5rem);
-  --text-small:clamp(1.25rem,1.75vw,4.5rem);
-  --text-medium:clamp(1.5rem, 1.2727rem + 1.1364vw, 4rem);
-  --text-big:clamp(3.5rem,5vw,8.5rem);
+  --font-primary: 'Cormorant Upright', serif;
+  --font-secondary: 'Open Sans', serif;
+
+  --text-xs: clamp(1rem, 0.7727rem + 1.1364vw, 3.5rem);
+  --text-small: clamp(1.25rem, 1.75vw, 4.5rem);
+  --text-medium: clamp(1.5rem, 1.2727rem + 1.1364vw, 4rem);
+  --text-big: clamp(3.5rem, 5vw, 8.5rem);
 
   /* padding - 320-3840px*/
-  --padding-xs:clamp(0.1rem, 0.0409rem + 0.2955vw, 0.75rem) clamp(0.25rem, -0.1875rem + 0.9115vw, 2rem);
-  --padding-small:clamp(0.5rem, 0.3133rem + 0.7028vw, 2rem) clamp(0.5rem, 0.1889rem + 1.1713vw, 3rem);
-  --padding-medium:clamp(0.75rem, 0.5455rem + 1.0227vw, 3rem) clamp(0.9rem, 0.6864rem + 1.0682vw, 3.25rem);
-  --padding-big:clamp(1rem, 0.3636rem + 3.1818vw, 8rem) clamp(1rem, 0.3636rem + 3.1818vw, 8rem);
-  
-  --padding-x-xs:0 clamp(0.25rem, -0.1875rem + 0.9115vw, 2rem);
-  --padding-x-small:0 clamp(0.5rem, 0.1889rem + 1.1713vw, 3rem);
-  --padding-x-medium:0 clamp(0.9rem, 0.6864rem + 1.0682vw, 3.25rem);
-  --padding-x-big:0 clamp(1rem, 0.3636rem + 3.1818vw, 8rem);
-  
-  /* border-radius - 320-3840px */
-  --border-xs:clamp(0.5rem, 0.4378rem + 0.2343vw, 1rem);
-  --border-small:clamp(0.5rem, 0.4378rem + 0.2343vw, 1rem);
-  --border-medium:clamp(0.5rem, 0.4378rem + 0.2343vw, 1rem);
-  --border-big:clamp(0.5rem, 0.4378rem + 0.2343vw, 1rem);
+  --padding-xs: clamp(0.1rem, 0.0409rem + 0.2955vw, 0.75rem) clamp(0.25rem, -0.1875rem + 0.9115vw, 2rem);
+  --padding-small: clamp(0.5rem, 0.3133rem + 0.7028vw, 2rem) clamp(0.5rem, 0.1889rem + 1.1713vw, 3rem);
+  --padding-medium: clamp(0.75rem, 0.5455rem + 1.0227vw, 3rem) clamp(0.9rem, 0.6864rem + 1.0682vw, 3.25rem);
+  --padding-big: clamp(1rem, 0.3636rem + 3.1818vw, 8rem) clamp(1rem, 0.3636rem + 3.1818vw, 8rem);
+
+  --padding-x-xs: 0 clamp(0.25rem, -0.1875rem + 0.9115vw, 2rem);
+  --padding-x-small: 0 clamp(0.5rem, 0.1889rem + 1.1713vw, 3rem);
+  --padding-x-medium: 0 clamp(0.9rem, 0.6864rem + 1.0682vw, 3.25rem);
+  --padding-x-big: 0 clamp(1rem, 0.3636rem + 3.1818vw, 8rem);
 
   /* border-radius - 320-3840px */
-  --gap-xs:clamp(0.75rem, 0.6364rem + 0.5682vw, 2rem);
-  --gap-small:clamp(1rem, 0.8636rem + 0.6818vw, 2.5rem);
-  --gap-medium:clamp(1.5rem, 1.3636rem + 0.6818vw, 3rem);
-  --gap-big:clamp(2rem, 1.8182rem + 0.9091vw, 4rem);
+  --border-xs: clamp(0.5rem, 0.4378rem + 0.2343vw, 1rem);
+  --border-small: clamp(0.5rem, 0.4378rem + 0.2343vw, 1rem);
+  --border-medium: clamp(0.5rem, 0.4378rem + 0.2343vw, 1rem);
+  --border-big: clamp(0.5rem, 0.4378rem + 0.2343vw, 1rem);
+
+  /* border-radius - 320-3840px */
+  --gap-xs: clamp(0.75rem, 0.6364rem + 0.5682vw, 2rem);
+  --gap-small: clamp(1rem, 0.8636rem + 0.6818vw, 2.5rem);
+  --gap-medium: clamp(1.5rem, 1.3636rem + 0.6818vw, 3rem);
+  --gap-big: clamp(2rem, 1.8182rem + 0.9091vw, 4rem);
 }
 
 body {
   font-family: 'Open Sans', sans-serif;
-  color:#ffffff;
+  color: #ffffff;
   list-style: none;
   min-height: 100vh;
   height: -webkit-fill-available;
@@ -81,7 +81,7 @@ body {
 }
 
 html {
-  height:-webkit-fill-available;
+  height: -webkit-fill-available;
   min-height: 100vh;
   /* to rewrite darkreader styles when modal open */
   background-color: #141311 !important;
@@ -93,14 +93,17 @@ cause they have some extentions like dark reader */
 /* if you want apply border try do it with !important if it doesn't work without it */
 a {
   text-decoration: none !important;
-  border-color:#e5e7eb !important;
+  border-color: #e5e7eb !important;
   border-style: none !important;
-  border-color:inherit !important;
-}
-
-*, ::before , ::after {
   border-color: inherit !important;
 }
+
+*,
+::before,
+::after {
+  border-color: inherit !important;
+}
+
 /* something that impact on hover - end */
 
 
@@ -124,53 +127,55 @@ a {
 }
 
 .spoon-svg {
-  width: clamp(2rem,3vw,11rem);
-  height: clamp(1rem,1vw,5rem)
+  width: clamp(2rem, 3vw, 11rem);
+  height: clamp(1rem, 1vw, 5rem)
 }
 
 .title-big {
   font-family: 'Cormorant Upright', serif;
   font-weight: 700;
-  color:#DCCA87;
-  line-height: clamp(3rem,6vw,10rem);
+  color: #DCCA87;
+  line-height: clamp(3rem, 6vw, 10rem);
   font-size: var(--text-big);
 }
 
 .title {
   font-family: 'Cormorant Upright', serif;
-  color:#DCCA87;
+  color: #DCCA87;
   font-weight: 600;
   font-size: var(--text-medium);
 }
 
 .title-small {
   font-family: 'Cormorant Upright', serif;
-  color:#DCCA87;
+  color: #DCCA87;
   font-size: var(--text-small);
 }
 
 .subTitle {
-  color:#AAAAAA;
-  line-height: clamp(1rem,2vw,4rem);
-  font-size: clamp(1rem,1.5vw,3.5rem);
+  color: #AAAAAA;
+  line-height: clamp(1rem, 2vw, 4rem);
+  font-size: clamp(1rem, 1.5vw, 3.5rem);
 }
 
 
 
 .cta-link-primary {
-  color:var(--cta);
+  color: var(--cta);
   cursor: pointer;
 }
+
 .cta-link-primary:hover {
-  color:var(--cta-dark);
+  color: var(--cta-dark);
 }
 
 .cta-link-secondary {
-  color:var(--preTitle);
+  color: var(--preTitle);
   cursor: pointer;
 }
+
 .cta-link-secondary:hover {
-  color:var(--subTitle);
+  color: var(--subTitle);
 }
 
 
@@ -186,32 +191,32 @@ a {
 }
 
 .section-container {
-position: relative;
-z-index: 1;
-max-width: 70%;
-margin-right:  auto;
-margin-left:  auto;
+  position: relative;
+  z-index: 1;
+  max-width: 70%;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .bg-png {
   z-index: 0;
   position: absolute;
-  top:0;
-  bottom:0;
-  left:0;
-  right:0;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 
 .close-button {
   cursor: pointer;
-  width:clamp(1rem,2vw,1.75rem);
-  height: clamp(1rem,2vw,1.75rem);
+  width: clamp(1rem, 2vw, 1.75rem);
+  height: clamp(1rem, 2vw, 1.75rem);
   filter: invert(98%) sepia(5%) saturate(4054%) hue-rotate(334deg) brightness(93%) contrast(83%);
 
   position: absolute;
-  right:clamp(1rem,2.25vw,8rem);
-  top:50%;
-  transform: translate(0%,-50%) !important;
+  right: clamp(1rem, 2.25vw, 8rem);
+  top: 50%;
+  transform: translate(0%, -50%) !important;
 }
 
 /* Tooltip */
@@ -219,19 +224,20 @@ margin-left:  auto;
   visibility: visible;
   white-space: nowrap;
   width: auto;
-  height:auto;
+  height: auto;
   padding: 5px 10px;
-  color:var(--preTitle);
+  color: var(--preTitle);
   z-index: 99;
 }
+
 .tooltiptext {
   visibility: hidden;
   position: absolute;
-  top:0;
-  left:50%;
-  transform:translate(-50%,-110%);
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -110%);
   font-size: 14px;
-  background:url('/bg.webp');
+  background: url('/bg.webp');
   text-align: center;
   border-radius: 6px;
   z-index: 99;
@@ -244,26 +250,26 @@ margin-left:  auto;
 
 
 /* ===== Scrollbar ===== */
-  /* Firefox */
-  * {
-    scrollbar-width: none;
-    scrollbar-color: #272c8f #262978;
-  }
+/* Firefox */
+* {
+  scrollbar-width: none;
+  scrollbar-color: #272c8f #262978;
+}
 
-  /* Chrome, Edge, and Safari */
-  *::-webkit-scrollbar {
-    width: 16px;
-    height: 0.2rem;
-  }
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 16px;
+  height: 0.2rem;
+}
 
-  *::-webkit-scrollbar-track {
-    background: #100f0e;
-  }
+*::-webkit-scrollbar-track {
+  background: #100f0e;
+}
 
-  *::-webkit-scrollbar-thumb {
-    background-color: #1f1c18;
-    border-radius: 2px;
-    border: 1px solid rgba(220, 202, 135,0.4);
-    /* add some js here to change 2nd parameter when scrolling up/down */
-    box-shadow: 10px -20px 40px 10px rgba(220, 202, 135,0.25);
-  }
+*::-webkit-scrollbar-thumb {
+  background-color: #1f1c18;
+  border-radius: 2px;
+  border: 1px solid rgba(220, 202, 135, 0.4);
+  /* add some js here to change 2nd parameter when scrolling up/down */
+  box-shadow: 10px -20px 40px 10px rgba(220, 202, 135, 0.25);
+}

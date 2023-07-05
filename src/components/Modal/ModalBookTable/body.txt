@@ -1,52 +1,9 @@
-import './modalBookTable.css'
-
-import { Button, Dropdown, ModalContainer } from "../.."
-import useBookTable from "../../../hooks/useBookTableModal"
-import { Chair } from './Chair'
-import { useSlider } from '../../../hooks/useSlider'
-
-import { MdOutlineMan, MdOutlineWoman } from 'react-icons/md'
-
-
-
-
-/* MODAL HEADER */
-const header = (
-  <>
-    <div className='book-table-header-info'>
-      <h1 className="title bg-back whitespace-nowrap">Book Table</h1>
-      <Dropdown className='flex Tablet:hidden' />
-      <div className='flex Tablet:hidden whitespace-nowrap tooltip'>
-        Date&Time picker <span className="tooltiptext !translate-y-[160%] !translate-x-[-40%]">Pick date-time in the feature</span>
-      </div>
-    </div>
-    <Button label='Book table' className='button-book-table whitespace-nowrap'
-      onClick={() => {/* BACKEND - Send book data to another site */ }} />
-  </>
-)
-
-
-
-
-
-export function ModalBookTable() {
-  const bookTable = useBookTable()
-
-  const { onMouseTouchDown, move } = useSlider()
-
-
-
-  /* MODAL BODY */
-  const body = (
-    <>
-
-      <div className='w-[calc(100%+17px)] h-full bg-[--bg-primary]
-      relative flex overflow-y-scroll overflow-x-hidden'
+<div className='min-w-[100rem] max-w-[100rem] min-h-[100rem] max-h-[100rem] bg-[--bg-primary]
+      relative flex overflow-scroll'
         onMouseDown={onMouseTouchDown}
         onTouchStart={onMouseTouchDown}
         onMouseMove={move}
         onTouchMove={move}>
-
 
         <div className='window-decoration'>
           <div className='window-decoration-fragment' />
@@ -70,10 +27,8 @@ export function ModalBookTable() {
         <div className='kitchen-decoration' />
 
         <div className='enter-decoration'>
-          <img className='absolute top-[30%] left-[40%] w-16 h-16' src="/book-table/exit.png" alt="exit" />
+          <img className='absolute top-[20%] left-[40%] w-16 h-16' src="/book-table/exit.png" alt="exit" />
         </div>
-
-
 
 
         { /* Tables */}
@@ -107,7 +62,7 @@ export function ModalBookTable() {
           </div>
         </div>
 
-        <div className='absolute top-[4rem] left-[101rem] flex flex-col'>
+        <div className='absolute top-[4rem] left-[75rem] flex flex-col'>
           <div className="radio table-big-horizontal">
             <input id="table-3" name="radio" type="radio" disabled />
             <label htmlFor="table-3" className={`radio-label tooltip`}>
@@ -159,8 +114,8 @@ export function ModalBookTable() {
             <Chair reverse />
           </div>
           <div className="radio table-big-vertical">
-            <input id="table-7" name="radio" type="radio" />
-            <label htmlFor="table-7" className={`radio-label`}></label>
+            <input id="table-6" name="radio" type="radio" />
+            <label htmlFor="table-6" className={`radio-label`}></label>
           </div>
           <div className='flex flex-col'>
             <Chair />
@@ -168,7 +123,6 @@ export function ModalBookTable() {
             <Chair />
           </div>
         </div>
-
 
         <div className='absolute top-[80rem] left-[40rem] book-container'>
           <div className='flex flex-col'>
@@ -188,16 +142,4 @@ export function ModalBookTable() {
         </div>
 
 
-
       </div>
-    </>
-  )
-
-
-  return (
-    <ModalContainer className='modal-book-table' imgSrc='/bg-secondary-reverse.jpg'
-      header={header} headerClassName="modal-book-table-header"
-      body={body} bodyClassName="w-[100vw] h-[88vh] overflow-hidden"
-      onClose={bookTable.onClose} isOpen={bookTable.isOpen} />
-  )
-}
