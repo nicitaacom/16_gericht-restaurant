@@ -23,7 +23,7 @@ export function ModalMenu() {
 
 
   /* adding smth in a cart and showing 2nd modal for configuring - start*/
-  const quantity = 0
+
 
 
 

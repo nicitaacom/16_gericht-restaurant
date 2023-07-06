@@ -13,7 +13,7 @@ import {ModalMenu} from './Modal/ModalMenu/ModalMenu'
 
 import {Dropdown} from './Dropdown/Dropdown'
 
-import {Video} from './Video/Video'
+import {Video} from './Video/VideoWrapper'
 
 export {Navbar,Footer,Button,ModalContainer,ModalMenu,ModalAbout,Input,InputNewsletter,
   ModalAuth,ModalBookTable,
