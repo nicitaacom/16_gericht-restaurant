@@ -36,7 +36,7 @@ export function Main() {
 
   useEffect(() => {
     changeSlide(1)
-  }, [])
+  }, [changeSlide])
 
 
   return (

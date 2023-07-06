@@ -53,7 +53,7 @@ export function ModalContainer({ header, body, footer,
         });
       }
     }
-  }, [isOpen])
+  }, [isOpen, navbar])
 
   /* for onClose animation and showing navbar (applies for all modals) */
   function closeModal() {

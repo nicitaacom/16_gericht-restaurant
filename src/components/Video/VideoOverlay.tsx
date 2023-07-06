@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react"
+import { useEffect, useState } from "react"
 import { FaPlay, FaPause, FaStepBackward, FaStepForward } from "react-icons/fa"
 import { BiFullscreen, BiExitFullscreen } from 'react-icons/bi'
 
@@ -27,8 +27,19 @@ const VideoOverlay: React.FC<VideoOverlayProps> = ({
   setJumpTime,
   previewSrc,
 }) => {
+
+  const [isFullScreen, setIsFullscreen] = useState(false)
+  useEffect(() => {
+    document.addEventListener("fullscreenchange", () => {
+      if (document.fullscreenElement) {
+        setIsFullscreen(true)
+      } else {
+        setIsFullscreen(false)
+      }
+    })
+  }, [])
+
   if (video) {
-    const [isFullScreen, setIsFullscreen] = useState(false)
     const JUMP_FACTOR = 4
 
 
@@ -47,15 +58,7 @@ const VideoOverlay: React.FC<VideoOverlayProps> = ({
 
 
 
-    useEffect(() => {
-      document.addEventListener("fullscreenchange", () => {
-        if (document.fullscreenElement) {
-          setIsFullscreen(true)
-        } else {
-          setIsFullscreen(false)
-        }
-      })
-    }, [])
+
 
     const toggleFullScreen = () => {
       if (document.fullscreenElement) {
