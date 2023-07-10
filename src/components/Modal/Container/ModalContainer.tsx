@@ -6,7 +6,6 @@ import { useSwipeable } from 'react-swipeable'
 import { gsap } from 'gsap'
 
 
-
 type ModalProps = {
   header: React.ReactElement
   body: React.ReactElement

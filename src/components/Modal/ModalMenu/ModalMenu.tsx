@@ -5,13 +5,12 @@ import fullMenu from '../../../constant/fullMenu.json'
 import { ModalContainer } from '../..'
 import useMenuModal from '../../../hooks/useMenuModal'
 import { Category } from './Category'
-import { useEffect, useRef } from 'react'
 import { useSlider } from '../../../hooks/useSlider'
 
 
 export function ModalMenu() {
 
-  const { move, onMouseTouchDown } = useSlider()
+  const { handleMouseMove, handleTouchMove, handleMouseDown, handleTouchDown } = useSlider()
   const menuModal = useMenuModal()
 
   /* logic for deleting/!deleting ingridients (without 2nd modal) - start */
@@ -36,39 +35,6 @@ export function ModalMenu() {
 
 
 
-  /* slider */
-  const sliderRef = useRef(null);
-  useEffect(() => {
-    const slider: any = sliderRef.current;
-    let isDown = false;
-    let startX: number;
-    let scrollLeft: number;
-
-    if (slider) {
-      slider.addEventListener("mousedown", (e: any) => {
-        isDown = true;
-        startX = e.pageX - slider.offsetLeft;
-        scrollLeft = slider.scrollLeft;
-      });
-
-
-
-      window.addEventListener("mouseup", () => {
-        isDown = false;
-      });
-
-      window.addEventListener("mousemove", (e) => {
-        if (!isDown) return;
-        e.preventDefault();
-
-        const x = e.pageX - slider.offsetLeft;
-        const speed = 1;
-        const walk = (x - startX) * speed;
-        slider.scrollLeft = scrollLeft - walk;
-      });
-    }
-  }, []);
-
 
 
 
@@ -80,14 +46,15 @@ export function ModalMenu() {
 
 
   /* MODAL HEADER */
+
   const header = (
     <>
       <h1 className={`modal-title`}>Menu</h1>
       <div
-        onMouseDown={onMouseTouchDown}
-        onTouchStart={onMouseTouchDown}
-        onMouseMove={move}
-        onTouchMove={move}>
+        onMouseDown={handleMouseDown}
+        onTouchStart={handleTouchDown}
+        onMouseMove={handleMouseMove}
+        onTouchMove={handleTouchMove}>
         <ul className='modal-categories-container'>
           {fullMenu.map((category) => (
             <a href={`#${category.title}`} key={category.id}>
@@ -100,7 +67,6 @@ export function ModalMenu() {
       </div>
     </>
   )
-
 
 
 
@@ -119,9 +85,8 @@ export function ModalMenu() {
 
 
 
-
-
   return (
+
     <ModalContainer className='modal-menu'
       header={header} headerClassName='modal-menu-header'
       body={body} bodyClassName='modal-menu-body'

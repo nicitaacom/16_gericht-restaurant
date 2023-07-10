@@ -7,7 +7,7 @@ import { useSlider } from '../../../hooks/useSlider'
 
 
 export function PhotoGallerey() {
-  const { move, onMouseTouchDown } = useSlider()
+  const { handleMouseMove, handleTouchMove, handleMouseDown, handleTouchDown } = useSlider()
   return (
     <div className="flex py-32 relative bg-[url('/bg.webp')] bg-cover
 Tablet:flex-col Tablet:items-center Tablet:text-center Tablet:gap-y-8
@@ -28,10 +28,10 @@ MobileL:gap-y-8">
   4K:gap-x-8
   LaptopL:gap-x-4
   Tablet:max-w-[90%] Tablet:ml-[10%]"
-        onMouseDown={onMouseTouchDown}
-        onTouchStart={onMouseTouchDown}
-        onMouseMove={move}
-        onTouchMove={move}
+        onMouseMove={handleMouseMove}
+        onTouchMove={handleTouchMove}
+        onMouseDown={handleMouseDown}
+        onTouchStart={handleTouchDown}
         style={{ touchAction: "none", overflow: "hidden" }}>
         {gallerey.map(gallerey => (
           <div className='relative overflow-hidden image-container' key={gallerey.imgSrc}>
