@@ -6,28 +6,14 @@
       {
         "id": "a8414f0c-1413-4d11-a657-64c3fccf3a77",
         "title": "Burger",
-        "subTitle": [
-          "Beef meet",
-          "Burger sause",
-          "cheese",
-          "salat",
-          "tomato",
-          "pickled cucumber"
-        ],
+        "subTitle": ["Beef meet", "Burger sause", "cheese", "salat", "tomato", "pickled cucumber"],
         "price": 20.99,
         "imgUrl": "./menu/main/burger.webp"
       },
       {
         "id": "fe39504a-5ae4-40ce-9c44-a4d3310644fe",
         "title": "Roast Beef`",
-        "subTitle": [
-          "Rare",
-          "Medium Rare",
-          "Medium",
-          "Medium Well",
-          "Well",
-          "Well done"
-        ],
+        "subTitle": ["Rare", "Medium Rare", "Medium", "Medium Well", "Well", "Well done"],
         "price": 49.99,
         "imgUrl": "./menu/main/roast-beef.webp"
       },
@@ -117,75 +103,35 @@
       {
         "id": "29997311-b247-4940-83f3-488a136f1ebe",
         "title": "Water",
-        "subTitle": [
-          "Cold",
-          "Normal",
-          "Hot",
-          "Ice",
-          "NoIce",
-          "Spirkles",
-          "NoSpirkles"
-        ],
+        "subTitle": ["Cold", "Normal", "Hot", "Ice", "NoIce", "Spirkles", "NoSpirkles"],
         "price": 3,
         "imgUrl": "./menu/drinks/water.webp"
       },
       {
         "id": "f0e20028-9108-4926-96ba-b0464a558157",
         "title": "`Pepsi`",
-        "subTitle": [
-          "Cold",
-          "Normal",
-          "Hot",
-          "Ice",
-          "NoIce",
-          "Spirkles",
-          "NoSpirkles"
-        ],
+        "subTitle": ["Cold", "Normal", "Hot", "Ice", "NoIce", "Spirkles", "NoSpirkles"],
         "price": 6,
         "imgUrl": "./menu/drinks/pepsi.webp"
       },
       {
         "id": "e6f1cd13-b7db-4263-a4a8-f616bd4d8bbb",
         "title": "Mirinda",
-        "subTitle": [
-          "Cold",
-          "Normal",
-          "Hot",
-          "Ice",
-          "NoIce",
-          "Spirkles",
-          "NoSpirkles"
-        ],
+        "subTitle": ["Cold", "Normal", "Hot", "Ice", "NoIce", "Spirkles", "NoSpirkles"],
         "price": 6,
         "imgUrl": "./menu/drinks/mirinda.webp"
       },
       {
         "id": "88687d1d-6f3b-4191-b1d2-c95ed8e73c76",
         "title": "7up",
-        "subTitle": [
-          "Cold",
-          "Normal",
-          "Hot",
-          "Ice",
-          "NoIce",
-          "Spirkles",
-          "NoSpirkles"
-        ],
+        "subTitle": ["Cold", "Normal", "Hot", "Ice", "NoIce", "Spirkles", "NoSpirkles"],
         "price": 7,
         "imgUrl": "./menu/drinks/7up.webp"
       },
       {
         "id": "6efd27e6-5144-4d30-bd96-41daa5bb2ab9",
         "title": "Coffee",
-        "subTitle": [
-          "Cold",
-          "Normal",
-          "Hot",
-          "Ice",
-          "NoIce",
-          "Spirkles",
-          "NoSpirkles"
-        ],
+        "subTitle": ["Cold", "Normal", "Hot", "Ice", "NoIce", "Spirkles", "NoSpirkles"],
         "price": 2.5,
         "imgUrl": "./menu/drinks/coffee.webp"
       }
