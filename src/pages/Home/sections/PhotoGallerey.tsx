@@ -40,7 +40,7 @@ MobileL:gap-y-8">
         ' onClick={() => window.open('https://github.com/Nicitaa')}>
               <use xlinkHref='./sprite.svg#instagram' />
             </svg>
-            <img className="object-cover w-full transition-all duration-500
+            <img className="object-cover w-full transition-all duration-500 pointer-events-none
       hover:brightness-75 gallery-img"
               src={gallerey.imgSrc} key={gallerey.imgSrc} />
           </div>
