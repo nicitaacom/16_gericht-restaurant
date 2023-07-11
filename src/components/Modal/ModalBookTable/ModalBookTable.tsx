@@ -32,7 +32,7 @@ const header = (
 export function ModalBookTable() {
   const bookTable = useBookTable()
 
-  const { onMouseTouchDown, move } = useSlider()
+  const { handleMouseDown, handleMouseMove, handleTouchDown, handleTouchMove } = useSlider()
 
 
 
@@ -42,10 +42,10 @@ export function ModalBookTable() {
 
       <div className='w-[calc(100%+17px)] h-full bg-[--bg-primary]
       relative flex overflow-y-scroll overflow-x-hidden'
-        onMouseDown={onMouseTouchDown}
-        onTouchStart={onMouseTouchDown}
-        onMouseMove={move}
-        onTouchMove={move}>
+        onMouseDown={handleMouseDown}
+        onTouchStart={handleTouchDown}
+        onMouseMove={handleMouseMove}
+        onTouchMove={handleTouchMove}>
 
 
         <div className='window-decoration'>

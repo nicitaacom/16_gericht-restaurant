@@ -77,14 +77,13 @@ const VideoOverlay: React.FC<VideoOverlayProps> = ({
             <div className={`progress-bar-container h-1 w-[98%] mx-auto`}>
               {/* Progress bar inner */}
               <div
-                className={`${`progress h-full w-0`} ${video?.ended ? "" : "progress-inner"
-                  }`}
+                className={`${`progress h-full w-0`} ${video?.ended ? "" : "progress-inner"}`}
                 style={{
                   animationPlayState:
                     isPlaying && !isLoading ? "running" : "paused",
                   animationDuration: video?.ended
                     ? "0s"
-                    : `${Math.ceil(video?.duration - jumpTime)}s`,
+                    : `${Math.ceil(video.duration - jumpTime)}s`,
                 }}
               />
             </div>

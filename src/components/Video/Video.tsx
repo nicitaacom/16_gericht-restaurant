@@ -1,3 +1,4 @@
+import './video.css'
 import { useState, useRef } from "react"
 import { convertToMinuteSeconds } from "../../utils/formatters"
 import VideoOverlay from "./VideoOverlay"
@@ -44,7 +45,7 @@ export function Video({ videoSrc, previewSrc, ...props }: VideoProps) {
   }
 
   const onTimeUpdate = () => {
-    setCurrentTime(() => convertToMinuteSeconds(videoRef.current?.currentTime))
+    setCurrentTime(() => convertToMinuteSeconds(videoRef.current?.currentTime ?? 0))
   }
   return (
     <div className={`w-full max-w-full mx-auto relative`} ref={videoWrapperRef}>
@@ -56,7 +57,7 @@ export function Video({ videoSrc, previewSrc, ...props }: VideoProps) {
       <video className={`w-full pointer-events-none`}
         onCanPlayThrough={() => {
           setVideoDuration(() =>
-            convertToMinuteSeconds(videoRef.current?.duration)
+            convertToMinuteSeconds(videoRef.current?.duration ?? 0)
           )
           setIsLoading(false)
         }}
