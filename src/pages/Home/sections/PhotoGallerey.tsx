@@ -34,7 +34,7 @@ MobileL:gap-y-8">
         onTouchStart={handleTouchDown}
         style={{ touchAction: "none", overflow: "hidden" }}>
         {gallerey.map(gallerey => (
-          <div className='relative overflow-hidden image-container' key={gallerey.imgSrc}>
+          <div className='relative overflow-hidden image-container select-none' key={gallerey.imgSrc}>
             <svg className='absolute opacity-0 cursor-pointer scale-90 transition-all duration-500 z-10
         gallery-svg
         ' onClick={() => window.open('https://github.com/Nicitaa')}>
@@ -45,7 +45,7 @@ MobileL:gap-y-8">
               src={gallerey.imgSrc} key={gallerey.imgSrc} />
           </div>
         ))}
-        <motion.a className="inline-flex relative items-center mx-12 text-center font-bold cursor-pointer outline-0 z-0
+        <motion.a className="inline-flex relative items-center mx-12 text-center font-bold cursor-pointer select-none outline-0 z-0
     gallery-shadow"
           whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} onClick={() => window.open('https://github.com/Nicitaa')}>View More...</motion.a>
       </div>
