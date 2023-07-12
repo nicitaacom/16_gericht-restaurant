@@ -1,4 +1,4 @@
-# What inside? <br/> <font size="2"> https://16-gericht-restaurant.vercel.app/ </font>
+# What inside? <br/> <sub> https://16-gericht-restaurant.vercel.app/ </sub>
 
 ![work in progress](https://i.imgur.com/HLihsxP.png)
 
