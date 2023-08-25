@@ -4,9 +4,12 @@ import { Route, Routes } from "react-router-dom"
 import { Navbar, Footer, ModalMenu, ModalAbout, ModalAuth, ModalBookTable } from './components/'
 /* sections */
 import { AboutPage, ContactPage, Error404, HomePage } from "./pages"
+import { useModalsStore } from "./store/modalsStore"
 
 
 function App() {
+
+  const { isOpen,closeModal } = useModalsStore()
 
 
   return (
@@ -20,10 +23,10 @@ function App() {
       </Routes>
       <Footer />
       {/* MODALS */}
-      <ModalAuth />
-      <ModalMenu />
-      <ModalAbout />
-      <ModalBookTable />
+      <ModalAuth isOpen={isOpen['ModalAuth']} onClose={() => closeModal('ModalAuth')} />
+      <ModalMenu isOpen={isOpen['ModalMenu']} onClose={() => closeModal('ModalMenu')} />
+      <ModalAbout isOpen={isOpen['ModalAbout']} onClose={() => closeModal('ModalAbout')} />
+      <ModalBookTable isOpen={isOpen['ModalBookTable']} onClose={() => closeModal('ModalBookTable')} />
     </>
   )
 }

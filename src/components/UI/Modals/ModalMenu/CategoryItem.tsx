@@ -1,11 +1,12 @@
 import './modalMenu.css'
 
+import {AiOutlineInfoCircle} from 'react-icons/ai'
+
 import { IItem } from "../../../../interfaces/fullMenu";
 import { formatCurrency } from "../../../../utils/formatCurrency";
 
 export function CategoryItem(item: IItem) {
 
-  const quantity = 0
 
   return (
     <>
@@ -24,9 +25,8 @@ export function CategoryItem(item: IItem) {
           </span>
         ))}</div>
         <div className='modal-list-text-info-footer'>
-          {quantity === 0
-            ? <a className='add-to-cart'>Add to cart</a>
-            : <a className='remove-from-cart'>Remove from cart</a>}
+            <a className='add-to-cart'>Add to cart</a>
+             <a className='list-item-info'><AiOutlineInfoCircle/></a>
         </div>
         {/* Menu item image info */}
       </div>

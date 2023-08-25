@@ -2,11 +2,11 @@ import './main.css'
 import { useEffect, useRef, useState } from 'react'
 import { Button } from '../../../components'
 import { gsap } from 'gsap'
-import useMenuModal from '../../../hooks/useMenuModal'
+import { useModalsStore } from "../../../store/modalsStore"
 
 export function Main() {
 
-  const menuModal = useMenuModal()
+  const {openModal} = useModalsStore()
 
   const [slide, setSlide] = useState(1)
   const sliderRef = useRef<HTMLDivElement>(null)
@@ -49,7 +49,7 @@ export function Main() {
           </svg>
           <h1 className="title-big mb-6 MobileM:mb-4">The Key To Fine Dining</h1>
           <p className="subTitle mb-6">I know a lot of things are not ideal here and I can do it better - its just for showcase in my protfolio</p>
-          <Button label={'Explore Menu'} onClick={menuModal.onOpen} />
+          <Button label={'Explore Menu'} onClick={() => openModal('ModalMenu')} />
         </div>
 
         <div className="main-slider img-pseudo" ref={sliderRef}>

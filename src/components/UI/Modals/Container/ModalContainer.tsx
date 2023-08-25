@@ -7,12 +7,12 @@ import { gsap } from 'gsap'
 
 
 type ModalProps = {
+  isOpen?: boolean
+  onClose: () => void
   header: React.ReactElement
   body: React.ReactElement
   footer?: React.ReactElement
-  isOpen?: boolean
   imgSrc?: string
-  onClose: () => void
   className?: string
   headerClassName?: string
   bodyClassName?: string

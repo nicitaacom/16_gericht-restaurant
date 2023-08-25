@@ -1,11 +1,12 @@
 import './modalAbout.css'
-
 import { ModalContainer } from '../../..'
-import useAboutModal from '../../../../hooks/useAboutModal'
 
+interface ModalAboutProps {
+  isOpen: boolean
+  onClose: () => void
+}
 
-export function ModalAbout () {
-  const aboutModal = useAboutModal()
+export function ModalAbout ({ isOpen, onClose}:ModalAboutProps) {
 
   const header = (
     <h1>About</h1>
@@ -17,11 +18,13 @@ export function ModalAbout () {
   </div>
   )
 
+
+
 return (
-<ModalContainer className='modal-about'
+<ModalContainer className='modal-about overflow-hidden'
   header={header}
-  body={body}
-  isOpen={aboutModal.isOpen} onClose={aboutModal.onClose}
+  body={body} bodyClassName="pt-4 overflow-y-scroll"
+  isOpen={isOpen} onClose={onClose}
   imgSrc='/bg-secondary-reverse.jpg'
  />
 )

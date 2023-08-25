@@ -3,15 +3,17 @@ import './modalMenu.css'
 import fullMenu from '../../../../constant/fullMenu.json'
 
 import { ModalContainer } from '../Container/ModalContainer'
-import useMenuModal from '../../../../hooks/useMenuModal'
 import { Category } from './Category'
 import { useSlider } from '../../../../hooks/useSlider'
 
+interface ModalMenuProps {
+  isOpen: boolean
+  onClose: () => void
+}
 
-export function ModalMenu() {
+export function ModalMenu({isOpen,onClose}:ModalMenuProps) {
 
   const { handleMouseMove, handleTouchMove, handleMouseDown, handleTouchDown } = useSlider()
-  const menuModal = useMenuModal()
 
   /* logic for deleting/!deleting ingridients (without 2nd modal) - start */
 
@@ -90,7 +92,7 @@ export function ModalMenu() {
     <ModalContainer className='modal-menu'
       header={header} headerClassName='modal-menu-header'
       body={body} bodyClassName='modal-menu-body'
-      onClose={menuModal.onClose} isOpen={menuModal.isOpen}
+      isOpen={isOpen} onClose={onClose}
       imgSrc='/bg-secondary-reverse.jpg' />
   )
 }

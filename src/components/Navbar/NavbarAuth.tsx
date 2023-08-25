@@ -1,28 +1,23 @@
-
-import useAuthModal from '../../hooks/useAuthModal';
 import { HamburgerMenu } from './HamburgerMenu';
-import useHamburgerMenu from '../../hooks/useHamburgerMenu';
-import useBookTableModal from '../../hooks/useBookTableModal';
-import useMenuModal from '../../hooks/useMenuModal';
+import useHamburgerMenu from '../../store/useHamburgerMenu';
+import { useModalsStore } from "../../store/modalsStore";
 
 
 export function NavbarAuth() {
-  const authModal = useAuthModal()
-  const bookTable = useBookTableModal()
-  const menuModal = useMenuModal()
   const hamburgerMenu = useHamburgerMenu()
 
+  const {openModal} = useModalsStore()
 
 
 
   return (
     <>
       <div className='navbar-auth'>
-        <span><a className='link' onClick={authModal.onOpen}>Log In / Registration</a></span>
+        <span><a className='link' onClick={() => openModal('ModalAuth')}>Log In / Registration</a></span>
         <div className='line' />
-        <span><a className='link' onClick={bookTable.onOpen}>Book Table</a></span>
+        <span><a className='link' onClick={() => openModal('ModalBookTable')}>Book Table</a></span>
         <div className='line' />
-        <span><a className='link' onClick={menuModal.onOpen}>Delivery</a></span>
+        <span><a className='link' onClick={() => openModal('ModalMenu')}>Delivery</a></span>
       </div>
 
       <svg className='navbar-mobile-icon' onClick={hamburgerMenu.onOpen}>

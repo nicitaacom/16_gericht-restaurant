@@ -5,14 +5,12 @@ import { gsap } from 'gsap'
 import { motion } from 'framer-motion'
 
 import { navLinks } from "../../constant";
-import useHamburgerMenu from '../../hooks/useHamburgerMenu';
-import useAuthModal from '../../hooks/useAuthModal';
-import useBookTableModal from '../../hooks/useBookTableModal';
+import useHamburgerMenu from '../../store/useHamburgerMenu';
+import { useModalsStore } from "../../store/modalsStore";
 
 export function HamburgerMenu() {
 
-  const authModal = useAuthModal()
-  const bookTable = useBookTableModal()
+  const { openModal } = useModalsStore()
 
 
   const hamburgerMenu = useHamburgerMenu()
@@ -31,13 +29,13 @@ export function HamburgerMenu() {
     });
     document.body.removeAttribute('style')
   }
-  function openAuthModal() {
+  function openModalAuth() {
     closeMobileLinks()
-    authModal.onOpen()
+    openModal('ModalAuth')
   }
-  function openBookTable() {
+  function openModalBookTable() {
     closeMobileLinks()
-    bookTable.onOpen()
+    openModal('ModalBookTable')
   }
 
   return (
@@ -50,9 +48,9 @@ export function HamburgerMenu() {
         ))}
       </ul>
       <div className='navbar-hamburger-menu_auth-mobile'>
-        <span><a className='cta-link-secondary' onClick={() => openAuthModal()}>Log In / Registration</a></span>
+        <span><a className='cta-link-secondary'  onClick={openModalAuth}>Log In / Registration</a></span>
         <div className='line' />
-        <span><a className='cta-link-secondary' onClick={() => openBookTable()}>Book Table</a></span>
+        <span><a className='cta-link-secondary'  onClick={openModalBookTable}>Book Table</a></span>
       </div>
       <svg className='navbar-hamburger-menu_close'
         onClick={() => closeMobileLinks()}>

@@ -1,14 +1,16 @@
 import './todaySpecial.css'
 import {Button} from '../../../components'
 import { wines,coctails } from '../../../constant'
-import useMenuModal from '../../../hooks/useMenuModal'
+import { useModalsStore } from "../../../store/modalsStore"
 
 interface todaySpecialProps {
   className?:string
 }
 
 export function TodaySpecial ({className}:todaySpecialProps) {
-  const menuModal = useMenuModal()
+
+const {openModal} = useModalsStore()
+
 return (
 <div className={`todaySpecial ${className}`}>
 
@@ -61,7 +63,7 @@ return (
 ))}
 </div>
 
-<Button label='View more' onClick={menuModal.onOpen}/>
+<Button label='View more' onClick={() => openModal('ModalMenu')}/>
 
   
 </div>

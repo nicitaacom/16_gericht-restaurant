@@ -1,13 +1,15 @@
 import './modalBookTable.css'
 
-import { Button, Dropdown, ModalContainer } from "../../.."
-import useBookTable from "../../../../hooks/useBookTableModal"
-import { Chair } from './Chair'
-import { useSlider } from '../../../../hooks/useSlider'
-
 import { MdOutlineMan, MdOutlineWoman } from 'react-icons/md'
 
+import { Button, Dropdown, ModalContainer } from "../../.."
+import { useSlider } from '../../../../hooks/useSlider'
+import { Chair } from './Chair'
 
+interface ModalBookTableProps {
+  isOpen: boolean
+  onClose: () => void
+}
 
 
 /* MODAL HEADER */
@@ -29,8 +31,7 @@ const header = (
 
 
 
-export function ModalBookTable() {
-  const bookTable = useBookTable()
+export function ModalBookTable({isOpen,onClose}:ModalBookTableProps) {
 
   const { handleMouseDown, handleMouseMove, handleTouchDown, handleTouchMove } = useSlider()
 
@@ -198,6 +199,6 @@ export function ModalBookTable() {
     <ModalContainer className='modal-book-table' imgSrc='/bg-secondary-reverse.jpg'
       header={header} headerClassName="modal-book-table-header"
       body={body} bodyClassName="w-[100vw] h-[88vh] overflow-hidden"
-      onClose={bookTable.onClose} isOpen={bookTable.isOpen} />
+      isOpen={isOpen} onClose={onClose} />
   )
 }

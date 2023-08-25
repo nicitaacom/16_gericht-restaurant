@@ -6,18 +6,20 @@ import { BsGoogle } from 'react-icons/bs'
 
 import { Button, ModalContainer } from "../../.."
 import { SocialButton } from '../../Button/SocialButton'
-import useAuthModal from "../../../../hooks/useAuthModal"
 import { Input } from '../../Inputs/Input'
 
 import { useState } from "react"
 
 type Variant = 'FORGOT' | 'LOGIN' | 'REGISTER'
 
-export function ModalAuth() {
+interface ModalAuthProps {
+  isOpen: boolean
+  onClose: () => void
+}
+
+export function ModalAuth({isOpen,onClose}:ModalAuthProps) {
 
   const [checked, setChecked] = useState(true)
-
-  const authModal = useAuthModal()
   const [variant, setVariant] = useState<Variant>('LOGIN')
 
 
@@ -118,7 +120,7 @@ export function ModalAuth() {
   ${variant === 'LOGIN' && 'h-[22.5em] Tablet:h-[24.5rem]'}
   ${variant === 'REGISTER' && 'h-[26.5em] translate-x-[-100%] Tablet:h-[28rem]'}
  `}
-      isOpen={authModal.isOpen} onClose={authModal.onClose}
+      isOpen={isOpen} onClose={onClose}
       imgSrc='/bg-secondary-reverse.jpg' />
   )
 }

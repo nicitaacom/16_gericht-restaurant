@@ -22,11 +22,11 @@ import {TableButton} from './UI/Inputs/TableButton'
 
 export {Input,InputNewsletter,TableButton}
 
-import {ModalContainer} from './UI/Modal/Container/ModalContainer'
-import {ModalAbout} from './UI/Modal/ModalAbout/ModalAbout'
-import {ModalAuth} from './UI/Modal/ModalAuth/ModalAuth'
-import {ModalBookTable} from './UI/Modal/ModalBookTable/ModalBookTable'
-import {ModalMenu} from './UI/Modal/ModalMenu/ModalMenu'
+import {ModalContainer} from './UI/Modals/Container/ModalContainer'
+import {ModalAbout} from './UI/Modals/ModalAbout/ModalAbout'
+import {ModalAuth} from './UI/Modals/ModalAuth/ModalAuth'
+import {ModalBookTable} from './UI/Modals/ModalBookTable/ModalBookTable'
+import {ModalMenu} from './UI/Modals/ModalMenu/ModalMenu'
 
 export {ModalContainer,ModalAbout,ModalAuth,ModalBookTable,ModalMenu}
 
