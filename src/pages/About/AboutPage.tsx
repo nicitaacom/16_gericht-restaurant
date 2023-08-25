@@ -1,7 +1,5 @@
 export function AboutPage() {
 
-
-
   return (
     <div className='min-h-[80vh] flex justify-center items-center
     px-32 4K:px-28 LaptopL:px-16'>
