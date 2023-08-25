@@ -74,10 +74,9 @@ cause they have some extentions like dark reader */
 }
 
 .line {
-  width: 1px;
-  height: 2.5rem;
-  border-right: 1px solid #505050;
-  border-image: linear-gradient(to bottom, #202020, #606060, #202020) 1 100%;
+  width: 70%;
+  height: 2px;
+  background: linear-gradient(to right, #000000, #606060, #000000);
 }
 
 
@@ -121,12 +120,6 @@ gap: 1rem;
   justify-content: center;
   align-items: center;
   text-align: center;
-}
-
-.navbar-hamburger-menu_auth-mobile .line{
-  -webkit-transform: rotate(90deg); -moz-transform: rotate(90deg); -o-transform: rotate(90deg); -ms-transform: rotate(90deg); transform: rotate(90deg);
-  height: 15vh;
-  position: absolute;
 }
 
 .navbar-mobile-icon {
