@@ -29,13 +29,9 @@ export function HamburgerMenu() {
     });
     document.body.removeAttribute('style')
   }
-  function openModalAuth() {
+  function openModalAndCloseMobileLinks(modalLabel:string) {
     closeMobileLinks()
-    openModal('ModalAuth')
-  }
-  function openModalBookTable() {
-    closeMobileLinks()
-    openModal('ModalBookTable')
+    openModal(modalLabel)
   }
 
   return (
@@ -48,9 +44,11 @@ export function HamburgerMenu() {
         ))}
       </ul>
       <div className='navbar-hamburger-menu_auth-mobile'>
-        <span><a className='cta-link-secondary'  onClick={openModalAuth}>Log In / Registration</a></span>
-        <div className='line' />
-        <span><a className='cta-link-secondary'  onClick={openModalBookTable}>Book Table</a></span>
+        <span><a className='cta-link-secondary' onClick={() => openModalAndCloseMobileLinks('ModalAuth')}>Log In / Registration</a></span>
+        <span className="line"/>
+        <span><a className='cta-link-secondary' onClick={() => openModalAndCloseMobileLinks('ModalBookTable')}>Book Table</a></span>
+        <span className="line w-[50%]"/>
+        <span><a className='cta-link-secondary'  onClick={() => openModalAndCloseMobileLinks('ModalMenu')}>Delivery</a></span>
       </div>
       <svg className='navbar-hamburger-menu_close'
         onClick={() => closeMobileLinks()}>
