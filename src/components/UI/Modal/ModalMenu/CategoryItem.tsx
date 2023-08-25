@@ -1,7 +1,7 @@
 import './modalMenu.css'
 
-import { IItem } from "../../../interfaces/fullMenu";
-import { formatCurrency } from "../../../utils/formatCurrency";
+import { IItem } from "../../../../interfaces/fullMenu";
+import { formatCurrency } from "../../../../utils/formatCurrency";
 
 export function CategoryItem(item: IItem) {
 

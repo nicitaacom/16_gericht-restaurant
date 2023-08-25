@@ -4,5 +4,6 @@
   color:#0C0B08;
   font-size: clamp(1rem,1.5vw,5rem);
   padding:clamp(0.4rem,0.75vw,1.5rem) clamp(1rem,1.25vw,4rem);
-  background-color: #DCCA87
+  background-color: #DCCA87;
+  outline:none;
 }

@@ -1,11 +1,11 @@
 import './modalMenu.css'
 
-import fullMenu from '../../../constant/fullMenu.json'
+import fullMenu from '../../../../constant/fullMenu.json'
 
-import { ModalContainer } from '../..'
-import useMenuModal from '../../../hooks/useMenuModal'
+import { ModalContainer } from '../Container/ModalContainer'
+import useMenuModal from '../../../../hooks/useMenuModal'
 import { Category } from './Category'
-import { useSlider } from '../../../hooks/useSlider'
+import { useSlider } from '../../../../hooks/useSlider'
 
 
 export function ModalMenu() {

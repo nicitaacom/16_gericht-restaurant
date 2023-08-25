@@ -4,9 +4,9 @@ import { BiLockOpenAlt, BiUser } from 'react-icons/bi'
 import { AiFillGithub, AiOutlineMail } from 'react-icons/ai'
 import { BsGoogle } from 'react-icons/bs'
 
-import { Button, ModalContainer } from "../.."
+import { Button, ModalContainer } from "../../.."
 import { SocialButton } from '../../Button/SocialButton'
-import useAuthModal from "../../../hooks/useAuthModal"
+import useAuthModal from "../../../../hooks/useAuthModal"
 import { Input } from '../../Inputs/Input'
 
 import { useState } from "react"

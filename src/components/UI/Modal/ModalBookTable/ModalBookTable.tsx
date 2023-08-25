@@ -1,9 +1,9 @@
 import './modalBookTable.css'
 
-import { Button, Dropdown, ModalContainer } from "../.."
-import useBookTable from "../../../hooks/useBookTableModal"
+import { Button, Dropdown, ModalContainer } from "../../.."
+import useBookTable from "../../../../hooks/useBookTableModal"
 import { Chair } from './Chair'
-import { useSlider } from '../../../hooks/useSlider'
+import { useSlider } from '../../../../hooks/useSlider'
 
 import { MdOutlineMan, MdOutlineWoman } from 'react-icons/md'
 

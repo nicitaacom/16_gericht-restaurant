@@ -1,7 +1,7 @@
 import './modalAbout.css'
 
-import { ModalContainer } from '../..'
-import useAboutModal from '../../../hooks/useAboutModal'
+import { ModalContainer } from '../../..'
+import useAboutModal from '../../../../hooks/useAboutModal'
 
 
 export function ModalAbout () {

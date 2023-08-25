@@ -2,14 +2,53 @@ import './dropdown.css'
 
 import { useState } from 'react'
 import { AiFillCaretDown } from 'react-icons/ai'
-import { people } from '../../constant'
 
 
 export function Dropdown({ className }: { className?: string }) {
 
   const [isActive, setIsActive] = useState(false)
-
   const [selected, setSelected] = useState<number>()
+
+//I'm sure it possible to do it in another way because here can be 10000
+  const people = [
+    {
+      id:1,
+      amount:1
+    },
+    {
+      id:2,
+      amount:2
+    },
+    {
+      id:2,
+      amount:3
+    },
+    {
+      id:3,
+      amount:3
+    },
+    {
+      id:4,
+      amount:4
+    },
+    {
+      id:5,
+      amount:5
+    },
+    {
+      id:6,
+      amount:6
+    },
+    {
+      id:7,
+      amount:7
+    },
+    {
+      id:8,
+      amount:8
+    },
+  ]
+
 
   return (
     <div className={`dropdown ${className}`}>
