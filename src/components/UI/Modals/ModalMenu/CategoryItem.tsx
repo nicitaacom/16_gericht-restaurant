@@ -4,12 +4,24 @@ import {AiOutlineInfoCircle} from 'react-icons/ai'
 
 import { IItem } from "../../../../interfaces/fullMenu";
 import { formatCurrency } from "../../../../utils/formatCurrency";
+import { useModalsStore } from "../../../../store/modalsStore";
+import { ModalProductInfo } from "../ModalProductInfo/ModalProductInfo";
+import { motion } from "framer-motion";
 
 export function CategoryItem(item: IItem) {
 
+const {isOpen,closeModal,openModal} = useModalsStore()
+
+
+document.querySelectorAll(".modal-product").forEach((item) => {
+      item.classList.add("hidden");
+    });
+
+    (document.querySelector(`.modal-product-${item.title}`) as HTMLDivElement).classList.add("visible");
 
   return (
     <>
+    <ModalProductInfo isOpen={isOpen['ModalProductInfo']} onClose={() => closeModal('ModalProductInfo')} label={item.title}/>
       <div className='modal-list-text-info-container'>
         <div className='modal-list-text-info-header'>
           <h6 className='modal-list-item-title'>{item.title}</h6>
@@ -25,14 +37,19 @@ export function CategoryItem(item: IItem) {
           </span>
         ))}</div>
         <div className='modal-list-text-info-footer'>
-            <a className='add-to-cart'>Add to cart</a>
-             <a className='list-item-info'><AiOutlineInfoCircle/></a>
+            <motion.a className='add-to-cart hover:cursor-pointer'
+            whileHover={{scale:0.975}}>Add to cart</motion.a>
+            <motion.div className='list-item-info hover:cursor-pointer'
+            whileHover={{scale:0.975}}>
+             <a onClick={() => openModal('ModalProductInfo')}><AiOutlineInfoCircle/></a>
+            </motion.div>
         </div>
         {/* Menu item image info */}
       </div>
 
 
       <img className='modal-list-img-info' src={item.imgUrl} />
+      
     </>
   )
 }

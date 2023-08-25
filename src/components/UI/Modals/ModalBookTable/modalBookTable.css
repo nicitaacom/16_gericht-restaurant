@@ -6,7 +6,7 @@
   display: flex;
   justify-content: space-between;
   height: 12.25vh;
-  padding: var(--padding-x-medium);
+  padding: var(--padding-x-md);
   padding-right: clamp(4rem, 3.6rem + 2vw, 6rem);
 }
 
@@ -14,7 +14,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: var(--gap-small);
+  gap: var(--gap-sm);
   width: 60%;
 }
 
@@ -51,17 +51,17 @@
 
 
 /* Table width and height */
-.table-medium input[type="radio"]+.radio-label:before {
+.table-md input[type="radio"]+.radio-label:before {
   width: clamp(1.25rem, 0.3rem + 4.75vw, 6rem);
   height: clamp(9rem, 3.2857rem + 8.9286vw, 14rem);
 }
 
-.table-big-vertical input[type="radio"]+.radio-label:before {
+.table-lg-vertical input[type="radio"]+.radio-label:before {
   width: clamp(4rem, 1.7143rem + 3.5714vw, 6rem);
   height: clamp(14rem, 4.8571rem + 14.2857vw, 22rem);
 }
 
-.table-big-horizontal input[type="radio"]+.radio-label:before {
+.table-lg-horizontal input[type="radio"]+.radio-label:before {
   width: clamp(14rem, 4.8571rem + 14.2857vw, 22rem);
   height: clamp(4rem, 1.7143rem + 3.5714vw, 6rem);
 }
@@ -277,7 +277,7 @@
   display: flex;
   flex-direction: row;
   gap: var(--gap-xs);
-  font-size: var(--text-medium);
+  font-size: var(--text-md);
   align-items: center;
   position: absolute;
   top: 15%;
@@ -289,7 +289,7 @@
   display: flex;
   flex-direction: row;
   gap: var(--gap-xs);
-  font-size: var(--text-medium);
+  font-size: var(--text-md);
   align-items: center;
   position: absolute;
   top: 65%;
@@ -315,7 +315,7 @@
   position: absolute;
   top: 50%;
   left: 0%;
-  font-size: var(--text-medium);
+  font-size: var(--text-md);
   transform: rotate(270deg);
 }
 
@@ -357,16 +357,16 @@
 @media (max-width:1024px) {
 
   /*Table width and height */
-  .table-medium input[type="radio"]+.radio-label:before {
+  .table-md input[type="radio"]+.radio-label:before {
     height: clamp(6rem, -3rem + 18.75vw, 9rem);
   }
 
-  .table-big-horizontal input[type="radio"]+.radio-label:before {
+  .table-lg-horizontal input[type="radio"]+.radio-label:before {
     width: clamp(12rem, 6rem + 12.5vw, 14rem);
     height: clamp(3rem, 0rem + 6.25vw, 4rem);
   }
 
-  .table-big-vertical input[type="radio"]+.radio-label:before {
+  .table-lg-vertical input[type="radio"]+.radio-label:before {
     width: clamp(3rem, 0rem + 6.25vw, 4rem);
     height: clamp(12rem, 6rem + 12.5vw, 14rem);
   }
@@ -395,12 +395,12 @@
 @media (max-width:768px) {
 
   /*Table width and height */
-  .table-medium input[type="radio"]+.radio-label:before {
+  .table-md input[type="radio"]+.radio-label:before {
     width: clamp(1.75rem, 1.2143rem + 2.6786vw, 2.5rem);
     height: clamp(5rem, 4.2857rem + 3.5714vw, 6rem);
   }
 
-  .table-big-vertical input[type="radio"]+.radio-label:before {
+  .table-lg-vertical input[type="radio"]+.radio-label:before {
     width: clamp(3rem, 0rem + 6.25vw, 4rem);
     height: clamp(7rem, 3.4286rem + 17.8571vw, 12rem);
   }

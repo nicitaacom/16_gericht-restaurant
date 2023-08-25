@@ -17,6 +17,7 @@ type ModalProps = {
   headerClassName?: string
   bodyClassName?: string
   footerClassName?: string
+  displayNavbar?:boolean
 }
 
 
@@ -24,7 +25,7 @@ type ModalProps = {
 export function ModalContainer({ header, body, footer,
   isOpen, onClose,
   imgSrc,
-  className, headerClassName, bodyClassName, footerClassName }: ModalProps) {
+  className, headerClassName, bodyClassName, footerClassName ,displayNavbar}: ModalProps) {
 
   const modalRef = useRef(null);
   const modalBgRef = useRef(null);
@@ -33,37 +34,38 @@ export function ModalContainer({ header, body, footer,
 
   /* for disbling scroll and hiding navbar when modal open */
   const navbar = document.getElementById('navbar')
-  function hideNavbar() {
-    if (navbar) {
-      navbar.style.visibility = 'hidden'
+   function hideNavbar() {
+      if (navbar) {
+        navbar.style.visibility = 'hidden'
+      }
     }
-  }
-  useEffect(() => {
-    setShowModal(isOpen)
-
-    if (isOpen) {
+    useEffect(() => {
+  
+      setShowModal(isOpen)
+      
+      if (isOpen) {
       document.body.style.overflow = 'hidden';
       document.body.style.width = 'calc(100% - 17px)';
-      if (navbar) {
+      if (navbar && !displayNavbar) {
         gsap.to(navbar, {
           duration: 1,
           y: -240,
           onComplete: () => hideNavbar()
         });
       }
-    }
+    
+  }
   }, [isOpen, navbar])
-
   /* for onClose animation and showing navbar (applies for all modals) */
   function closeModal() {
     const modal = modalRef.current;
     const navbar = document.getElementById('navbar')
     function showNavbar() {
-      if (navbar) {
+      if (navbar && !displayNavbar) {
         navbar.style.visibility = 'visible'
       }
     }
-    if (navbar) {
+    if (navbar && !displayNavbar) {
       showNavbar()
       gsap.to(navbar, {
         duration: 1,
@@ -136,7 +138,9 @@ export function ModalContainer({ header, body, footer,
               <div className="flex flex-row gap-x-2 items-center">
                 {header}
               </div>
-              <motion.img className="close-button" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} src={'./menu/close.png'} onClick={() => closeModal()} />
+              <motion.img className="close-button"
+              src={'./menu/close.png'} onClick={closeModal}
+               whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}/>
             </div>
 
             <div className={`modal-body ${bodyClassName}`}>

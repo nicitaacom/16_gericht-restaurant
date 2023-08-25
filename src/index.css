@@ -26,6 +26,8 @@
   --cta-light: #dcca87dd;
   --cta-dark: #dcca87bb;
 
+  /* Support colors */
+  --info:hsl(204deg 74% 43%);
 
   /* text - 320-3840px */
   --preTitle: #ffffff;
@@ -36,32 +38,32 @@
   --font-secondary: 'Open Sans', serif;
 
   --text-xs: clamp(1rem, 0.7727rem + 1.1364vw, 3.5rem);
-  --text-small: clamp(1.25rem, 1.75vw, 4.5rem);
-  --text-medium: clamp(1.5rem, 1.2727rem + 1.1364vw, 4rem);
-  --text-big: clamp(3.5rem, 5vw, 8.5rem);
+  --text-sm: clamp(1.25rem, 1.75vw, 4.5rem);
+  --text-md: clamp(1.5rem, 1.2727rem + 1.1364vw, 4rem);
+  --text-lg: clamp(3.5rem, 5vw, 8.5rem);
 
   /* padding - 320-3840px*/
   --padding-xs: clamp(0.1rem, 0.0409rem + 0.2955vw, 0.75rem) clamp(0.25rem, -0.1875rem + 0.9115vw, 2rem);
-  --padding-small: clamp(0.5rem, 0.3133rem + 0.7028vw, 2rem) clamp(0.5rem, 0.1889rem + 1.1713vw, 3rem);
-  --padding-medium: clamp(0.75rem, 0.5455rem + 1.0227vw, 3rem) clamp(0.9rem, 0.6864rem + 1.0682vw, 3.25rem);
-  --padding-big: clamp(1rem, 0.3636rem + 3.1818vw, 8rem) clamp(1rem, 0.3636rem + 3.1818vw, 8rem);
+  --padding-sm: clamp(0.5rem, 0.3133rem + 0.7028vw, 2rem) clamp(0.5rem, 0.1889rem + 1.1713vw, 3rem);
+  --padding-md: clamp(0.75rem, 0.5455rem + 1.0227vw, 3rem) clamp(0.9rem, 0.6864rem + 1.0682vw, 3.25rem);
+  --padding-lg: clamp(1rem, 0.3636rem + 3.1818vw, 8rem) clamp(1rem, 0.3636rem + 3.1818vw, 8rem);
 
   --padding-x-xs: 0 clamp(0.25rem, -0.1875rem + 0.9115vw, 2rem);
-  --padding-x-small: 0 clamp(0.5rem, 0.1889rem + 1.1713vw, 3rem);
-  --padding-x-medium: 0 clamp(0.9rem, 0.6864rem + 1.0682vw, 3.25rem);
-  --padding-x-big: 0 clamp(1rem, 0.3636rem + 3.1818vw, 8rem);
+  --padding-x-sm: 0 clamp(0.5rem, 0.1889rem + 1.1713vw, 3rem);
+  --padding-x-md: 0 clamp(0.9rem, 0.6864rem + 1.0682vw, 3.25rem);
+  --padding-x-lg: 0 clamp(1rem, 0.3636rem + 3.1818vw, 8rem);
 
   /* border-radius - 320-3840px */
   --border-xs: clamp(0.5rem, 0.4378rem + 0.2343vw, 1rem);
-  --border-small: clamp(0.5rem, 0.4378rem + 0.2343vw, 1rem);
-  --border-medium: clamp(0.5rem, 0.4378rem + 0.2343vw, 1rem);
-  --border-big: clamp(0.5rem, 0.4378rem + 0.2343vw, 1rem);
+  --border-sm: clamp(0.5rem, 0.4378rem + 0.2343vw, 1rem);
+  --border-md: clamp(0.5rem, 0.4378rem + 0.2343vw, 1rem);
+  --border-lg: clamp(0.5rem, 0.4378rem + 0.2343vw, 1rem);
 
   /* border-radius - 320-3840px */
   --gap-xs: clamp(0.75rem, 0.6364rem + 0.5682vw, 2rem);
-  --gap-small: clamp(1rem, 0.8636rem + 0.6818vw, 2.5rem);
-  --gap-medium: clamp(1.5rem, 1.3636rem + 0.6818vw, 3rem);
-  --gap-big: clamp(2rem, 1.8182rem + 0.9091vw, 4rem);
+  --gap-sm: clamp(1rem, 0.8636rem + 0.6818vw, 2.5rem);
+  --gap-md: clamp(1.5rem, 1.3636rem + 0.6818vw, 3rem);
+  --gap-lg: clamp(2rem, 1.8182rem + 0.9091vw, 4rem);
 }
 
 body {
@@ -131,25 +133,25 @@ a {
   height: clamp(1rem, 1vw, 5rem)
 }
 
-.title-big {
+.title-lg {
   font-family: 'Cormorant Upright', serif;
   font-weight: 700;
   color: #DCCA87;
   line-height: clamp(3rem, 6vw, 10rem);
-  font-size: var(--text-big);
+  font-size: var(--text-lg);
 }
 
 .title {
   font-family: 'Cormorant Upright', serif;
   color: #DCCA87;
   font-weight: 600;
-  font-size: var(--text-medium);
+  font-size: var(--text-md);
 }
 
-.title-small {
+.title-sm {
   font-family: 'Cormorant Upright', serif;
   color: #DCCA87;
-  font-size: var(--text-small);
+  font-size: var(--text-sm);
 }
 
 .subTitle {

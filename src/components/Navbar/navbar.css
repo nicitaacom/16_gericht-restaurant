@@ -70,7 +70,7 @@ gap:2rem;
 /* don't modify !important here cause some users will not see hover effect 
 cause they have some extentions like dark reader */
 .navbar-auth a:hover {
-  border-bottom:1px solid #DCCA87 !important;
+  border-bottom:1px solid #DCCA87 !important
 }
 
 .line {

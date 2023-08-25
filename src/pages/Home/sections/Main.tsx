@@ -47,7 +47,7 @@ export function Main() {
           <svg className='spoon-svg mb-1'>
             <use xlinkHref='./sprite.svg#spoon' />
           </svg>
-          <h1 className="title-big mb-6 MobileM:mb-4">The Key To Fine Dining</h1>
+          <h1 className="title-lg mb-6 MobileM:mb-4">The Key To Fine Dining</h1>
           <p className="subTitle mb-6">I know a lot of things are not ideal here and I can do it better - its just for showcase in my protfolio</p>
           <Button label={'Explore Menu'} onClick={() => openModal('ModalMenu')} />
         </div>
@@ -79,7 +79,7 @@ export function Main() {
 
       <div className='scroll'>
         <div className='line-scroll mt-4' />
-        <h6 className='title-small uppercase'>Scroll</h6>
+        <h6 className='title-sm uppercase'>Scroll</h6>
       </div>
     </div>
   )

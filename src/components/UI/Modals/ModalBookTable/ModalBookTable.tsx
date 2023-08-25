@@ -83,7 +83,7 @@ export function ModalBookTable({isOpen,onClose}:ModalBookTableProps) {
             <Chair reverse />
             <Chair reverse />
           </div>
-          <div className="radio table-medium">
+          <div className="radio table-md">
             <input id="table-1" name="radio" type="radio" />
             <label htmlFor="table-1" className={`radio-label`}></label>
           </div>
@@ -98,7 +98,7 @@ export function ModalBookTable({isOpen,onClose}:ModalBookTableProps) {
             <Chair reverse />
             <Chair reverse />
           </div>
-          <div className="radio table-medium">
+          <div className="radio table-md">
             <input id="table-2" name="radio" type="radio" />
             <label htmlFor="table-2" className={`radio-label`}></label>
           </div>
@@ -109,7 +109,7 @@ export function ModalBookTable({isOpen,onClose}:ModalBookTableProps) {
         </div>
 
         <div className='absolute top-[4rem] left-[101rem] flex flex-col'>
-          <div className="radio table-big-horizontal">
+          <div className="radio table-lg-horizontal">
             <input id="table-3" name="radio" type="radio" disabled />
             <label htmlFor="table-3" className={`radio-label tooltip`}>
               <span className="tooltiptext">Booked 19:00-21:00 GMT-0</span>
@@ -128,7 +128,7 @@ export function ModalBookTable({isOpen,onClose}:ModalBookTableProps) {
             <Chair reverse />
             <Chair reverse />
           </div>
-          <div className="radio table-medium">
+          <div className="radio table-md">
             <input id="table-4" name="radio" type="radio" />
             <label htmlFor="table-4" className={`radio-label`}></label>
           </div>
@@ -143,7 +143,7 @@ export function ModalBookTable({isOpen,onClose}:ModalBookTableProps) {
             <Chair reverse />
             <Chair reverse />
           </div>
-          <div className="radio table-medium">
+          <div className="radio table-md">
             <input id="table-5" name="radio" type="radio" />
             <label htmlFor="table-5" className={`radio-label`}></label>
           </div>
@@ -159,7 +159,7 @@ export function ModalBookTable({isOpen,onClose}:ModalBookTableProps) {
             <Chair reverse />
             <Chair reverse />
           </div>
-          <div className="radio table-big-vertical">
+          <div className="radio table-lg-vertical">
             <input id="table-7" name="radio" type="radio" />
             <label htmlFor="table-7" className={`radio-label`}></label>
           </div>
@@ -177,7 +177,7 @@ export function ModalBookTable({isOpen,onClose}:ModalBookTableProps) {
             <Chair reverse />
             <Chair reverse />
           </div>
-          <div className="radio table-big-vertical">
+          <div className="radio table-lg-vertical">
             <input id="table-7" name="radio" type="radio" />
             <label htmlFor="table-7" className={`radio-label`}></label>
           </div>

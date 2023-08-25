@@ -1,7 +1,7 @@
 import './modalMenu.css'
 
 import { useInView } from "react-intersection-observer"
-import { IFullMenu } from "../../../interfaces/fullMenu";
+import { IFullMenu } from "../../../../interfaces/fullMenu";
 import { CategoryItem } from "./CategoryItem";
 
 export function Category(category: IFullMenu) {

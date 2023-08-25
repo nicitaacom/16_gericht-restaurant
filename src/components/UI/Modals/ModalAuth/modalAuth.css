@@ -4,7 +4,7 @@
 
 .modal-auth-body {
   display: flex;
-  padding:var(--padding-medium);
+  padding:var(--padding-md);
   transition: all 500ms;
 }
 
@@ -20,14 +20,14 @@
 
 .modal-auth-body-forgot {
   position: absolute;
-  padding:var(--padding-medium);
+  padding:var(--padding-md);
   right: 100%;
   text-align: center;
 }
 
 .modal-auth-body-register {
   position: absolute;
-  padding:var(--padding-medium);
+  padding:var(--padding-md);
   left:100%;
 }
 

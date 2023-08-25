@@ -14,7 +14,7 @@ return (
           <h1 className="title mb-12 inline-block">Find Us</h1>
           <p className="subTitle mb-6">Lane Ends Bungalow, Whatcroft Hall Lane, Rudheath, CW9 7SG</p>
           <div className="flex flex-col gap-y-3 mb-12">
-            <h2 className="title-small">Opening hours</h2>
+            <h2 className="title-sm">Opening hours</h2>
             <p className="text-5xl
             4K:text-3xl
             LaptopL:text-2xl

@@ -32,7 +32,7 @@ return (
         {wine.items.map(item => (
         <li key={item.title} className='list-item'>
           <div className='item-info'>
-          <h6 className='title-small menu-title'>{item.title}</h6>
+          <h6 className='title-sm menu-title'>{item.title}</h6>
           <div className='list-line'/>
           <h6 className='list-price'>{item.price}</h6>
           </div>
@@ -51,7 +51,7 @@ return (
         {coctail.items.map(item => (
         <li key={item.title} className='list-item'>
           <div className='item-info'>
-          <h6 className='title-small menu-title'>{item.title}</h6>
+          <h6 className='title-sm menu-title'>{item.title}</h6>
           <div className='list-line'/>
           <h6 className='list-price'>{item.price}</h6>
           </div>

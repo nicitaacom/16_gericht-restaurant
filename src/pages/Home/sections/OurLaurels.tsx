@@ -19,7 +19,7 @@ return (
           Tablet:justify-center Tablet:items-center" key={laurel.title}>
           <img className="w-1/5 object-cover Tablet:w-1/6 MobileL:w-1/4" src={laurel.imgSrc} alt="award01"/>
           <div className="flex flex-col justify-center h-full w-1/2">
-            <h1 className="title-small font-bold whitespace-nowrap">{laurel.title}</h1>
+            <h1 className="title-sm font-bold whitespace-nowrap">{laurel.title}</h1>
             <p className="subTitle">{laurel.subTitle}</p>
           </div>
         </div>
