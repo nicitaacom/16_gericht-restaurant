@@ -207,17 +207,6 @@ a {
   right: 0;
 }
 
-.close-button {
-  cursor: pointer;
-  width: clamp(1rem, 2vw, 1.75rem);
-  height: clamp(1rem, 2vw, 1.75rem);
-  filter: invert(98%) sepia(5%) saturate(4054%) hue-rotate(334deg) brightness(93%) contrast(83%);
-
-  position: absolute;
-  right: clamp(1rem, 2.25vw, 8rem);
-  top: 50%;
-  transform: translate(0%, -50%) !important;
-}
 
 /* Tooltip */
 .tooltip:hover .tooltiptext {

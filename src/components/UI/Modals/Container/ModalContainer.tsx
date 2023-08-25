@@ -133,9 +133,10 @@ export function ModalContainer({ header, body, footer,
 
 
             <div className={`modal-header ${headerClassName}`}>
-              <motion.img src={'./menu/close.png'} className='close-button' onClick={() => closeModal()}
-                whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} />
-              {header}
+              <div className="flex flex-row gap-x-2 items-center">
+                {header}
+              </div>
+              <motion.img className="close-button" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} src={'./menu/close.png'} onClick={() => closeModal()} />
             </div>
 
             <div className={`modal-body ${bodyClassName}`}>
