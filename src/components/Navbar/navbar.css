@@ -122,12 +122,6 @@ gap: 1rem;
   text-align: center;
 }
 
-.navbar-mobile-icon {
-  width: 1.5rem;
-  height: 1.5rem;
-  fill:#ffffff;
-}
-
 .navbar-hamburger-menu_close {
   position: absolute;
   top: 1.25rem;

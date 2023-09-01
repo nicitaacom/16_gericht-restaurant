@@ -1,7 +1,5 @@
 import './modalBookTable.css'
 
-import { MdOutlineMan, MdOutlineWoman } from 'react-icons/md'
-
 import { Button, Dropdown, ModalContainer } from "../../.."
 import { useSlider } from '../../../../hooks/useSlider'
 import { Chair } from './Chair'
@@ -16,12 +14,14 @@ interface ModalBookTableProps {
 const header = (
   <>
     <div className='book-table-header-info'>
-      <h1 className="title bg-back whitespace-nowrap">Book Table</h1>
-      <Dropdown className='flex Tablet:hidden' />
-      <div className='flex Tablet:hidden whitespace-nowrap tooltip'>
-        Date&Time picker <span className="tooltiptext !translate-y-[160%] !translate-x-[-40%]">Pick date-time in the feature</span>
+     <div className="flex flex-row gap-x-4 items-center">
+        <h1 className="title bg-back whitespace-nowrap">Book Table</h1>
+        <Dropdown className='flex Tablet:hidden' />
+        <div className='flex Tablet:hidden whitespace-nowrap tooltip'>
+          Date&Time picker <span className="tooltiptext !translate-y-[160%] !translate-x-[-40%]">Pick date-time in the feature</span>
       </div>
-    </div>
+     </div>
+     </div>
     <Button label='Book table' className='button-book-table whitespace-nowrap'
       onClick={() => {/* BACKEND - Send book data to another site */ }} />
   </>
@@ -41,7 +41,7 @@ export function ModalBookTable({isOpen,onClose}:ModalBookTableProps) {
   const body = (
     <>
 
-      <div className='w-[calc(100%+17px)] h-full bg-[--bg-primary]
+      <div className='w-[calc(100%+17px)] h-full bg-[--primary]
       relative flex overflow-y-scroll overflow-x-hidden'
         onMouseDown={handleMouseDown}
         onTouchStart={handleTouchDown}
@@ -60,11 +60,10 @@ export function ModalBookTable({isOpen,onClose}:ModalBookTableProps) {
 
         <div className='wc-decoration'>
           <div className='wc-decoration-man'>
-            WC <MdOutlineMan size={48} />
+            WC <img className="w-[48px] h-[48px]" src="./modals/modalBookTable/man.svg" alt="man" />
           </div>
           <div className='wc-decoration-woman'>
-            WC <MdOutlineWoman size={48} />
-
+            WC <img className="w-[48px] h-[48px]" src="./modals/modalBookTable/woman.svg" alt="woman" />
           </div>
         </div>
 
@@ -196,7 +195,7 @@ export function ModalBookTable({isOpen,onClose}:ModalBookTableProps) {
 
 
   return (
-    <ModalContainer className='modal-book-table' imgSrc='/bg-secondary-reverse.jpg'
+    <ModalContainer className='modal-book-table' imgSrc='/pages/bg-secondary-reverse.avif'
       header={header} headerClassName="modal-book-table-header"
       body={body} bodyClassName="w-[100vw] h-[88vh] overflow-hidden"
       isOpen={isOpen} onClose={onClose} />

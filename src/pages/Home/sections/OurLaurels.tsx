@@ -1,16 +1,16 @@
 import { laurels } from "../../../constant";
 
-export function OutLaurels () {
+export function OurLaurels () {
 return (
-<div className="relative overflow-hidden py-32 bg-[url('/bg.webp')] bg-cover">
- <img className="absolute top-4 left-8 z-10 max-w-[7.5%]" src="/smth1.png" alt="smth1.png" />
+<div className="relative overflow-hidden py-32 bg-[url('./pages/bg-secondary.avif')] bg-cover">
+ <img className="absolute top-4 left-8 z-10 max-w-[7.5%]" src="/pages/home/decoration.png" alt="decoration.png" />
   <div className="section-container flex justify-between items-center
   Tablet:justify-center Tablet:text-center">
     <div className="flex flex-col max-w-[50%] 
     Tablet:max-w-full Tablet:items-center">
       <h6 className="preTitle">Awards & Recognition</h6>
       <svg className='spoon-svg'>
-      <use xlinkHref='./sprite.svg#spoon'/>
+      <use xlinkHref='./pages/home/sprite.svg#spoon'/>
       </svg>
       <h1 className="title mb-12 inline-block">Our Laurels</h1>
       <div className="grid grid-cols-2 gap-y-8 LaptopL:grid-cols-1">
@@ -27,7 +27,7 @@ return (
       </div>
     </div>
       <div className="max-w-[40%] Tablet:hidden">
-        <img src="/laurels.png" alt="laurels.png" />
+        <img src="/pages/home/placeholder.avif" alt="placeholder.avif" />
       </div>
   </div>
 </div>

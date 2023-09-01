@@ -9,7 +9,7 @@ return (
     Tablet:px-4 Tablet:py-4 Tablet:text-center">
         <h6 className="preTitle">Newsletter</h6>
         <svg className='spoon-svg'>
-            <use xlinkHref='./sprite.svg#spoon'/>
+            <use xlinkHref='./pages/home/sprite.svg#spoon'/>
           </svg>
           <h1 className="title">Subscribe To Our Newsletter</h1>
           <p className="mb-16 text-5xl

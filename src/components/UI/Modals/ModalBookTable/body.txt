@@ -1,4 +1,4 @@
-<div className='min-w-[100rem] max-w-[100rem] min-h-[100rem] max-h-[100rem] bg-[--bg-primary]
+<div className='min-w-[100rem] max-w-[100rem] min-h-[100rem] max-h-[100rem] bg-[--primary]
       relative flex overflow-scroll'
         onMouseDown={onMouseTouchDown}
         onTouchStart={onMouseTouchDown}

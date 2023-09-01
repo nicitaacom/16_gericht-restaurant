@@ -15,11 +15,12 @@
   justify-content: space-between;
   align-items: center;
   gap: var(--gap-sm);
-  width: 60%;
 }
 
 .button-book-table {
   padding: var(--padding-xs);
+  margin-left: auto;
+  margin-right: 1rem;
 }
 
 
@@ -276,7 +277,6 @@
 .wc-decoration-man {
   display: flex;
   flex-direction: row;
-  gap: var(--gap-xs);
   font-size: var(--text-md);
   align-items: center;
   position: absolute;
@@ -288,7 +288,6 @@
 .wc-decoration-woman {
   display: flex;
   flex-direction: row;
-  gap: var(--gap-xs);
   font-size: var(--text-md);
   align-items: center;
   position: absolute;

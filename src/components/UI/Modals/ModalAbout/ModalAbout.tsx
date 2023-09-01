@@ -25,7 +25,7 @@ return (
   header={header}
   body={body} bodyClassName="pt-4 overflow-y-scroll"
   isOpen={isOpen} onClose={onClose}
-  imgSrc='/bg-secondary-reverse.jpg'
+  imgSrc='/pages/bg-secondary-reverse.avif'
  />
 )
 }

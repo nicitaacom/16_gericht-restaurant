@@ -2,6 +2,7 @@ import { HamburgerMenu } from './HamburgerMenu';
 import useHamburgerMenu from '../../store/useHamburgerMenu';
 import { useModalsStore } from "../../store/modalsStore";
 
+import {AiOutlineMenu} from 'react-icons/ai'
 
 export function NavbarAuth() {
   const hamburgerMenu = useHamburgerMenu()
@@ -20,9 +21,7 @@ export function NavbarAuth() {
         <span><a className='link' onClick={() => openModal('ModalMenu')}>Delivery</a></span>
       </div>
 
-      <svg className='navbar-mobile-icon' onClick={hamburgerMenu.onOpen}>
-        <use xlinkHref='./sprite.svg#hamburger-menu' />
-      </svg>
+      <AiOutlineMenu size={20} onClick={hamburgerMenu.onOpen}/>
 
       {hamburgerMenu.isOpen && <HamburgerMenu />}
     </>

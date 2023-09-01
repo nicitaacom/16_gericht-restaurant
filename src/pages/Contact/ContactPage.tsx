@@ -8,9 +8,9 @@ export function ContactPage() {
       <p className="subTitle mb-4">9 W 53rd St, New York, NY 10019, USA      </p>
       <ul>
         <li className='subTitle flex flex-row gap-2 items-center justify-center'>
-          <a className='hover:text-[--cta]' href="t.me/icpcedu">Telegram</a> <FaTelegramPlane /></li>
+          <a className='hover:text-[--cta]' href="https://t.me/nicitaacom" target="_blank">Telegram</a> <FaTelegramPlane /></li>
         <li className='subTitle flex flex-row gap-2 items-center justify-center'>
-          <a className='hover:text-[--cta]' href="https://discord.com/users/780002958380498955">Discord</a><BsDiscord /></li>
+          <a className='hover:text-[--cta]' href="https://discord.com/users/780002958380498955" target="_blank">Discord</a><BsDiscord /></li>
       </ul>
     </div>
   )

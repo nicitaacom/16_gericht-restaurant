@@ -45,7 +45,7 @@ export function Main() {
         <div className="main-text">
           <h6 className="preTitle">Chase the new Flavour</h6>
           <svg className='spoon-svg mb-1'>
-            <use xlinkHref='./sprite.svg#spoon' />
+            <use xlinkHref='./pages/home/sprite.svg#spoon' />
           </svg>
           <h1 className="title-lg mb-6 MobileM:mb-4">The Key To Fine Dining</h1>
           <p className="subTitle mb-6">I know a lot of things are not ideal here and I can do it better - its just for showcase in my protfolio</p>
@@ -53,10 +53,10 @@ export function Main() {
         </div>
 
         <div className="main-slider img-pseudo" ref={sliderRef}>
-          <img className={`object-cover opacity-0 absolute inset-0`} src='./main-01.jpg' />
-          <img className={`object-cover opacity-0 absolute inset-0`} src='./main-02.jpeg' />
-          <img className={`object-cover opacity-0 absolute inset-0`} src='./main-03.jpg' />
-          <img className={`object-cover opacity-0 absolute inset-0`} src='./main-04.webp' />
+          <img className={`object-cover opacity-0 absolute inset-0`} src='./pages/home/main-01.avif' />
+          <img className={`object-cover opacity-0 absolute inset-0`} src='./pages/home/main-02.avif' />
+          <img className={`object-cover opacity-0 absolute inset-0`} src='./pages/home/main-03.avif' />
+          <img className={`object-cover opacity-0 absolute inset-0`} src='./pages/home/main-04.avif' />
         </div>
 
       </div>
@@ -65,7 +65,7 @@ export function Main() {
       <div className='slider-dots'>
         <button className='preTitle' onClick={() => changeSlide(1)}>01</button>
         <svg className='line-svg mt-[0.4rem]'>
-          <use xlinkHref='./sprite.svg#line' />
+          <use xlinkHref='./pages/home/sprite.svg#line' />
         </svg>
         <button className='preTitle' onClick={() => changeSlide(2)}>02</button>
         <button className='preTitle' onClick={() => changeSlide(3)}>03</button>

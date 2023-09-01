@@ -20,7 +20,7 @@
 
 :root {
   /* bg */
-  --bg-primary: #141311;
+  --primary: #141311;
   /* bg-secondary - I use '/bg-secondary-reverse.jpg for it' */
   --cta: #DCCA87;
   --cta-light: #dcca87dd;
@@ -54,12 +54,12 @@
   --padding-x-lg: 0 clamp(1rem, 0.3636rem + 3.1818vw, 8rem);
 
   /* border-radius - 320-3840px */
-  --border-xs: clamp(0.5rem, 0.4378rem + 0.2343vw, 1rem);
-  --border-sm: clamp(0.5rem, 0.4378rem + 0.2343vw, 1rem);
-  --border-md: clamp(0.5rem, 0.4378rem + 0.2343vw, 1rem);
-  --border-lg: clamp(0.5rem, 0.4378rem + 0.2343vw, 1rem);
+  --border-xs: clamp(0.25rem, 0.2273rem + 0.1136vw, 0.5rem);
+  --border-sm: clamp(0.5rem, 0.4773rem + 0.1136vw, 0.75rem);
+  --border-md: clamp(0.75rem, 0.7273rem + 0.1136vw, 1rem);
+  --border-lg: clamp(1rem, 0.9545rem + 0.2273vw, 1.5rem);
 
-  /* border-radius - 320-3840px */
+  /* gap - 320-3840px */
   --gap-xs: clamp(0.75rem, 0.6364rem + 0.5682vw, 2rem);
   --gap-sm: clamp(1rem, 0.8636rem + 0.6818vw, 2.5rem);
   --gap-md: clamp(1.5rem, 1.3636rem + 0.6818vw, 3rem);
@@ -228,7 +228,7 @@ a {
   left: 50%;
   transform: translate(-50%, -110%);
   font-size: 14px;
-  background: url('/bg.webp');
+  background: url('/pages/bg-secondary.avif');
   text-align: center;
   border-radius: 6px;
   z-index: 99;

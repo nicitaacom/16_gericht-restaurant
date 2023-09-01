@@ -121,6 +121,6 @@ export function ModalAuth({isOpen,onClose}:ModalAuthProps) {
   ${variant === 'REGISTER' && 'h-[26.5em] translate-x-[-100%] Tablet:h-[28rem]'}
  `}
       isOpen={isOpen} onClose={onClose}
-      imgSrc='/bg-secondary-reverse.jpg' />
+      imgSrc='/pages/bg-secondary-reverse.avif' />
   )
 }

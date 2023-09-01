@@ -17,7 +17,7 @@ return (
 <div className='todaySpecial-header'>
 <h6 className='preTitle mb-1'>Menu that fits you palatte</h6>
 <svg className='spoon-svg'>
-<use xlinkHref='./sprite.svg#spoon'/>
+<use xlinkHref='./pages/home/sprite.svg#spoon'/>
 </svg>
 <h1 className='title'>Today’s Special</h1>
 </div>
@@ -42,7 +42,7 @@ return (
       </div>
     </div>
     ))}
-<img className='menu-list-img' src='./menu.png'/>
+<img className='menu-list-img' src='./pages/home/menu.avif'/>
 
 {coctails.map(coctail => (
   <div key={coctail.title} className='menu-list'>

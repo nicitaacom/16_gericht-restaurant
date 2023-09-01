@@ -1,10 +1,10 @@
 import './modalMenu.css'
 
 import { useInView } from "react-intersection-observer"
-import { IFullMenu } from "../../../../interfaces/fullMenu";
+import { ICategory } from "../../../../interfaces/fullMenu";
 import { CategoryItem } from "./CategoryItem";
 
-export function Category(category: IFullMenu) {
+export function Category(category: ICategory) {
 
   const { ref, inView } = useInView({ threshold: 0.5 })
 

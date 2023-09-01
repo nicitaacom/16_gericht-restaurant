@@ -1,139 +1,567 @@
 [
   {
-    "id": "7421eae4-cf2a-4437-8af6-d354bfcf0595",
+    "id": "aeb6615e-027a-419e-b1f7-0ef09ffb4c78",
     "title": "Main dishes",
     "items": [
       {
-        "id": "a8414f0c-1413-4d11-a657-64c3fccf3a77",
+        "id": "91c82f50-830a-4311-8e2b-31e360b46671",
         "title": "Burger",
-        "subTitle": ["Beef meet", "Burger sause", "cheese", "salat", "tomato", "pickled cucumber"],
+        "ingredients": [
+          {
+            "id": "3bfe29f8-dc40-4591-9d63-adc3dffec77a",
+            "label": "Beef meet",
+            "imgSrc": "/modals/modalMenu/main/ingredients/beef-meet.avif"
+          },
+          {
+            "id": "2b12775a-7c21-4c2d-9a39-4913004b1b4e",
+            "label": "Burger sause",
+            "imgSrc": "/modals/modalMenu/main/ingredients/burger-sause.avif"
+          },
+          {
+            "id": "681bddbc-d44b-4c1a-9f49-defa0a936cfb",
+            "label": "Cheese cheddar",
+            "imgSrc": "/modals/modalMenu/main/ingredients/cheese-cheddar.avif"
+          },
+          {
+            "id": "434256b6-8fe2-42de-b32d-4354e491468e",
+            "label": "Aisberg-salad",
+            "imgSrc": "/modals/modalMenu/main/ingredients/aisberg-salad.avif"
+          },
+          {
+            "id": "ff0ce68c-e10b-41af-90dc-58cf5bd6bce1",
+            "label": "Big-tomato-slice",
+            "imgSrc": "/modals/modalMenu/main/ingredients/big-tomato-slice.avif"
+          },
+          {
+            "id": "12d89e9f-36e1-4848-9c55-47038e13f521",
+            "label": "Pickled cucumber",
+            "imgSrc": "/modals/modalMenu/main/ingredients/pickled-cucumber.avif"
+          }
+        ],
         "price": 20.99,
-        "imgUrl": "./menu/main/burger.webp"
+        "imgUrl": "/modals/modalMenu/main/burger.avif"
       },
       {
-        "id": "fe39504a-5ae4-40ce-9c44-a4d3310644fe",
-        "title": "Roast Beef`",
-        "subTitle": ["Rare", "Medium Rare", "Medium", "Medium Well", "Well", "Well done"],
+        "id": "3607aa3f-b343-42c7-9384-fff631ee584e",
+        "title": "Roast Beef",
+        "ingredients": [
+          {
+            "id": "687556de-6b5b-49c9-a10c-b6cc0ab429b1",
+            "label": "Rare",
+            "imgSrc": "/modals/modalMenu/main/ingredients/beef-meet.avif"
+          },
+          {
+            "id": "157fc1bd-f6bb-40cc-ad1e-1e68e59acd7e",
+            "label": "Medium Rare",
+            "imgSrc": "/modals/modalMenu/main/ingredients/burger-sause.avif"
+          },
+          {
+            "id": "c9f60122-bdd9-48c9-a341-2574af269db3",
+            "label": "Medium",
+            "imgSrc": "/modals/modalMenu/main/ingredients/cheese-cheddar.avif"
+          },
+          {
+            "id": "5a97e5cf-2fb2-415b-8c00-cb88c8cb9805",
+            "label": "Medium Well",
+            "imgSrc": "/modals/modalMenu/main/ingredients/aisberg-salad.avif"
+          },
+          {
+            "id": "0565c6c0-c6f1-4b9c-b90a-e31b61f2e321",
+            "label": "Well",
+            "imgSrc": "/modals/modalMenu/main/ingredients/big-tomato-slice.avif"
+          },
+          {
+            "id": "373a66e3-0e87-42d6-8003-cbb9ae485573",
+            "label": "Well done",
+            "imgSrc": "/modals/modalMenu/main/ingredients/pickled-cucumber.avif"
+          }
+        ],
         "price": 49.99,
-        "imgUrl": "./menu/main/roast-beef.webp"
+        "imgUrl": "./menu/main/roast-beef.avif"
       },
       {
-        "id": "6e893741-bc6c-432c-a753-a18a8060c651",
+        "id": "9137360d-797e-43b3-88a4-6153927249e8",
         "title": "Naruto pasta",
-        "subTitle": ["noodles", "2 Eggs", "Meat", "Green Onion", "smth"],
+        "ingredients": [
+          {
+            "id": "4281e751-0d32-4b7d-955e-3b4edbdf5684",
+            "label": "noodles",
+            "imgSrc": "/modals/modalMenu/main/ingredients/beef-meet.avif"
+          },
+          {
+            "id": "92c82c0c-0ff4-4101-b595-f67ce6e7b235",
+            "label": "2 Eggs",
+            "imgSrc": "/modals/modalMenu/main/ingredients/burger-sause.avif"
+          },
+          {
+            "id": "c30fe9b7-63fb-4617-936f-5aadc031bea4",
+            "label": "Meat",
+            "imgSrc": "/modals/modalMenu/main/ingredients/cheese-cheddar.avif"
+          },
+          {
+            "id": "b1b470a0-deb2-4a50-bc47-018b891dea2f",
+            "label": "Green Onion",
+            "imgSrc": "/modals/modalMenu/main/ingredients/aisberg-salad.avif"
+          },
+          {
+            "id": "0cfc6cce-7a20-43db-99bc-747a49ed83ff",
+            "label": "smth",
+            "imgSrc": "/modals/modalMenu/main/ingredients/big-tomato-slice.avif"
+          }
+        ],
         "price": 15.49,
-        "imgUrl": "./menu/main/naruto-pasta.webp"
+        "imgUrl": "./menu/main/naruto-pasta.avif"
       },
       {
-        "id": "12b53b97-fc41-4250-a28d-2878008bd815",
+        "id": "b4237490-ae34-4d2c-8d1c-59acc57211b5",
         "title": "Pizza",
-        "subTitle": ["Pizza sause", "Chicken meet", "Cherry Tomatos", "Cheese"],
+        "ingredients": [
+          {
+            "id": "8501d6c8-8bd9-4e1c-bff3-05f1582c00dd",
+            "label": "Pizza sause",
+            "imgSrc": "/modals/modalMenu/main/ingredients/beef-meet.avif"
+          },
+          {
+            "id": "1ff9513f-524c-498b-9cd2-15ca91c2a761",
+            "label": "Chicken meet",
+            "imgSrc": "/modals/modalMenu/main/ingredients/burger-sause.avif"
+          },
+          {
+            "id": "9f66dd41-6bdb-472a-a330-00719669222f",
+            "label": "Cherry Tomatos",
+            "imgSrc": "/modals/modalMenu/main/ingredients/cheese-cheddar.avif"
+          },
+          {
+            "id": "e167da72-5038-43cb-b74a-0805f126e1b4",
+            "label": "Cheese",
+            "imgSrc": "/modals/modalMenu/main/ingredients/aisberg-salad.avif"
+          }
+        ],
         "price": 27.7,
-        "imgUrl": "./menu/main/pizza.webp"
+        "imgUrl": "./menu/main/pizza.avif"
       },
       {
-        "id": "37c732e7-9009-410b-80ec-77c347ac7bd3",
+        "id": "820cbfff-e858-49f5-aa07-051b0307ef49",
         "title": "Meet with Fries",
-        "subTitle": ["Sauce", "Chicken Meet Rare", "Fries", "Green"],
+        "ingredients": [
+          {
+            "id": "91ea41f8-8132-46d0-9599-d6dc36dc8d47",
+            "label": "Sauce",
+            "imgSrc": "/modals/modalMenu/main/ingredients/beef-meet.avif"
+          },
+          {
+            "id": "09623833-c4cb-4fcd-9567-8e932c0d8099",
+            "label": "Chicken Meet Rare",
+            "imgSrc": "/modals/modalMenu/main/ingredients/burger-sause.avif"
+          },
+          {
+            "id": "eca2f233-a7ac-4a08-83f5-4170ba463259",
+            "label": "Fries",
+            "imgSrc": "/modals/modalMenu/main/ingredients/cheese-cheddar.avif"
+          },
+          {
+            "id": "64e3a43f-8860-4d72-a9cb-e1bd33b3637d",
+            "label": "Green",
+            "imgSrc": "/modals/modalMenu/main/ingredients/aisberg-salad.avif"
+          }
+        ],
         "price": 24.4,
-        "imgUrl": "./menu/main/beef-with-fries.webp"
+        "imgUrl": "./menu/main/beef-with-fries.avif"
       },
       {
-        "id": "736710da-a8a3-4f9d-98ae-77da66e5d96f",
+        "id": "57e05443-834a-4fd4-8ac6-312f2e85d738",
         "title": "Cheese Soup",
-        "subTitle": ["Melted Cheese", "Potato", "Carrot", "Green"],
+        "ingredients": [
+          {
+            "id": "4326c3d9-328e-469e-b910-791ca1392a23",
+            "label": "Melted Cheese",
+            "imgSrc": "/modals/modalMenu/main/ingredients/beef-meet.avif"
+          },
+          {
+            "id": "649af6f0-e296-4be2-9aa2-777675ad49e0",
+            "label": "Potato",
+            "imgSrc": "/modals/modalMenu/main/ingredients/burger-sause.avif"
+          },
+          {
+            "id": "9aab81e7-06b6-460d-b41b-17d6bc735332",
+            "label": "Carrot",
+            "imgSrc": "/modals/modalMenu/main/ingredients/cheese-cheddar.avif"
+          },
+          {
+            "id": "7fec637a-0556-403a-b36c-e5e1adb7fdce",
+            "label": "Green",
+            "imgSrc": "/modals/modalMenu/main/ingredients/aisberg-salad.avif"
+          }
+        ],
         "price": 18.18,
-        "imgUrl": "./menu/main/cheese-soup.webp"
+        "imgUrl": "./menu/main/cheese-soup.avif"
       }
     ]
   },
   {
-    "id": "c06a32bc-7929-462e-83e2-d7e487ff0fb0",
+    "id": "6a4eef9d-7a41-462d-bb9c-c448b38413a2",
     "title": "Deserts",
     "items": [
       {
-        "id": "301f1c7f-e079-4d9d-9f45-58c4fed7483e",
+        "id": "3c38f60d-85be-4901-8ca6-91fac91860a2",
         "title": "Pancakes",
-        "subTitle": ["smth1", "smth2", "honig"],
+        "ingredients": [
+          {
+            "id": "bbb691df-5891-4b19-a029-6c7e4afd16c9",
+            "label": "smth1",
+            "imgSrc": "/modals/modalMenu/main/ingredients/beef-meet.avif"
+          },
+          {
+            "id": "34680639-8775-4bbb-8806-f4166b75c6e3",
+            "label": "smth2",
+            "imgSrc": "/modals/modalMenu/main/ingredients/burger-sause.avif"
+          },
+          {
+            "id": "6936d4f7-7f41-4cef-82b6-5edaee7adb28",
+            "label": "honig",
+            "imgSrc": "/modals/modalMenu/main/ingredients/cheese-cheddar.avif"
+          }
+        ],
         "price": 8.88,
-        "imgUrl": "./menu/deserts/pancakes.webp"
+        "imgUrl": "./menu/deserts/pancakes.avif"
       },
       {
-        "id": "ec45f5dc-5233-419a-ad1d-1f059c8ce058",
-        "title": "`Banana cheesecake`",
-        "subTitle": ["Milk", "Bananas", "Chokolate"],
+        "id": "cda3d890-7410-4f39-9fdf-8309d0d14069",
+        "title": "Banana cheesecake",
+        "ingredients": [
+          {
+            "id": "39785d8c-b716-4c62-9df6-3edd55be5899",
+            "label": "Milk",
+            "imgSrc": "/modals/modalMenu/main/ingredients/beef-meet.avif"
+          },
+          {
+            "id": "5d5cba12-98e9-41d3-bbeb-4c3a41d19245",
+            "label": "Bananas",
+            "imgSrc": "/modals/modalMenu/main/ingredients/burger-sause.avif"
+          },
+          {
+            "id": "bd67aac5-fba2-453b-ad5b-2a1377b6ddd9",
+            "label": "Chokolate",
+            "imgSrc": "/modals/modalMenu/main/ingredients/cheese-cheddar.avif"
+          }
+        ],
         "price": 45.99,
-        "imgUrl": "./menu/deserts/banana-cheesecake.webp"
+        "imgUrl": "./menu/deserts/banana-cheesecake.avif"
       },
       {
-        "id": "4c052b1a-4a16-4cec-91f0-946d911987e9",
+        "id": "471e1dfa-7dc8-445e-841c-83b3fdc1602f",
         "title": "Fruits salat",
-        "subTitle": ["Strawberry", "Peach", "Plum", "Bananas", "Mandarin"],
+        "ingredients": [
+          {
+            "id": "99750f0e-b756-48b0-adcb-bfe445078a1d",
+            "label": "Strawberry",
+            "imgSrc": "/modals/modalMenu/main/ingredients/beef-meet.avif"
+          },
+          {
+            "id": "5212fdef-8efe-4e23-b511-c28bc8c0e1e5",
+            "label": "Peach",
+            "imgSrc": "/modals/modalMenu/main/ingredients/burger-sause.avif"
+          },
+          {
+            "id": "2d22aed8-01c1-4149-bbf3-5d4edb50a291",
+            "label": "Plum",
+            "imgSrc": "/modals/modalMenu/main/ingredients/cheese-cheddar.avif"
+          },
+          {
+            "id": "a23f9a03-5b1a-4e9d-bc2f-6f789922e216",
+            "label": "Bananas",
+            "imgSrc": "/modals/modalMenu/main/ingredients/cheese-cheddar.avif"
+          },
+          {
+            "id": "e3c347d9-0690-4436-bc79-d26b5063e00c",
+            "label": "Mandarin",
+            "imgSrc": "/modals/modalMenu/main/ingredients/cheese-cheddar.avif"
+          }
+        ],
         "price": 12.19,
-        "imgUrl": "./menu/deserts/fruits-salat.webp"
+        "imgUrl": "./menu/deserts/fruits-salat.avif"
       },
       {
-        "id": "e11c8cfb-b324-4abd-ba2c-5dd1d6f26d33",
+        "id": "9734a6b1-e1aa-4c16-ac10-50864926b5cd",
         "title": "Tiramisu",
-        "subTitle": ["Egg", "Sugar", "Coffee", "Coca powder"],
+        "ingredients": [
+          {
+            "id": "2327bcb3-44b9-44cf-8248-ae6a3bebf527",
+            "label": "Egg",
+            "imgSrc": "/modals/modalMenu/main/ingredients/beef-meet.avif"
+          },
+          {
+            "id": "2fad12f4-0c5a-4ddd-b73a-5a07da4f2e2c",
+            "label": "Sugar",
+            "imgSrc": "/modals/modalMenu/main/ingredients/burger-sause.avif"
+          },
+          {
+            "id": "a78d01b3-42ce-40af-8875-36e7b57c7118",
+            "label": "Coffee",
+            "imgSrc": "/modals/modalMenu/main/ingredients/cheese-cheddar.avif"
+          },
+          {
+            "id": "1586e7a5-ec0a-401d-a97b-76021dc2af22",
+            "label": "Coca powder",
+            "imgSrc": "/modals/modalMenu/main/ingredients/cheese-cheddar.avif"
+          }
+        ],
         "price": 27.77,
-        "imgUrl": "./menu/deserts/tiramisu.webp"
+        "imgUrl": "./menu/deserts/tiramisu.avif"
       },
       {
-        "id": "1529fc8f-7e30-466e-83a9-5fd1791d0f25",
+        "id": "7f32d6d8-50be-47aa-9ffb-285cda6d48f1",
         "title": "Ice cream",
-        "subTitle": [
-          "Orange",
-          "Blue",
-          "Yellow",
-          "White",
-          "Black",
-          "Fruits on your choise",
-          "Sweet sause on your choise"
+        "ingredients": [
+          {
+            "id": "acbd58ad-a66f-4100-be18-5b24ef9147d4",
+            "label": "Orange",
+            "imgSrc": "/modals/modalMenu/main/ingredients/beef-meet.avif"
+          },
+          {
+            "id": "1372806c-81c7-4ffa-a61e-9425803c2364",
+            "label": "Blue",
+            "imgSrc": "/modals/modalMenu/main/ingredients/burger-sause.avif"
+          },
+          {
+            "id": "994ba95b-bbd1-4ae5-b6d1-f672d5fa17b6",
+            "label": "Yellow",
+            "imgSrc": "/modals/modalMenu/main/ingredients/cheese-cheddar.avif"
+          },
+          {
+            "id": "c2282b5d-1f63-4c83-9eb5-38eb02e428ce",
+            "label": "White",
+            "imgSrc": "/modals/modalMenu/main/ingredients/cheese-cheddar.avif"
+          },
+          {
+            "id": "02a35d65-f9b3-4d6f-8272-87e65075927d",
+            "label": "Black",
+            "imgSrc": "/modals/modalMenu/main/ingredients/cheese-cheddar.avif"
+          },
+          {
+            "id": "f38e9c15-c2f3-4e1c-9117-7050b32eac78",
+            "label": "Fruits on your choise",
+            "imgSrc": "/modals/modalMenu/main/ingredients/cheese-cheddar.avif"
+          },
+          {
+            "id": "08ba654f-2c08-4189-86df-8d0475c1a459",
+            "label": "Sweet sause on your choise",
+            "imgSrc": "/modals/modalMenu/main/ingredients/cheese-cheddar.avif"
+          }
         ],
         "price": 24.99,
-        "imgUrl": "./menu/deserts/ice-cream.webp"
+        "imgUrl": "./menu/deserts/ice-cream.avif"
       }
     ]
   },
   {
-    "id": "95e1af4e-72e1-4c28-9194-3c2850cfb264",
+    "id": "da4b18ed-7cc4-4c06-9d04-cff5778005ba",
     "title": "Drinks",
     "items": [
       {
-        "id": "29997311-b247-4940-83f3-488a136f1ebe",
+        "id": "2643b37e-2186-4dda-8dab-e6877a1e469e",
         "title": "Water",
-        "subTitle": ["Cold", "Normal", "Hot", "Ice", "NoIce", "Spirkles", "NoSpirkles"],
+        "ingredients": [
+          {
+            "id": "a389d372-c7e0-4438-88cd-70c50afb55ca",
+            "label": "Cold",
+            "imgSrc": "/modals/modalMenu/main/ingredients/beef-meet.avif"
+          },
+          {
+            "id": "24d611be-4a35-45e3-b796-8b53b6a4e054",
+            "label": "Normal",
+            "imgSrc": "/modals/modalMenu/main/ingredients/burger-sause.avif"
+          },
+          {
+            "id": "da223d49-2283-425e-96e0-37470ea293ef",
+            "label": "Hot",
+            "imgSrc": "/modals/modalMenu/main/ingredients/cheese-cheddar.avif"
+          },
+          {
+            "id": "c27c1a8d-d245-4996-9716-8bc6a02a6c42",
+            "label": "Ice",
+            "imgSrc": "/modals/modalMenu/main/ingredients/cheese-cheddar.avif"
+          },
+          {
+            "id": "437a53b4-3e07-4660-bde6-e6ee14eef5f7",
+            "label": "NoIce",
+            "imgSrc": "/modals/modalMenu/main/ingredients/cheese-cheddar.avif"
+          },
+          {
+            "id": "56c0d424-4941-42e8-b441-693654bd8eca",
+            "label": "Spirkles",
+            "imgSrc": "/modals/modalMenu/main/ingredients/cheese-cheddar.avif"
+          },
+          {
+            "id": "2e2faf0f-929c-474e-a15f-1a864bab724f",
+            "label": "NoSpirkles",
+            "imgSrc": "/modals/modalMenu/main/ingredients/cheese-cheddar.avif"
+          }
+        ],
         "price": 3,
-        "imgUrl": "./menu/drinks/water.webp"
+        "imgUrl": "./menu/drinks/water.avif"
       },
       {
-        "id": "f0e20028-9108-4926-96ba-b0464a558157",
-        "title": "`Pepsi`",
-        "subTitle": ["Cold", "Normal", "Hot", "Ice", "NoIce", "Spirkles", "NoSpirkles"],
+        "id": "4b171e92-f434-4abe-a102-f6d1f80a827c",
+        "title": "Pepsi",
+        "ingredients": [
+          {
+            "id": "c7af506b-609a-42c9-8d8b-9a47340379d2",
+            "label": "Cold",
+            "imgSrc": "/modals/modalMenu/main/ingredients/beef-meet.avif"
+          },
+          {
+            "id": "15cfc491-c2a9-4bd6-957c-6c56d46b95fc",
+            "label": "Normal",
+            "imgSrc": "/modals/modalMenu/main/ingredients/burger-sause.avif"
+          },
+          {
+            "id": "9767470b-c0cf-44ae-b9f0-c9f05c86a816",
+            "label": "Hot",
+            "imgSrc": "/modals/modalMenu/main/ingredients/cheese-cheddar.avif"
+          },
+          {
+            "id": "f585e172-ab70-4e77-8e8c-c478b2c1be78",
+            "label": "Ice",
+            "imgSrc": "/modals/modalMenu/main/ingredients/cheese-cheddar.avif"
+          },
+          {
+            "id": "827857e4-ddf6-445c-a9ef-9a6f63a7d5f2",
+            "label": "NoIce",
+            "imgSrc": "/modals/modalMenu/main/ingredients/cheese-cheddar.avif"
+          },
+          {
+            "id": "258515ca-3383-4bb2-ab1f-c3f5b9612d5e",
+            "label": "Spirkles",
+            "imgSrc": "/modals/modalMenu/main/ingredients/cheese-cheddar.avif"
+          },
+          {
+            "id": "4499890b-3362-4017-ba0c-88f3dfd43e6c",
+            "label": "NoSpirkles",
+            "imgSrc": "/modals/modalMenu/main/ingredients/cheese-cheddar.avif"
+          }
+        ],
         "price": 6,
-        "imgUrl": "./menu/drinks/pepsi.webp"
+        "imgUrl": "./menu/drinks/pepsi.avif"
       },
       {
-        "id": "e6f1cd13-b7db-4263-a4a8-f616bd4d8bbb",
+        "id": "3bb363b3-78e8-4d8b-965d-af5d44b7e5df",
         "title": "Mirinda",
-        "subTitle": ["Cold", "Normal", "Hot", "Ice", "NoIce", "Spirkles", "NoSpirkles"],
+        "ingredients": [
+          {
+            "id": "81cf6410-b37f-42a3-9647-2602172984ca",
+            "label": "Cold",
+            "imgSrc": "/modals/modalMenu/main/ingredients/beef-meet.avif"
+          },
+          {
+            "id": "a702dfff-bde8-45ed-9ee0-ce0b44cbb82f",
+            "label": "Normal",
+            "imgSrc": "/modals/modalMenu/main/ingredients/burger-sause.avif"
+          },
+          {
+            "id": "2425bf24-937f-4923-bb9a-38d08bb34478",
+            "label": "Hot",
+            "imgSrc": "/modals/modalMenu/main/ingredients/cheese-cheddar.avif"
+          },
+          {
+            "id": "f7596a8d-48f5-45e3-9e93-7eff0ce442e0",
+            "label": "Ice",
+            "imgSrc": "/modals/modalMenu/main/ingredients/cheese-cheddar.avif"
+          },
+          {
+            "id": "83fc71ed-9488-401a-9118-ab5510578817",
+            "label": "NoIce",
+            "imgSrc": "/modals/modalMenu/main/ingredients/cheese-cheddar.avif"
+          },
+          {
+            "id": "c687c7f4-7d96-41ca-b393-1910b2ed67d5",
+            "label": "Spirkles",
+            "imgSrc": "/modals/modalMenu/main/ingredients/cheese-cheddar.avif"
+          },
+          {
+            "id": "577aec05-2059-45f6-95e0-a90d1c716deb",
+            "label": "NoSpirkles",
+            "imgSrc": "/modals/modalMenu/main/ingredients/cheese-cheddar.avif"
+          }
+        ],
         "price": 6,
-        "imgUrl": "./menu/drinks/mirinda.webp"
+        "imgUrl": "./menu/drinks/mirinda.avif"
       },
       {
-        "id": "88687d1d-6f3b-4191-b1d2-c95ed8e73c76",
+        "id": "db7334c1-9c98-402f-8297-114db27a5cb8",
         "title": "7up",
-        "subTitle": ["Cold", "Normal", "Hot", "Ice", "NoIce", "Spirkles", "NoSpirkles"],
+        "ingredients": [
+          {
+            "id": "74e7bbfe-a7f1-47af-bcc9-ce25e0994ea8",
+            "label": "Cold",
+            "imgSrc": "/modals/modalMenu/main/ingredients/beef-meet.avif"
+          },
+          {
+            "id": "a1de8974-357d-4d91-8f4b-500d98e86b71",
+            "label": "Normal",
+            "imgSrc": "/modals/modalMenu/main/ingredients/burger-sause.avif"
+          },
+          {
+            "id": "e4311979-8b33-4c7e-9ee2-8d7c5c520da3",
+            "label": "Hot",
+            "imgSrc": "/modals/modalMenu/main/ingredients/cheese-cheddar.avif"
+          },
+          {
+            "id": "97f40e44-d5bd-463d-b3e1-337cc50aa5d2",
+            "label": "Ice",
+            "imgSrc": "/modals/modalMenu/main/ingredients/cheese-cheddar.avif"
+          },
+          {
+            "id": "2bb2b76a-573c-4274-9374-f711fd6517a9",
+            "label": "NoIce",
+            "imgSrc": "/modals/modalMenu/main/ingredients/cheese-cheddar.avif"
+          },
+          {
+            "id": "e7d972c5-7ab2-43f7-a6ce-7ae004d1c47b",
+            "label": "Spirkles",
+            "imgSrc": "/modals/modalMenu/main/ingredients/cheese-cheddar.avif"
+          },
+          {
+            "id": "eae7431b-f291-43a2-81cd-1b5b38c612f1",
+            "label": "NoSpirkles",
+            "imgSrc": "/modals/modalMenu/main/ingredients/cheese-cheddar.avif"
+          }
+        ],
         "price": 7,
-        "imgUrl": "./menu/drinks/7up.webp"
+        "imgUrl": "./menu/drinks/7up.avif"
       },
       {
-        "id": "6efd27e6-5144-4d30-bd96-41daa5bb2ab9",
+        "id": "ac613b6f-5fce-4b6a-bb47-1630e8f84fb9",
         "title": "Coffee",
-        "subTitle": ["Cold", "Normal", "Hot", "Ice", "NoIce", "Spirkles", "NoSpirkles"],
+        "ingredients": [
+          {
+            "id": "e3d074f9-c121-4bda-b8f7-9a15c9a70c46",
+            "label": "Cold",
+            "imgSrc": "/modals/modalMenu/main/ingredients/beef-meet.avif"
+          },
+          {
+            "id": "2b2146d6-5db1-4473-9555-5f41eca69ed7",
+            "label": "Normal",
+            "imgSrc": "/modals/modalMenu/main/ingredients/burger-sause.avif"
+          },
+          {
+            "id": "9659a018-9a64-488a-802c-d4154df4ef7e",
+            "label": "Hot",
+            "imgSrc": "/modals/modalMenu/main/ingredients/cheese-cheddar.avif"
+          },
+          {
+            "id": "ca202e93-38dd-4e36-a039-ffdf2b5f91e7",
+            "label": "IceCream",
+            "imgSrc": "/modals/modalMenu/main/ingredients/cheese-cheddar.avif"
+          },
+          {
+            "id": "41a3649b-c6c8-47a9-9f54-e6a7f8e034e3",
+            "label": "NoIceCream",
+            "imgSrc": "/modals/modalMenu/main/ingredients/cheese-cheddar.avif"
+          }
+        ],
         "price": 2.5,
-        "imgUrl": "./menu/drinks/coffee.webp"
+        "imgUrl": "./menu/drinks/coffee.avif"
       }
     ]
   }

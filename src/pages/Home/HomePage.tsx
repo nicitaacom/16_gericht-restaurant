@@ -1,4 +1,4 @@
-import { Main,About, TodaySpecial, WhatWeBelieveIn, VideoSection, OutLaurels,PhotoGallerey, FindUs, Newsletter} from "./sections";
+import { Main,About, TodaySpecial, WhatWeBelieveIn, VideoSection, OurLaurels,PhotoGallerey, FindUs, Newsletter} from "./sections";
 
 export function HomePage () {
 return (
@@ -8,7 +8,7 @@ return (
 <TodaySpecial className="mb-32"/>
 <WhatWeBelieveIn/>
 <VideoSection/>
-<OutLaurels/>
+<OurLaurels/>
 <PhotoGallerey/>
 <FindUs/>
 <Newsletter/>

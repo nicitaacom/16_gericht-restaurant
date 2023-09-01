@@ -25,7 +25,7 @@ export function HamburgerMenu() {
     gsap.to(mobileMenu, {
       duration: 1,
       y: -1920,
-      onComplete: () => hamburgerMenu.onClose(),
+      onComplete: hamburgerMenu.onClose,
     });
     document.body.removeAttribute('style')
   }
@@ -40,7 +40,7 @@ export function HamburgerMenu() {
       transition={{ type: "spring", duration: 0.75 }}>
       <ul className="navbar-hamburger-menu_links-mobile">
         {navLinks.map(navLink => (
-          <Link className='cta-link-secondary' to={navLink.to} key={navLink.id}>{navLink.label}</Link>
+          <Link className='cta-link-secondary' key={navLink.id} onClick={closeMobileLinks} to={navLink.to}>{navLink.label}</Link>
         ))}
       </ul>
       <div className='navbar-hamburger-menu_auth-mobile'>
@@ -52,7 +52,7 @@ export function HamburgerMenu() {
       </div>
       <svg className='navbar-hamburger-menu_close'
         onClick={() => closeMobileLinks()}>
-        <use xlinkHref='./sprite.svg#close' />
+        <use xlinkHref='./pages/home/sprite.svg#close' />
       </svg>
     </motion.div>
 

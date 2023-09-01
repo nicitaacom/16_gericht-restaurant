@@ -50,7 +50,7 @@ export function ModalMenu({isOpen,onClose}:ModalMenuProps) {
   /* MODAL HEADER */
 
   const header = (
-    <>
+    <div className="flex flex-row items-center">
       <h1 className={`modal-title`}>Menu</h1>
       <div
         onMouseDown={handleMouseDown}
@@ -67,7 +67,7 @@ export function ModalMenu({isOpen,onClose}:ModalMenuProps) {
           ))}
         </ul>
       </div>
-    </>
+    </div>
   )
 
 
@@ -93,6 +93,6 @@ export function ModalMenu({isOpen,onClose}:ModalMenuProps) {
       header={header} headerClassName='modal-menu-header'
       body={body} bodyClassName='modal-menu-body'
       isOpen={isOpen} onClose={onClose}
-      imgSrc='/bg-secondary-reverse.jpg' />
+      imgSrc='/pages/bg-secondary-reverse.avif' />
   )
 }

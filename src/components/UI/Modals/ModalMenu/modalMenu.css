@@ -218,16 +218,17 @@
 }
 
 .list-item-info {
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
-  width: 2rem;
-  height: 38px;
+  padding:var(--padding-sm);
   border:1px solid var(--info) !important;
   border-radius: var(--border-sm);
+  width: 100%;
 }
-
-
+.list-item-info:hover {
+  cursor: pointer;
+}
 
 
 
@@ -282,8 +283,17 @@
 }
 
 @media (max-width:425px) {
+  .modal-list-item-container {
+    flex-flow: column;
+  }
+  .list-item-info {
+    display: flex;
+  }
   .modal-list-text-info-header {
     margin-bottom: 1rem;
+  }
+  .modal-list-text-info-footer{
+    flex-flow: column;
   }
 
   .modal-list-text-info-body {

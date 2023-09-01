@@ -94,46 +94,46 @@ export const laurels = [
   {
     title: "Bib Gourmond",
     subTitle: "lorem ipsum dolor sit amet, consectetur.",
-    imgSrc: "/award01.png",
+    imgSrc: "/pages/home/award-01.png",
   },
   {
     title: "Rising Star",
     subTitle: "Rising Star lorema nakinul",
-    imgSrc: "/award02.png",
+    imgSrc: "/pages/home/award-02.png",
   },
   {
     title: "AA Hospitality",
     subTitle: "Find the best dishes in your life",
-    imgSrc: "/award03.png",
+    imgSrc: "/pages/home/award-03.png",
   },
   {
     title: "Outstanding Chef",
     subTitle: "We have the best chef in the world",
-    imgSrc: "/award05.png",
+    imgSrc: "/pages/home/award-05.png",
   },
 ];
 
 export const gallerey = [
   {
-    imgSrc: "/gallery-01.webp",
+    imgSrc: "./pages/home/gallery-01.avif",
   },
   {
-    imgSrc: "/gallery-02.webp",
+    imgSrc: "./pages/home/gallery-02.avif",
   },
   {
-    imgSrc: "/gallery-03.webp",
+    imgSrc: "./pages/home/gallery-03.avif",
   },
   {
-    imgSrc: "/gallery-04.webp",
+    imgSrc: "./pages/home/gallery-04.avif",
   },
   {
-    imgSrc: "/gallery-05.webp",
+    imgSrc: "./pages/home/gallery-05.avif",
   },
   {
-    imgSrc: "/gallery-06.webp",
+    imgSrc: "./pages/home/gallery-06.avif",
   },
   {
-    imgSrc: "/gallery-07.webp",
+    imgSrc: "./pages/home/gallery-07.avif",
   },
 ];
 

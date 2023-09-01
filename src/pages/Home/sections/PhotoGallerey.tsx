@@ -9,7 +9,7 @@ import { useSlider } from '../../../hooks/useSlider'
 export function PhotoGallerey() {
   const { handleMouseMove, handleTouchMove, handleMouseDown, handleTouchDown } = useSlider()
   return (
-    <div className="flex py-32 relative bg-[url('/bg.webp')] bg-cover
+    <div className="flex py-32 relative bg-[url('./pages/bg-secondary.avif')] bg-cover
 Tablet:flex-col Tablet:items-center Tablet:text-center Tablet:gap-y-8
 MobileL:gap-y-8">
 
@@ -18,7 +18,7 @@ MobileL:gap-y-8">
   Tablet:items-center Tablet:px-0">
         <h6 className="preTitle leading-[1.6rem]">Awards & Recognition</h6>
         <svg className='spoon-svg'>
-          <use xlinkHref='./sprite.svg#spoon' />
+          <use xlinkHref='./pages/home/sprite.svg#spoon' />
         </svg>
         <h1 className="title inline-block">Photo Gallery</h1>
         <p className="subTitle mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae, assumenda?</p>
@@ -38,7 +38,7 @@ MobileL:gap-y-8">
             <svg className='absolute opacity-0 cursor-pointer scale-90 transition-all duration-500 z-10
         gallery-svg
         ' onClick={() => window.open('https://github.com/Nicitaa')}>
-              <use xlinkHref='./sprite.svg#instagram' />
+              <use xlinkHref='./pages/home/sprite.svg#instagram' />
             </svg>
             <img className="object-cover w-full transition-all duration-500 pointer-events-none
       hover:brightness-75 gallery-img"
