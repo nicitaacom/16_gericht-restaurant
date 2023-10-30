@@ -2,6 +2,10 @@
 
 ![work in progress](https://i.imgur.com/HLihsxP.png)
 
+<br/>
+<br/>
+<br/>
+
 # Clone repository
 
 ## Step 1.1 - clone repository (variant 1)
