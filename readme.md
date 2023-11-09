@@ -1,6 +1,6 @@
 # What inside? <br/> <sub> https://16-gericht-restaurant.vercel.app/ </sub>
 
-![work in progress](https://i.imgur.com/HLihsxP.png)
+![16_gericht-restaurant](https://i.imgur.com/HLihsxP.png)
 
 # Clone repository
 
